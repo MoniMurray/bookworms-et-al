@@ -18,9 +18,12 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    {% endblock %}
+
+    {% block favicon %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -57,7 +60,7 @@
             </div>
             <!-- Search bar -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <form method="GET" action="{% url 'products' %}">
+                <form method="GET" action="#">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
                             placeholder="Search our site">
@@ -87,9 +90,9 @@
                             {% if request.user.is_authenticated %}
                             <!-- if the user is the superuser we want them to be able to manage the store by 'CRUD' store products -->
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Bookworms Product Management</a>
+                            <a href="#" class="dropdown-item">Bookworms Product Management</a>
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Account</a>
+                            <a href="#" class="dropdown-item">My Account</a>
                             <!-- the following urls are coming from Django allauth -->
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
@@ -100,7 +103,7 @@
                     </li>
                     <li class="list-inline-item">
                         <a class="{% if total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                            href="{% url 'view_bag' %}">
+                            href="#">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
@@ -124,8 +127,7 @@
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
+                <!-- add the includes top header etc -->
             </nav>
         </div>
         <div id="delivery-banner" class="row text-center">
@@ -135,24 +137,8 @@
         </div>
     </header>
 
-    <!-- using django default messages framework and default message codes 40-E, 30-W, 25-S -->
-    {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {%  with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
-    {% endif %}
+    <!-- using django default messages framework and default message codes 40-E, 30-W, 25-S so add the toasts from BA here-->
+   
 
     <!-- to act as an additional header in extended templates where we 
         need to put something at the top of the page but underneath 
