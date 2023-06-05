@@ -16,7 +16,7 @@
     {% block corecss %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
     {% endblock %}
 
@@ -63,7 +63,7 @@
                 <form method="GET" action="#">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search our site">
+                            placeholder="Search our library">
                         <div class="input-group-append">
                             <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                 <span class="icon">
@@ -90,7 +90,7 @@
                             {% if request.user.is_authenticated %}
                             <!-- if the user is the superuser we want them to be able to manage the store by 'CRUD' store products -->
                             {% if request.user.is_superuser %}
-                            <a href="#" class="dropdown-item">Bookworms Product Management</a>
+                            <a href="#" class="dropdown-item">Bookworms Store Management</a>
                             {% endif %}
                             <a href="#" class="dropdown-item">My Account</a>
                             <!-- the following urls are coming from Django allauth -->
@@ -128,6 +128,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- add the includes top header etc -->
+                {% include 'includes/mobile_top_header.html' %}
+                {% include 'includes/main_nav.html' %}
             </nav>
         </div>
         <div id="delivery-banner" class="row text-center">
