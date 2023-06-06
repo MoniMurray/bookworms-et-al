@@ -13,12 +13,12 @@
                 All Books
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="books-link">
-                <a href="#?category=business, investing" class="dropdown-item">Business &amp Investing</a>
-                <a href="#?category=cookbooks" class="dropdown-item">Cookbooks</a>
-                <a href="#?category=mystery, suspense" class="dropdown-item">Mystery &amp Suspense</a>
-                <a href="#?category=scifi, fantasy" class="dropdown-item">Scifi &amp Fantasy</a>
-                <a href="#?category=accessories" class="dropdown-item">Accessories</a>
-                <a href="#?category=business,cookbooks,mystery,scifi,accessories" class="dropdown-item">All
+                <a href="{% url 'products' %}?category=business, investing" class="dropdown-item">Business &amp Investing</a>
+                <a href="{% url 'products' %}?category=cookbooks" class="dropdown-item">Cookbooks</a>
+                <a href="{% url 'products' %}?category=mystery, suspense" class="dropdown-item">Mystery &amp Suspense</a>
+                <a href="{% url 'products' %}?category=scifi, fantasy" class="dropdown-item">Scifi &amp Fantasy</a>
+                <a href="{% url 'products' %}?category=children" class="dropdown-item">Children</a>
+                <a href="{% url 'products' %}?category=business,cookbooks,mystery,scifi,accessories" class="dropdown-item">All
                     Books</a>
             </div>
         </li>
@@ -73,7 +73,7 @@
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Accessories
+                Children
             </a>
             <!-- <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="#?sort=price&direction=asc" class="dropdown-item">By Price</a>

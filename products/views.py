@@ -10,7 +10,7 @@ def all_products(request):
     and search queries
     """
 
-    products = Products.objects.all()
+    products = Product.objects.all()
     context = {
         'products': products,
     }

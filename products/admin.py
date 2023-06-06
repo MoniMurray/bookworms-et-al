@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Product, Category, Author
 
 
-class CategoryAdmin(admin, ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     """
     Display the Category model fields in the Admin view
     """
@@ -19,7 +19,6 @@ class ProductAdmin(admin.ModelAdmin):
 
     list_display = (
         'rating',
-        'category',
         'name',
         'description',
         'price',
@@ -32,7 +31,7 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('-rating',)
 
 
-class AuthorAdmin(admin, ModelAdmin):
+class AuthorAdmin(admin.ModelAdmin):
     """
     Display the Author model fields in the Admin view
     """

@@ -4,14 +4,14 @@ html {
 }
 
 body {
-    background: url('media/creative-composition-with-books-flower.jpg') no-repeat center center fixed;
+    background: url('media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #f7f9f9;
+    color: #00205b;
     font-family: 'Montserrat';
 }
 
-/* from Bulma */     
+/* from Bulma to perfectly center the Font awesome icons */     
 .icon {
     align-items: center;
     display: inline-flex;
