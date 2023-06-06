@@ -1,108 +1,381 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+#Project Rationale
 
-Welcome Monica Murray,
+#Business & Customer Goals
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+#UI/UX
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+#Database Design to ERD
 
-## Gitpod Reminders
+#Marketing
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+#Facebook Business Page
 
-`python3 -m http.server`
+#User Stories
 
-A blue button should appear to click: _Make Public_,
+#Testing
 
-Another blue button should appear to click: _Open Browser_.
+#Technologies Used
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#References & Credits
 
-A blue button should appear to click: _Make Public_,
+#Procedures
 
-Another blue button should appear to click: _Open Browser_.
+#Deployment
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#Favicon
 
-To log into the Heroku toolbelt CLI:
+#Code Validation
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#SEO
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#Privacy Policy
 
-------
+# THE SHOPPING LIST Organised | Everywhere
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Overview
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Developed by Monica Murray
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+An image of the finished site generated from [Amiresponsive]() which displays the application at four screen size breakpoints.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Amiresponsive](g) 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Please visit the live site via [this link]().
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Goals
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Project Goal
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+This is my fifth and final Portfolio Project for Code Institute Ecommerce Applications
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### User Goal
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+# CONTENTS
 
-------
+1. [User Experience(UX)](#ux)
 
-## FAQ about the uptime script
+2.  [Agile Methodologies](#agile)
 
-**Why have you added this script?**
+3.  [Design](#design)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+4.  [Features](#features)
 
-**How will this affect me?**
+5.  [Technologies](#technologies)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+6. [Testing](#testing)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+7. [Deployment](#deployment)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+8. [Credits](#credits)
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## User Experience (UX) Design<a name="ux"></a>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Strategy
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Scope
 
----
 
-Happy coding!
+
+The six-week deadline is fixed and the timeline is tight.  MVP is priority.  
+
+### Structure
+
+ and where that data is stored in a consistent and well-organised manner..
+
+### Skeleton
+
+A user will be familiar with clicking on icons to perform an action, this app will conform with this convention.  Uncluttered, simple UI. 
+
+### Surface
+
+
+
+The User's interaction with this responsive application should be easy and natural.  Use of icons will make actions like edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
+
+## Agile Methodology<a name="agile"></a>
+
+Please follow this link to open my [AGILE.md](AGILE.md) file and read about how I used Agile Methodology in the planning and development of The Shopping List application.
+
+
+## Design<a name="design"></a>
+
+
+I began my design of the database structure by creating an Entity Relationship Diagram using [LucidChart.com](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#), which can be viewed [here]().  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database. 
+ 
+
+### Colour Scheme
+
+The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a colour palette.
+
+![colour palette!](). 
+
+These colours were chosen based on a possible homepage image I used during early development of a personal organiser which employed a colour palette which was cool and calming.
+
+![personal organiser!]()
+
+
+### Typography
+
+I chose Montserrat font from Google Fonts for my website.
+
+
+### Wireframes
+
+I created my wireframes using Balsamiq to create the early UX Design Wireframe images.
+
+#### Registration/Authentication
+
+
+
+#### CRUD
+
+
+
+#### User Messages Wireframes
+
+
+
+
+
+The Entity Relationship Model for the relational database was first created on paper and then a model designed using LucidChart.
+
+[LucidChart](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#)
+
+![DIAGRAM!]()
+
+
+### Data Schema Planning
+
+Using [LucidChart](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#)
+
+## Features<a name="features"></a>
+
+
+
+
+### Landing Page
+
+
+
+
+### Home Page
+
+
+
+
+### General features on each page
+
+#### The Navigation Bar 
+
+
+
+#### Search Feature
+
+
+
+#### Footer
+
+The bespoke footer contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile. The footer also contains external links to Facebook, Instagram and Twitter.
+
+
+### Screenshots
+
+
+
+403 Page
+
+![Bespoke 403 Error page!]()
+
+
+
+### Future Implementations
+
+
+
+
+### Accessibility
+
+Throughout this project I have endeavoured to implement good accessibility practices, but in testing at the end of the project I acknowledge that I score poorly in this regard.  Using the tips provided in Lighthouse and [Wave](https://wave.webaim.org/) I have marginally improved their scores and learned more about developing an accessible site.
+
+Some examples include:
+
+I have used [fontawesome](https://fontawesome.com/search?q=checkbox&o=r&m=free) icons in my application and to each icon I have added aria-labels to enable screen readers to understand them.  I have endeavored to ensure the application meets the minimum contrast requirements between background and text colours.  I have chosen font sizes and type that are dyslexia/accessible friendly, for example there are no buttons or text that are in all capitals.
+
+[The A11y Collective](https://www.a11y-collective.com/) is a useful site at which I saw why I was scoring poorly in relation to links on my application.
+
+The CI a11y accessibility Slack channel is a useful and detailed resource which I will use earlier in my next project and post-Diploma.
+
+
+## Technologies Used**<a name="technologies"></a>
+
+### Languages Used
+
+Languages in this project were:
+
+- Python, 
+- HTML, 
+- CSS,  and 
+- JavaScript.
+
+### Frameworks, Libraries & Programs Used
+
+- Balsamiq Version: 4.5.5 - Editor Version: 5.3.1 - Used to create wireframes.
+
+- GitPod - The Cloud development environment used to develop the site.
+
+- Google Fonts - To import the fonts used on the website.
+
+- Google Developer Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+- TinyPNG - To compress the Homepage image
+
+- Am I Responsive? To show the website image on a range of devices.
+
+- Django framework and Bootstrap CSS library were both used in this project.
+
+- Fontawesome - Used for icons.
+
+- Heroku and ElephantSQL - For deployment and Hosting of the project.
+
+- GitHub - Distributed Version Control;
+
+- LucidChart - ERD Design and layout software
+
+- Favicon.io - Used to create the website favicon
+
+- Pillow - Imported to enable images to be viewed with the products in the models
+
+
+## Testing<a name="testing"></a>
+
+Testing is documented in TESTING.md file [here](TESTING.md)
+
+
+## Deployment<a name="deployment"></a>
+
+The site is deployed using Heroku - [eCommerce Project 5]()
+
+### To Deploy the site using Heroku:
+
+- Login (or signup) to Heroku;
+- From the dashboard, click on 'New' and select 'Create New App';
+- Populate the App Name field with your new Project or Application name, and select your local region ie. Europe. Click 'Create App' button.
+
+The app is now created and is listed in the Heroku dashboard.
+
+In the 'Settings' tab, add the Config Variables:
+
+- DATABASE_URL: 'Paste ElephantSQL URL';
+- SECRET_KEY: 'Paste in your secret key';
+- PORT: 8000;
+- CLOUDINARY_URL: Cloudinary://*.
+
+In the 'Deploy' tab:
+- Select 'GitHub' from the Deployment method section;
+- Connect to the GitHub repository for this project;
+- Select 'Enable Automatic Deploys' from the the Automatic Deploy section.
+
+### Create a new database on ElephantSQL
+
+Heroku uses an ephemeral file system - which means it is wiped clean every time Heroku updates, or every time the app is redeployed.
+
+So Gunicorn which will act as the web server for the project, and the project will also use a server-based database called 'Postgres'.  It will be seperated from the  application, so it will survive even if the application server is destroyed.
+
+To Create the Postgres database:
+
+- Login or signup to ElephantSQL;
+- Click 'Create New Instance';
+- Populate the 'Name' field with the name of the Project or Application;
+- Leave the 'Plan' field with the pre-populated Tiny Turtle content;
+- Leave the 'Tags' field blank;
+- Click the 'Select Region' button and choose 'EU-West-1' as the local region;
+- Click the 'Review' button, ensure all the content is correct, with the correct spelling, then click 'Create Instance'.
+
+The Postgres database is now created on ElephantSQL and you can see it on your ElephantSQL dashboard. 
+
+Connect Gitpod development environment to Postgres database
+
+Through Gitpod, connect ElephantSQL through settings.py with a variable named 'DATABASE_URL', and then migrate the database structure to the newly connected ElephantSQL database.
+
+Test the connection in ElephantSQL:
+
+- Select the database instance from the dashboard;
+- Select 'Browser' tab, then click on 'Table Queries'.
+
+You should see that the dropped down list has been populated from the Django migrations.
+
+### Create Procfile in Gitpod
+
+Heroku needs a Procfile so it knows how to run a project.
+
+In the newly created Procfile, add the line 'web: gunicorn PROJECTNAME.wsgi'.
+ - 'web:' tells Heroku that this is a process that should accept http traffic;
+ - 'gunicorn' is a web server installed for the project, a web services gateway server;
+ - '.wsgi' stands for 'web services gateway server' and is the standard that allows Python services to integrate with web servers.
+
+ The Project is now successfully deployed.
+ ![successfully deployed!](add screenshot).
+
+### How to Fork
+
+A Fork of a repository is a copy of the original repository that you now own. Any changes made to the project in your fork will not affect the original. 
+
+Use the following steps: 
+
+- Log in to GitHub and locate the repository Bookworms et al
+- At the top of the Repository (not the top of the page) just above the "Settings" Button on the menu, locate and click the "Fork" Button.
+
+You should now have a copy of the original repository in your GitHub account.
+
+### How to Clone
+
+Creating a clone enables you to make a copy of the repository at that point in time - this lets you run a copy of the project locally.
+
+To do this, you should:
+
+- Navigate to {insert the copied url here} 
+- Click on the arrow on the green code button at the top of the list of files
+- Select the 'Local' tab select the 'HTTPS' tab and click the icon to copy the prepopulated link
+- Navigate to your code editor of choice and within the terminal change the directory to the location you want to clone the repository to.
+- Type 'git clone' and paste the HTTPS link you copied from GitHub
+- Press enter, the Forked repository will now clone to your preferred development method on your local machine.
+
+
+## Credits<a name="credits"></a>
+
+For my Project I followed the advice given in the [CI Guide to MVP video for Project 5](https://youtu.be/i7clFOYiwS0) to use the Boutique Ado Walkthrough Project code as a boilerplate to get started and save precious time, and I then customised as much as I could.  So full credit to Boutique Ado walkthrough which I have used extensively throughout this eCommerce project. 
+ I also used the knowledge I learned from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
+
+I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me. 
+
+Favicon  - the image I chose, which states it requires crediting or I’ll be charged, comes from [Freepik.com]](Www.freepik.com).  The Image is by <a href="https://www.freepik.com/free-photo/creative-composition-with-books-flower_12407755.htm#query=book&position=21&from_view=keyword&track=sph">Freepik</a>
+
+I used the website [Tinypng](https://tinypng.com/) to reduce the size of my homepage image.
+
+Credit to the many [CI Community Q&A videos](https://www.youtube.com/playlist?list=PL_7334VduOHsrWzhu5Ta2lrkp016kcBWYvideos) for advice from MVP of Project 5, to how to study, to very valuable videos on Readme essential sections.
+
+I took inspiration for the design of the Bookworms et al Bookshop from many leading Irish bookshops with strong online presence such as Easons and Dubray.
+
+All wireframes, ERD and screenshots are my own creation.  This Readme is based on the extensive Readme.md file I created for my PP4, [The Shopping List](https://github.com/MoniMurray/shopping-list)
+
+
+### Acknowledgments
+
+The CI Slack Community is a resource I used almost as much as Google for this project! This community is so kind and generous with their collective and individual knowlege and I used them to bounce ideas off, ask for advice, and to seek guidance where code went awry.  A Big thank you to CI colleagues for taking the time to thoroughly test the site for me.
+
+CI Tutor Support were an invaluable resource for this project and I'm so grateful to all the patient Tutors from whom I received a huge amount of reasurance and guidance.
+
+Thanks to my mentor Jubril Akolade for all his encouragement!
+
+
