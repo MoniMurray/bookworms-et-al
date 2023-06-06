@@ -31,7 +31,8 @@ class Product(models.Model):
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    author = models.ForeignKey('Author', null=False, blank=False, on_delete=models.CASCADE)
+    author = models.ForeignKey(
+        'Author', null=False, blank=False, on_delete=models.CASCADE)
     type = models.CharField(
         max_length=20, choices=TYPE_CHOICES, default='Hardback')
     image_url = models.URLField(max_length=1024, null=True, blank=True)

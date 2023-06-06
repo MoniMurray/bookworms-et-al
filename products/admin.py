@@ -1,10 +1,49 @@
 from django.contrib import admin
-from . models import Product, Category, Author
+from .models import Product, Category, Author
 
-admin.site.register(Product)
 
-admin.site.register(Category)
+class CategoryAdmin(admin, ModelAdmin):
+    """
+    Display the Category model fields in the Admin view
+    """
 
-admin.site.register(Author)
+    list_display = (
+        'name',
+    )
 
-# Register your models here.
+
+class ProductAdmin(admin.ModelAdmin):
+    """
+    Display the Product model fields in the Admin view
+    """
+
+    list_display = (
+        'rating',
+        'category',
+        'name',
+        'description',
+        'price',
+        'type',
+        'author',
+        'image_url',
+        'image',
+    )
+
+    ordering = ('-rating',)
+
+
+class AuthorAdmin(admin, ModelAdmin):
+    """
+    Display the Author model fields in the Admin view
+    """
+
+    list_display = (
+        'name',
+    )
+
+
+admin.site.register(Product, ProductAdmin)
+
+admin.site.register(Category, CategoryAdmin)
+
+admin.site.register(Author, AuthorAdmin)
