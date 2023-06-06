@@ -4,8 +4,9 @@ html {
 }
 
 body {
-    background: url('media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-color: #7a7a7a;
     height: calc(100vh - 164px);
     color: #00205b;
     font-family: 'Montserrat';
