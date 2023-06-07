@@ -34,8 +34,11 @@
 
 
 
-## Overview
+## Project Overview
 
+Bookworms et al is a ficticious bookshop, built using Django, Python, Javascript and Bootstrap 4.
+
+Bookworms is a Business to Customer online retailer selling books.
 
 Developed by Monica Murray
 
@@ -46,13 +49,28 @@ An image of the finished site generated from [Amiresponsive]() which displays th
 
 Please visit the live site via [this link]().
 
-## Goals
 
-### Project Goal
+## Purpose
 
-This is my fifth and final Portfolio Project for Code Institute Ecommerce Applications
+The application is designed and build as the online presence of a physical bookshop, with the purpose of creating an online presence for the store to extend its customer reach. 
 
-### User Goal
+The design encourages users to browse and to make a purchase.
+
+## Stakeholder Goals (Store Owner)
+
+The Store Owner's goal is to have a profitable eCommerce presence of its physical bookshop, which extends its customer base by providing an intuitive, robust and visually appealing website with secure and simple payment system.  The Store Owner wants to manage the product offerings of the eCommerce site securely, and add, edit or delete items via the interactive front-end.
+
+## User's Goals
+
+To understand the application's purpose, to be able to navigation intuitively around the pages of the website, view all products and be able to purchase one or many products securely.  A user will also want to be able to Register, Login and Logout of the website, view and edit their personal data securely, and view their purchase history.  All user actions are met with feedback via the interactive front end.
+
+## Project Goal
+
+Bookworms is my fifth and final Portfolio Project for Code Institute's Diploma in Full Stack Software Development (Ecommerce Applications).
+
+## Business Model
+
+Bookworms is a Business to Consumer (B2C) direct seller of books.
 
 - 
 
@@ -116,25 +134,44 @@ I began my design of the database structure by creating an Entity Relationship D
 
 ### Colour Scheme
 
-The Shopping List colour scheme is designed to be crisp, clean, sophisticated.  I used [Coolors](https://coolors.co) to generate a colour palette.
+Bookworms' colour scheme is designed to be crisp, clean and sophisticated.  The colour palette is primarily black and white to optimise colour contrast.  
+
+I used [Coolors](https://coolors.co) to generate a complimentary colour palette.
+
 
 ![colour palette!](). 
-
-These colours were chosen based on a possible homepage image I used during early development of a personal organiser which employed a colour palette which was cool and calming.
-
-![personal organiser!]()
 
 
 ### Typography
 
 I chose Montserrat font from Google Fonts for my website.
 
+![Montserrat font]()
+
 
 ### Wireframes
 
 I created my wireframes using Balsamiq to create the early UX Design Wireframe images.
 
+#### Homepage
+
+
 #### Registration/Authentication
+
+
+#### My Account
+
+
+#### Shopping Cart
+
+
+#### Checkout
+
+
+#### Products
+
+
+#### Product Detail
 
 
 
@@ -142,7 +179,11 @@ I created my wireframes using Balsamiq to create the early UX Design Wireframe i
 
 
 
-#### User Messages Wireframes
+#### User Feedback Messages
+
+
+
+#### Email Confirmation
 
 
 
@@ -206,11 +247,15 @@ The bespoke footer contains a line of text "Made by Monica Murray for CI P4" wit
 
 ### Accessibility
 
-Throughout this project I have endeavoured to implement good accessibility practices, but in testing at the end of the project I acknowledge that I score poorly in this regard.  Using the tips provided in Lighthouse and [Wave](https://wave.webaim.org/) I have marginally improved their scores and learned more about developing an accessible site.
 
-Some examples include:
+Throughout this project I have endeavoured to implement good accessibility practices.  
 
-I have used [fontawesome](https://fontawesome.com/search?q=checkbox&o=r&m=free) icons in my application and to each icon I have added aria-labels to enable screen readers to understand them.  I have endeavored to ensure the application meets the minimum contrast requirements between background and text colours.  I have chosen font sizes and type that are dyslexia/accessible friendly, for example there are no buttons or text that are in all capitals.
+- Semantic HTML is used throughout
+- descriptive alt text attributes are used on all site images
+- I have used [fontawesome](https://fontawesome.com/search?q=checkbox&o=r&m=free) icons in my application and to each icon I have added aria-labels to enable screen readers to understand them
+
+I tested each site page on Lighthouse and [Wave](https://wave.webaim.org/) and improved my score further by implementing the following upgrades ...
+
 
 [The A11y Collective](https://www.a11y-collective.com/) is a useful site at which I saw why I was scoring poorly in relation to links on my application.
 
@@ -256,6 +301,12 @@ Languages in this project were:
 
 - Pillow - Imported to enable images to be viewed with the products in the models
 
+- Adobe Photoshop - Used on site images to optimise sizes
+
+
+## Defensive Programming
+
+Defensive Programming was at the forefront of the site's development, with user authentication and authorisation implemented for all site users and limiting access to data to only the authenticated registered owner of that data.  In addition, Store Owner access is further restricted using the 'login_required' decorator with those front-end management views only rendering at the front-end to superusers.
 
 ## Testing<a name="testing"></a>
 
