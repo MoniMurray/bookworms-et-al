@@ -56,13 +56,13 @@ The application is designed and build as the online presence of a physical books
 
 The design encourages users to browse and to make a purchase.
 
-## Stakeholder Goals (Store Owner)
+## Business Owner's Goals
 
 The Store Owner's goal is to have a profitable eCommerce presence of its physical bookshop, which extends its customer base by providing an intuitive, robust and visually appealing website with secure and simple payment system.  The Store Owner wants to manage the product offerings of the eCommerce site securely, and add, edit or delete items via the interactive front-end.
 
-## User's Goals
+## Customer's Goals
 
-To understand the application's purpose, to be able to navigation intuitively around the pages of the website, view all products and be able to purchase one or many products securely.  A user will also want to be able to Register, Login and Logout of the website, view and edit their personal data securely, and view their purchase history.  All user actions are met with feedback via the interactive front end.
+To understand the application's purpose, to be able to navigate intuitively around the pages of the website, view all products and be able to purchase one or many products securely.  A user will also want to be able to Register, Login and Logout of the website, view and edit their personal data securely, and view their purchase history.  All user actions are met with feedback via the interactive front end to confirm the user's chosen action has been performed successfully.
 
 ## Project Goal
 
@@ -152,6 +152,12 @@ I chose Montserrat font from Google Fonts for my website.
 ### Wireframes
 
 I created my wireframes using Balsamiq to create the early UX Design Wireframe images.
+
+### Favicon
+
+A favicon appears in the browser tab with the Website name to enable a user to easily recognise a company's website in a busy browner with many open tabs.  
+
+The favicon for Bookworms is also the website's landing page image.  I chose this image from [freepik.com](www.freepik.com), saved it to my local machine, and used [favicon.io](https://favicon.io/) to download the image and generate the favicon files and the link tags to insert in the Head of my base.html.
 
 #### Homepage
 
@@ -283,7 +289,7 @@ Languages in this project were:
 
 - Google Developer Tools - To troubleshoot and test features, solve issues with responsiveness and styling.
 
-- TinyPNG - To compress the Homepage image
+- TinyPNG - To compress the Homepage image.
 
 - Am I Responsive? To show the website image on a range of devices.
 
@@ -291,22 +297,60 @@ Languages in this project were:
 
 - Fontawesome - Used for icons.
 
+- PostgreSQL database used to build the store product offering.
+
 - Heroku and ElephantSQL - For deployment and Hosting of the project.
 
-- GitHub - Distributed Version Control;
+- GitHub - Distributed Version Control.
 
-- LucidChart - ERD Design and layout software
+- GitHub Projects - Used to support the Agile development of the website.
 
-- Favicon.io - Used to create the website favicon
+- LucidChart - ERD Design and layout software.
 
-- Pillow - Imported to enable images to be viewed with the products in the models
+- Favicon.io - Used to create the website favicon.
 
-- Adobe Photoshop - Used on site images to optimise sizes
+- Pillow - Imported to enable images to be viewed with the products in the models.
+
+- Adobe Photoshop - Used on site images to optimise sizes.
+
+- JQuery code library.
+
+- Stripe payments system.
+
+- Amazon Web Services (AWS) used to store the images for the website.
+
+
 
 
 ## Defensive Programming
 
 Defensive Programming was at the forefront of the site's development, with user authentication and authorisation implemented for all site users and limiting access to data to only the authenticated registered owner of that data.  In addition, Store Owner access is further restricted using the 'login_required' decorator with those front-end management views only rendering at the front-end to superusers.
+
+## Marketing
+
+### Document eCommerce Business model underlying the app
+
+
+### Document the purpose of the App
+
+
+### B2C Focused
+
+
+### Core Business Intents
+
+
+### Marketing Strategies for app
+
+
+### SEO
+
+www.xml-sitemaps.com
+
+
+## Privacy Policy
+
+Generate on https://policymaker.io
 
 ## Testing<a name="testing"></a>
 
@@ -314,6 +358,18 @@ Testing is documented in TESTING.md file [here](TESTING.md)
 
 
 ## Deployment<a name="deployment"></a>
+
+- List all Prerequisites, installs, IDE etc
+
+- Detail Forking, Cloning and Local Deployment of the repo
+
+- Detail all Heroku app creation steps
+
+- Detail the process, step by step, for connecting with AWS S3 Bucket creation
+
+- Detail how to connect to Stripe
+
+- Add an explanation of what env variables are, where to get them ie Django Secret Key is a 16-random-character key
 
 The site is deployed using Heroku - [eCommerce Project 5]()
 
