@@ -89,6 +89,11 @@ body {
     z-index: -1;
 }
 
+.card-img-top {
+    height: 300px;
+    width: auto;
+}
+
 /* To make category links colour change when hovered over */
 a.category-badge>span.badge:hover {
     background: #212529 !important;
