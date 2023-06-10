@@ -80,6 +80,8 @@ TEMPLATES = [
                 'django.template.context_processors.request', #required by allauth, do not remove
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # make the context processor available accross the entire application
+                'bag.contexts.bag_contents',
             ],
         },
     },
@@ -168,3 +170,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Calculate delivery costs
+FREE_DELIVERY_THRESHOLD = 50
+STANDARD_DELIVERY_PERCENTAGE = 10
