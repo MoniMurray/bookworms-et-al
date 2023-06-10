@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # apps
     'home',
     'products',
+    'bag',
 
 ]
 
