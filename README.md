@@ -151,7 +151,7 @@ I chose Montserrat font from Google Fonts for my website.
 
 ### Wireframes
 
-I created my wireframes using Balsamiq to create the early UX Design Wireframe images.
+I created my wireframes using [Figma.com](www.figma.com) to create the early UX Design Wireframe images.
 
 ### Favicon
 
@@ -281,7 +281,7 @@ Languages in this project were:
 
 ### Frameworks, Libraries & Programs Used
 
-- Balsamiq Version: 4.5.5 - Editor Version: 5.3.1 - Used to create wireframes.
+- Figma.com - Used to create wireframes.
 
 - GitPod - The Cloud development environment used to develop the site.
 
