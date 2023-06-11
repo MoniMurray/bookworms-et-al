@@ -141,7 +141,23 @@
 
     <!-- using django default messages framework and default message codes 40-E, 30-W, 25-S so add the toasts from BA here-->
    
-
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {%  with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
     <!-- to act as an additional header in extended templates where we 
         need to put something at the top of the page but underneath 
         the Main header -->
