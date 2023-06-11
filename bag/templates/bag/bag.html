@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -37,21 +38,31 @@
 
                             {% for item in bag_items %}
                                 <tr>
+                                    <!-- product image -->
                                     <td class="p-3 w-25">
                                         <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                     </td>
+
+                                    <!-- product name -->
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                         
                                     </td>
+
+                                    <!-- product item price -->
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
+
+                                    <!-- quantity -->
                                     <td class="py-3 w-25">
                                         {% include "bag/quantity_form.html" %}
                                     </td>
-                                    <td class="py-3">
-                                        <p class="my-0">${{ item.product.price }}</p>
+
+                                    <!-- Shopping bag sub-total -->
+                                    <td class="py-3 w-25">
+                                        <p class="my-0">
+                                            €{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
