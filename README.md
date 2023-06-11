@@ -309,7 +309,9 @@ Languages in this project were:
 
 - Favicon.io - Used to create the website favicon.
 
-- Pillow - Imported to enable images to be viewed with the products in the models.
+- Pillow - Installed to enable images to be viewed with the products in the models.
+
+- Django Countries - Installed to use a drop-down list of Countries to choose from.
 
 - Adobe Photoshop - Used on site images to optimise sizes.
 
