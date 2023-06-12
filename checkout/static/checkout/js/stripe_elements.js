@@ -78,6 +78,7 @@ var style = {
             'save_info': saveInfo,
         };        
         var url = '/checkout/cache_checkout_data/';
+        console.log(`Value of state parameter: ${form.county_or_state.value}`);
         $.post(url, postData).done(function () {
         // use the stripe confirmcardpayment() method to send the card info securely to Stripe
             stripe.confirmCardPayment(clientSecret, {
@@ -103,7 +104,7 @@ var style = {
                             line1: $.trim(form.address_line1.value),
                             line2: $.trim(form.address_line2.value),
                             city: $.trim(form.town_or_city.value),
-                            postcode: $.trim(form.post_code.value),
+                            postal_code: $.trim(form.post_code.value),
                             country: $.trim(form.country.value),
                             state: $.trim(form.county_or_state.value),
                         }

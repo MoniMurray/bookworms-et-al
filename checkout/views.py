@@ -63,7 +63,7 @@ def checkout(request):
             'address_line2': request.POST['address_line2'],
             'county_or_state': request.POST['county_or_state'],
         }
-        order_form = Orderform(form_data)
+        order_form = OrderForm(form_data)
 
         # if the form is valid, we'll save the order, and then iterate 
         # through the bag items to create each line item(similar to 
