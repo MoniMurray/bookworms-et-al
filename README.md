@@ -460,6 +460,13 @@ To do this, you should:
 - Type 'git clone' and paste the HTTPS link you copied from GitHub
 - Press enter, the Forked repository will now clone to your preferred development method on your local machine.
 
+## How Stripe Works - what's going on in the background
+
+- When a website user launches the Checkout page from the Shopping Cart, the checkout/view.py will call out to Stripe and create a "Payment Intent" for the current amount in the Shopping Cart.
+
+- When Stripe creates this payment intent, it will also have a secret that identifies it and when it is returned to the website, we send it to the template as the "client_secret" variable.
+
+- Then, in the javascript, on the client side (our website) we call the confirmCartPayment method from Stripe javascript using hte client_secret which will verify our user's credit card number.
 
 ## Credits<a name="credits"></a>
 
