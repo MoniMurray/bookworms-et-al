@@ -92,7 +92,7 @@ var style = {
                             line2: $.trim(form.address_line2.value),
                             city: $.trim(form.town_or_city.value),
                             country: $.trim(form.country.value),
-                            county: $.trim(form.county_or_state.value),
+                            state: $.trim(form.county_or_state.value),
                         }
                     }
                 },
@@ -105,7 +105,7 @@ var style = {
                             city: $.trim(form.town_or_city.value),
                             postcode: $.trim(form.post_code.value),
                             country: $.trim(form.country.value),
-                            county: $.trim(form.county_or_state.value),
+                            state: $.trim(form.county_or_state.value),
                         }
                 },
             }).then(function(result) {

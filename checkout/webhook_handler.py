@@ -110,7 +110,7 @@ class StripeWH_Handler:
                 profile.default_town_or_city = shipping_details.address.city
                 profile.default_address_line1 = shipping_details.address_line1
                 profile.default_address_line2 = shipping_details.address.line2
-                profile.default_county_or_state = shipping_details.address.county
+                profile.default_county_or_state = shipping_details.address.state
                 profile.save()
 
 
@@ -127,7 +127,7 @@ class StripeWH_Handler:
                     town_or_city__iexact=shipping_details.address.city,
                     address_line1__iexact=shipping_details.address.line1,
                     address_line2__iexact=shipping_details.address.line2,
-                    county_or_state__iexact=shipping_details.address.county,
+                    county_or_state__iexact=shipping_details.address.state,
                     grand_total=grand_total,
                     original_bag=bag,
                     stripe_pid=pid,
@@ -155,7 +155,9 @@ class StripeWH_Handler:
                     town_or_city=shipping_details.address.city,
                     address_line1=shipping_details.address.line1,
                     address_line2=shipping_details.address.line2,
-                    county_or_state=shipping_details.address.county,
+                    county_or_state=shipping_details.address.state,
+
+    
                     original_bag=bag,
                     stripe_pid=pid,
                 )
