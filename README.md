@@ -468,6 +468,10 @@ To do this, you should:
 
 - Then, in the javascript, on the client side (our website) we call the confirmCartPayment method from Stripe javascript using hte client_secret which will verify our user's credit card number.
 
+### Stripe Webhook
+
+- A webhook from Stripe tells your application whether your customer's payment went through or not.
+
 ## Credits<a name="credits"></a>
 
 For my Project I followed the advice given in the [CI Guide to MVP video for Project 5](https://youtu.be/i7clFOYiwS0) to use the Boutique Ado Walkthrough Project code as a boilerplate to get started and save precious time, and I then customised as much as I could.  So full credit to Boutique Ado walkthrough which I have used extensively throughout this eCommerce project. 
