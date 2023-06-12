@@ -1,0 +1,229 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bag_tools %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+
+<!-- create a loading overlay containing a giant spinner to indicate
+payment is being processed -->
+
+<div id="loading-overlay">
+    <h1 class="text-light logo-font loading-spinner">
+        <span class="icon">
+            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+        </span>
+    </h1>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container ">
+    <!-- Row 1 of two in this container - Row 1 Contains Checkout Heading -->
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Checkout</h2>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Row 2 contains the Orderform and Order Summary -->
+    
+            <!-- Order summary here -->
+            <div class="row">
+                <div class="col-12 col-lg-6 order-lg-last mb-5">
+                    <p class="text-muted">Order Summary ({{ product_count }})</p>
+                    <!-- 3 main row components, Header, Brief items description, Cost Summary -->
+                    <div class="row">
+                        
+                        <!-- Order summary header -->
+                        <div class="col-7 offset-2">
+                            
+                            <p class="mb-1 mt-0 small text-muted">Item</p>
+                        </div>
+                        <div class="col-3 text-right">
+                            <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                        </div>
+                    </div>
+
+                    <!-- Loop through items in bag to give brief description -->
+                    {% for item in bag_items %}
+                        <div class="row">
+                            <!-- product image -->
+                            <div class="col-2 mb-1">
+                                <a href="{% url 'product_detail' item.product.id %}">
+                                    {% if item.product.image %}
+                                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                    {% else %}
+                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    {% endif %}
+                                </a>
+                            </div>
+
+                            <!-- product name and quantity -->
+                            <div class="col-7">
+                                <p class="my-0"><strong>{{ item.product.name}}</strong></p>
+                                <p class="my-0 small text-muted">Qty: {{item.quantity}}</p>
+                            </div>
+
+                            <!-- product subtotal -->
+
+                            <div class="col-3 text-right">
+                                <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <hr class="my-0">
+
+                    <!-- A summary row containing the totals and delivery cost for this order -->
+                    <div class="row text-black text-right">
+                        <div class="col-7 offset-2">
+                            <p class="my-0">Order Total: </p>
+                            <p class="my-0">Delivery: </p>
+                            <p class="my-0">Grand Total: </p>
+                        </div>
+                        <div class="col-3">
+                            <p class="my-0">${{ total | floatformat:2 }}</p>
+                            <p class="my-0">${{ delivery | floatformat:2 }}</p>
+                            <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                        </div>
+                    </div>
+
+                </div>
+            
+                
+            
+            <hr class="my-0">
+            <!-- Orderform -->
+            <div class="col-12 col-lg-6">
+                    <p class="text-muted">Please fill out the form below to complete your order</p>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+
+                    <!-- render the form fields individually and divide them into 
+                    3 fieldsets, Details, Delivery and Payment Information -->
+
+                    <!-- Fieldset 1 - Details - Name and Email -->
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+
+                    </fieldset>
+
+                    <!-- Fieldset 2 - Delivery - Remaining Form Fields -->
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                        {{ order_form.post_code | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.address_line1 | as_crispy_field }}
+                        {{ order_form.address_line2 | as_crispy_field }}
+                        {{ order_form.county_or_state | as_crispy_field }}
+
+                        <!-- include an inline checkbox for allowing authenticated users
+                        save the info in their Order form to their profile.  
+                        If this is checked the users profile will autofill 
+                        with this information and will also reverse autofill future
+                        order forms next time the user checks out!-->
+                            <div class="form-check form-check-inline float-right mr-0">
+                                {% if user.is_authenticated %}
+                                    <label class="form-check-label" for="id-save-info">
+                                        Save this delivery information to My Account
+                                    </label>
+                                    <input class="form-check-input ml-2 mr-0" type="checkbox"
+                                    id="id-save-info" name="save-info" checked>
+                                {% else %}
+                                    <label class="form-check-label" for="id-save-info">
+                                        <a class="text-info" href="{% url 'account_signup' %}">
+                                            Create an account
+                                        </a> or 
+                                        <a class="text-info" href="{% url 'account_login' %}">login</a>
+                                        to save this information
+                                    </label>
+                                    
+                                {% endif %}
+                            </div>
+                    </fieldset>
+
+                    <!-- Fieldset 3 - User Payment Details -->
+                    <!-- No form fields for this because we will use Stripe -->
+                    <fieldset class="px-3">
+                        <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                        
+                        <!-- Two divs in this fieldset: 1 for Credit Card Payment; 2 for Card Errors -->
+
+                        <!-- Credit Card Payment -->
+                        <div class="mb-3" id="card-element">
+
+                        </div>
+
+                        <!-- Card Errors -->
+                        <div class="mb-3 text-danger" id="card-errors" role="alert">
+
+                        </div>
+
+                        <!-- pass the client secret to the view so we can get the payment intent id -->
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+
+                    </fieldset>
+
+                    <!-- Submit Button -->
+                    <div class="submit-button text-right mt-5 mb-2">
+                        <!-- Link back to Shopping bag to enable user to adjust their order -->
+                        <a class="btn btn-outline-black rounded-0" href="{% url 'view_bag' %}">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="font-weight-bold">Adjust Bag</span>
+                        </a>
+
+                        <!-- Submit button to be accessed with Javascript to submit the Order form -->
+                        <button id="submit-button" class="btn btn-black rounded-0">
+                            <span class="font-weight-bold">Complete Order</span>
+                            <span class="icon">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </button>
+
+                        <!-- Alert to user that credit card will be charged if they proceed -->
+                        <p class="small text-danger my-0">
+                            <span class="icon">
+                                <i class="fas fa-exlamation-circle"></i>
+                            </span>
+                            <span>Your card will be charged <strong>${{ grand_total | floatformat:2 }}</strong></span>
+                        </p>
+                    </div>
+                </form>
+                </div>
+
+            </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+
+    {{ block.super }}
+    {{ stripe_public_key | json_script:"id_stripe_public_key" }}
+    {{ client_secret | json_script:"id_client_secret" }}
+
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}
