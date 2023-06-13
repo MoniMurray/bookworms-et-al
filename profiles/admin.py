@@ -11,8 +11,7 @@ class ProfileAdmin(admin.ModelAdmin):
         'pk',
         'user',
         'bio',
-        'image',
-        
+        'image' 
     )
 
 
