@@ -4,7 +4,7 @@ from django_countries.fields import CountryField
 from django.db.models import Sum
 from django.conf import settings
 from products.models import Product
-from profiles.models import UserProfile
+from profiles.models import Profile
 
 
 # Create your models here.
@@ -34,7 +34,7 @@ class Order(models.Model):
     stripe_pid = models.CharField(max_length=254, null=False, blank=False,
                                   default='')
     user_profile = models.ForeignKey(
-        UserProfile, on_delete=models.SET_NULL, null=True,
+        Profile, on_delete=models.SET_NULL, null=True,
         blank=True, related_name='orders')
 
     def _generate_order_number(self):

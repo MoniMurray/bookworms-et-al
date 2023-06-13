@@ -6,8 +6,9 @@ from django.dispatch import receiver
 from django_resized import ResizedImageField
 
 
+
 # Create your models here.
-class UserProfile(models.Model):
+class Profile(models.Model):
     """ 
     A User profile model for maintaining default delivery 
     information and order history 
@@ -20,7 +21,7 @@ class UserProfile(models.Model):
         force_format='WEBP',
         blank=False
         )
-    bio = RichTextField(max_length=2500, null=True, blank=True)
+    bio = models.SlugField(max_length=2500, null=True, blank=True)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country *', null=True, blank=True)
     default_post_code = models.CharField(max_length=20, null=True, blank=True)
@@ -42,7 +43,7 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
 
     if created:
-        UserProfile.objects.create(user=instance)
+        Profile.objects.create(user=instance)
     
     # or update an existing profile
-    instance.userprofile.save()
+    instance.profile.save()

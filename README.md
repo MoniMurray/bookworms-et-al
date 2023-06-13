@@ -321,6 +321,8 @@ Languages in this project were:
 
 - Amazon Web Services (AWS) used to store the images for the website.
 
+- SummerNote - Used to create a Rich Text Field for the user's biography.
+
 
 
 
@@ -477,7 +479,9 @@ To do this, you should:
 For my Project I followed the advice given in the [CI Guide to MVP video for Project 5](https://youtu.be/i7clFOYiwS0) to use the Boutique Ado Walkthrough Project code as a boilerplate to get started and save precious time, and I then customised as much as I could.  So full credit to Boutique Ado walkthrough which I have used extensively throughout this eCommerce project. 
  I also used the knowledge I learned from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
 
-I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me. 
+I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me. I found the video on creating a [User Profile](https://www.youtube.com/watch?v=dGnRsNH81Ik&list=PLXuTq6OsqZjYSa-lrjd5wMGl23zpnhvln&index=2) particularly useful in creating my own Profile app in this project.
+
+I had used [SummerNote](https://djangocentral.com/integrating-summernote-in-django/) in [my fourth project](https://github.com/MoniMurray/shopping-list) and used it again in this Bookworms project.
 
 Favicon  - the image I chose, which states it requires crediting or I’ll be charged, comes from [Freepik.com]](Www.freepik.com).  The Image is by <a href="https://www.freepik.com/free-photo/creative-composition-with-books-flower_12407755.htm#query=book&position=21&from_view=keyword&track=sph">Freepik</a>
 
