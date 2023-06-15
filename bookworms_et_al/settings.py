@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-monimurray-bookwormseta-77y7350h04a.ws-eu99.gitpod.io'
+    '8000-monimurray-bookwormseta-77y7350h04a.ws-eu100.gitpod.io'
 ]
 
 
