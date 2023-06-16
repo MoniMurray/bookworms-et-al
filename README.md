@@ -332,6 +332,45 @@ Defensive Programming was at the forefront of the site's development, with user 
 
 ## Marketing
 
+- In the planning of my eCommerce application, I asked myself the following three questions:
+
+1. Which eCommerce application types apply to this online business.
+
+- This is a Business to Customer eCommerce application type, selling physical products online.
+
+2. With the eCommerce application type in mind, what kind of features might be included within the business website?
+	
+	- Easy Payment Gateway
+	- Authentication System
+	- Search + Filter functionality
+	- High Quality images
+    - Clear Product Descriptions
+    - Ratings or Reviews
+    - Shopping Cart, Checkout and Payment System
+
+3. What tables of data would your database need, and what data might be included in these tables?
+
+| User (allauth) | Profile           | Products      | Category | Author  | Checkout: Order          | Checkout: OrderLineItem | Club          |
+| -------------- | ----------------- | ------------- | -------- | ------- | ------------------------ | ----------------------- | ------------- |
+| ID (pk)        | id (pk)           | id (pk)       | id (pk)  | id (pk) | order_number (pk)        | id                      | id            |
+| username       | username ('User') | rating        | name     | name    | user_profile ('Profile') | order ('Order')         | user ('User') |
+| password       | image             | name          |          |         | full_name                | product ('Product')     | subscribe     |
+| email          | bio               | category_name |          |         | email                    | quantity                | emal ('User') |
+| is_superuser   | phonenumber       | description   |          |         | phone_number             | lineitem_total          |               |
+|                | email             | price         |          |         | country                  |                         |               |
+|                | country           | author        |          |         | town                     |                         |               |
+|                | address line1     | type          |          |         | address line1            |                         |               |
+|                | address line2     | image_url     |          |         | address line2            |                         |               |
+|                | town              | image_url     |          |         | county                   |                         |               |
+|                | postcode          |               |          |         | order_date               |                         |               |
+|                | county            |               |          |         | delivery_cost            |                         |               |
+|                |                   |               |          |         | order_total              |                         |               |
+|                |                   |               |          |         | grand_total              |                         |               |
+|                |                   |               |          |         | original_bag             |                         |               |
+|                |                   |               |          |         | stripe_pid               |                         |               |
+|                |                   |               |          |         |                          |                         |
+
+
 ### Document eCommerce Business model underlying the app
 
 
