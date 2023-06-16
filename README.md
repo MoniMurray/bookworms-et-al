@@ -36,11 +36,13 @@
 
 ## Project Overview
 
-Bookworms et al is a ficticious bookshop, built using Django, Python, Javascript and Bootstrap 4.
+Bookworms et al is a ficticious eCommerce bookshop, built using Django, Python, Javascript and Bootstrap 4.
 
 Bookworms is a Business to Customer online retailer selling books.
 
 Developed by Monica Murray
+
+
 
 An image of the finished site generated from [Amiresponsive]() which displays the application at four screen size breakpoints.
 
@@ -52,27 +54,28 @@ Please visit the live site via [this link]().
 
 ## Purpose
 
-The application is designed and build as the online presence of a physical bookshop, with the purpose of creating an online presence for the store to extend its customer reach. 
+The Bookworms et al application is designed and build as a fictitious online presence of a physical bookshop, with the purpose of creating an online presence for the store to extend its customer reach. 
 
 The design encourages users to browse and to make a purchase.
 
 ## Business Owner's Goals
 
-The Store Owner's goal is to have a profitable eCommerce presence of its physical bookshop, which extends its customer base by providing an intuitive, robust and visually appealing website with secure and simple payment system.  The Store Owner wants to manage the product offerings of the eCommerce site securely, and add, edit or delete items via the interactive front-end.
+The business owner's goal is to have a profitable eCommerce presence of its physical bookshop, which extends its customer base by providing an intuitive, robust and visually appealing website with secure and simple payment system.  The Store Owner wants to manage the product offerings of the eCommerce site securely, and add, edit or delete items via a secure interactive front-end.
 
 ## Customer's Goals
 
-To understand the application's purpose, to be able to navigate intuitively around the pages of the website, view all products and be able to purchase one or many products securely.  A user will also want to be able to Register, Login and Logout of the website, view and edit their personal data securely, and view their purchase history.  All user actions are met with feedback via the interactive front end to confirm the user's chosen action has been performed successfully.
+A customer of Bookworms et al wants to buy books.  They will understand the application's purpose when first arriving to the site, be able to navigate intuitively around the pages of the website, view all products, see any product in detail, and be able to purchase one or many books securely.  A customer of this website will also want to be able to Register to create a user profile, Login and Logout of their account on website, view and edit their personal data securely, and view their purchase history.  All customer actions are met with feedback via the interactive front end to confirm their chosen action has been performed successfully or has been unsuccessful.
 
 ## Project Goal
 
-Bookworms is my fifth and final Portfolio Project for Code Institute's Diploma in Full Stack Software Development (Ecommerce Applications).
+Bookworms is my fifth and final Portfolio Project for Code Institute's Diploma in Full Stack Software Development (Ecommerce Applications) and is a Full Stack site based on business logic used to control a centrall-owned dataset.  
+
+Bookworms et al contains an authentication mechanism and provides for the online, secure payment for products which are available and stored via the site's relational database.
 
 ## Business Model
 
 Bookworms is a Business to Consumer (B2C) direct seller of books.
 
-- 
 
 
 # CONTENTS
@@ -348,7 +351,7 @@ Defensive Programming was at the forefront of the site's development, with user 
     - Ratings or Reviews
     - Shopping Cart, Checkout and Payment System
 
-3. What tables of data would your database need, and what data might be included in these tables?
+3. What entities would your database need, and what data might be included in these entities?
 
 | User (allauth) | Profile           | Products      | Category | Author  | Checkout: Order          | Checkout: OrderLineItem | Club          |
 | -------------- | ----------------- | ------------- | -------- | ------- | ------------------------ | ----------------------- | ------------- |
@@ -369,6 +372,8 @@ Defensive Programming was at the forefront of the site's development, with user 
 |                |                   |               |          |         | original_bag             |                         |               |
 |                |                   |               |          |         | stripe_pid               |                         |               |
 |                |                   |               |          |         |                          |                         |
+
+- Plan the cardinality of the entities, asking what is the minimum or maximum number of attributes each entity can have with another entity, and establish any relationships between the entities clearly.
 
 
 ### Document eCommerce Business model underlying the app
