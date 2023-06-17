@@ -1,6 +1,7 @@
 from django.http import HttpResponse 
 from .models import Order, OrderLineItem
 from products.models import Product
+from profiles.models import Profile
 
 
 # to send an email the following need to be imported
@@ -99,7 +100,7 @@ class StripeWH_Handler:
         # similar to request.user, if the user is not anonymous user we know they were registered
         if username != 'AnonymousUser':
             # so we get their profile using the filter of username
-            profile = UserProfile.objects.get(user__username=username)
+            profile = Profile.objects.get(user__username=username)
 
             # if they have the save_info checked, 
             # add their shipping details as their default delivery info and save profile

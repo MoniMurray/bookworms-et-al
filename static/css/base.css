@@ -10,6 +10,7 @@ body {
     height: calc(100vh - 164px);
     color: #00205b;
     font-family: 'Montserrat';
+    
 }
 
 /* from Bulma to perfectly center the Font awesome icons */     

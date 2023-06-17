@@ -1,12 +1,17 @@
-.order-history {
-    /* 416px is the combined height of the form plus the submit button
+/* 590px is the combined height of the form plus the submit button
     in the adjacent column - beyond this the table will scroll */
-    max-height: 416px; 
+.order-history {
+    overflow-y: auto;
+}
+
+#profile-update-form {
+    max-height: 590px;
     overflow-y: auto;
 }
 
 #profile-update-form .form-control {
     color: #000;
+    
 }
 
 #profile-update-form input::placeholder {

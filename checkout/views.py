@@ -6,6 +6,8 @@ from .forms import OrderForm
 from bag.contexts import bag_contents
 from products.models import Product 
 from .models import Order, OrderLineItem
+from profiles.forms import ProfileForm
+from profiles.models import Profile
 
 import stripe
 
@@ -114,7 +116,26 @@ def checkout(request):
             amount = stripe_total,
             currency = settings.STRIPE_CURRENCY,
         )
-
+        if request.user.is_authenticated:
+            # if yes, get their profile and use the 'initial' parameter
+            # on the order form to prefill its fiels with the relevant info
+            try:
+                profile = Profile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'post_code': profile.default_post_code,
+                    'town_or_city': profile.default_town_or_city,
+                    'address_line1': profile.default_address_line1,
+                    'address_line2': profile.default_address_line2,
+                    'county_or_state': profile.default_county_or_state,
+                })
+            except Profile.DoesNotExist:
+                order_form = OrderForm()
+        else:     
+            order_form = OrderForm()
     
 
     order_form = OrderForm()
@@ -134,22 +155,66 @@ def checkout(request):
     return render(request, template, context)
 
 
+# def checkout_success(request, order_number):
+#     """
+#     Handle successful checkouts
+#     """
+#     save_info = request.session.get('save_info')
+#     order = get_object_or_404(Order, order_number=order_number)
+#     messages.success(request, f'Order successfully processed! \
+#         Your order number is {order_number}. A confirmation \
+#         email will be sent to {order.email}.')
+
+#     if 'bag' in request.session:
+#         del request.session['bag']
+
+#     template = 'checkout/checkout_success.html'
+#     context = {
+#         'order': order,
+#     }
+
+#     return render(request, template, context)
+
 def checkout_success(request, order_number):
-    """
-    Handle successful checkouts
-    """
+    """ Handle successful checkouts """
+
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
 
+    # to associate an order with a user's profile, add the user profile to the view
+    if request.user.is_authenticated:
+        profile = Profile.objects.get(user=request.user)
+        # attach the user's profile to their order
+        order.user_profile = profile
+        order.save()
+
+        # use the data in the save_info checkbox
+        if save_info:
+            profile_data = {
+                'default_full_name': order.full_name,
+                'default_email': order.email,
+                'default_phone_number': order.phone_number,
+                'default_country': order.country,
+                'default_post_code': order.post_code,
+                'default_town_or_city': order.town_or_city,
+                'default_address_line1': order.address_line1,
+                'default_address_line2': order.address_line2,
+                'default_county_or_state': order.county_or_state,
+            }
+            user_profile_form = ProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
+
+    messages.success(request, f'Order successfully processed!\
+        Your order number is {order_number}.  A confirmation \
+        email will be sent to {order.email}.')
+    
     if 'bag' in request.session:
         del request.session['bag']
-
+    
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
     }
-
+    
     return render(request, template, context)
