@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">S
 {% endblock%}
 
 {% block page_header %}
@@ -27,7 +27,7 @@
             <hr>
             <h2 class="logo-font mb-4">My Account</h2>
             <hr>
-            <p class="text-muted">Welcome back, {{ profile.username }}!</p>
+            <p class="text-muted">Welcome back, {{ profile.user_username }}!</p>
         </div>
     </div>
 
@@ -99,7 +99,7 @@
                             <!-- Order Total -->
                             <td> {{ order.grand_total}}</td>
                         </tr>
-                        <hr>
+                       
                         {% endfor %}
                     </tbody>
                 </table>
@@ -113,5 +113,5 @@
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript" src="{% static 'profile/js/countryfield.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/countryfield.js' %}"></script>
 {% endblock %}

@@ -40,7 +40,7 @@ var style = {
     // Handle realtime validation errors on the card element on Checkout page
 
     // add a listener to the card element for the change event, every time it changes, check for errors
-    card.addEventListener('change', function (event){
+    card.addEventListener('change', function (event) {
         var errorDiv = document.getElementById('card-errors');
         // if there are errors display them in the card errors div on checkout page
         if (event.error) {

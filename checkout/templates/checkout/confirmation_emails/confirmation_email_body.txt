@@ -1,0 +1,23 @@
+Hello {{ order.full_name }}, 
+
+This is a confirmation of your order at Bookworms.
+
+Your order information is below: 
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: €{{ order.order_total}}
+Delivery: €{% if order.country == 'Ireland' %}0{% else %} {{ order.delivery_cost }}
+Grand Total: €{{ order.grand_total }}
+
+Your order will be shipped to {{ order.address_line1}} in {{ order.town_or_city }}, {{ order.country }}.
+
+We have your phone number on file, {{ order.phone_number }}, if we need to contact you.
+
+If you have any questions or need to change anything, please feel free to contact us at {{ contact_email }}.
+
+Thank you for your order!
+
+Sincerely
+Bookworms et al

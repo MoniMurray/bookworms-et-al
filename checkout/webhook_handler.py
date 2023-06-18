@@ -23,6 +23,7 @@ class StripeWH_Handler:
         time an instance of the class is created"""
 
         self.request = request
+        
 
     def _send_confirmation_email(self, order):
         """
@@ -50,6 +51,7 @@ class StripeWH_Handler:
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
         )
+        
 
 
     def handle_event(self, event):
@@ -57,8 +59,8 @@ class StripeWH_Handler:
 
         return HttpResponse(
             content=f'Unhandled Webhook received: {event["type"]}',
-            status=200
-        )
+            status=200)
+        
     
     def handle_payment_intent_succeeded(self, event):
         """
@@ -76,10 +78,6 @@ class StripeWH_Handler:
         stripe_charge = stripe.Charge.retrieve(
                 intent.latest_charge
                 )
-
-        # billing_details = intent.charges.data[0].billing_details
-        # shipping_details = intent.shipping
-        # grand_total = round(intent.charges.data[0].amount / 100, 2)
 
         billing_details = stripe_charge.billing_details # updated
         shipping_details = intent.shipping
@@ -107,9 +105,9 @@ class StripeWH_Handler:
             if save_info:
                 profile.default_phone_number = shipping_details.phone
                 profile.default_country = shipping_details.address.country
-                profile.default_post_code = shipping_details.address.postcode
+                profile.default_post_code = shipping_details.address.postal_code
                 profile.default_town_or_city = shipping_details.address.city
-                profile.default_address_line1 = shipping_details.address_line1
+                profile.default_address_line1 = shipping_details.address.line1
                 profile.default_address_line2 = shipping_details.address.line2
                 profile.default_county_or_state = shipping_details.address.state
                 profile.save()
@@ -124,7 +122,7 @@ class StripeWH_Handler:
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
-                    post_code__iexact=shipping_details.address.postcode,
+                    post_code__iexact=shipping_details.address.postal_code,
                     town_or_city__iexact=shipping_details.address.city,
                     address_line1__iexact=shipping_details.address.line1,
                     address_line2__iexact=shipping_details.address.line2,
@@ -152,7 +150,7 @@ class StripeWH_Handler:
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     country=shipping_details.address.country,
-                    post_code=shipping_details.address.postcode,
+                    post_code=shipping_details.address.postal_code,
                     town_or_city=shipping_details.address.city,
                     address_line1=shipping_details.address.line1,
                     address_line2=shipping_details.address.line2,
@@ -181,11 +179,12 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
+        
 
     def handle_payment_intent_payment_failed(self, event):
         """
         Handle the payment_intent.payment_failed webhook from Stripe
         """
         return HttpResponse(
-            content=f'Webhook received: {event["type"]}',
-            status=200)
+            content=f'Webhook received: {event["type"]}', status=200)
+        
