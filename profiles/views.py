@@ -3,6 +3,7 @@ from .models import Profile
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm
 from django.contrib import messages
+from checkout.models import Order
 
 
 # Create your views here.
