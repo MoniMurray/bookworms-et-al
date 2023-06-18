@@ -118,7 +118,7 @@ def checkout(request):
         )
         if request.user.is_authenticated:
             # if yes, get their profile and use the 'initial' parameter
-            # on the order form to prefill its fiels with the relevant info
+            # on the order form to prefill its fields with the relevant info
             try:
                 profile = Profile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
@@ -138,7 +138,7 @@ def checkout(request):
             order_form = OrderForm()
     
 
-    order_form = OrderForm()
+    # order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(
