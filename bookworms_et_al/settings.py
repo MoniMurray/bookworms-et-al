@@ -45,7 +45,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'mym-bookworms-et-al.herokuapp.com', 'localhost',
-    '8000-monimurray-bookwormseta-77y7350h04a.ws-eu100.gitpod.io'
 ]
 
 
