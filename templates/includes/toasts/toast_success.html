@@ -14,7 +14,11 @@
               <hr class="mt-1 mb-3">
               <!-- under the success message, render the shopping bag 
                 preview but only if not a superuser -->
-            
+              {% if request.user.is_superuser %}
+
+                <div class="d-none"></div>
+
+                {% else %}
                     {% if grand_total and not on_profile_page %}
                         <!-- the preview header is a simple paragraph element shopping the Total of the items in the bag in parenthesis -->
                         <p class="logo-font bg-white text-black py-1">Your Shopping Cart ({{ product_count}})</p>
@@ -59,7 +63,7 @@
                                 </div>
                             </div>
                     {% endif %}
-                
+                {% endif %}
             </div>
         </div>
         
