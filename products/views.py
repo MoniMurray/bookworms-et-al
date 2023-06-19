@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category, Author
+from .forms import ProductForm
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -84,3 +86,85 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+@login_required
+def add_product(request):
+    """
+    Add a Product to the store
+    """
+
+    # restrict this view function to superusers/store owner
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        # instantiate a new instance of the ProductForm from request.POST,
+        # include request.Files to allow for images to be captured
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added a Product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add product. Please check the form is valid.')
+    else:
+        form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+@login_required
+def edit_product(request, product_id):
+    """
+    Edit a Product in the store
+    """
+    # restrict this view function to superusers/store owner
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    # pre-fill the form wiht the product details
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        # instantiate a new instance of the ProductForm from request.POST,
+        # include request.Files to allow for images to be captured, and
+        # tell it the specific instance to update is the 'product' obtained above.
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully edited a Product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(
+                request, 'Failed to update product. Please check the form is valid.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+@login_required
+def delete_product(request, product_id):
+    """
+    Delete a Product from the store
+    """
+    # restrict this view function to superusers/store owner
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    # pre-fill the form with the product details
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, f'{product.name} deleted from the store')
+
+    return redirect(reverse('products'))

@@ -7,24 +7,24 @@
             </a>
         </li>
 
-        <li class="nav-item d-block d-md-none">
+        <!-- <li class="nav-item d-block d-md-none">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=business,investing" id="business-investing">
                Business & Investing
             </a>
-        </li>
+        </li> -->
                <!-- List Books all at once or by category-->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}" id="books-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Books
             </a>
 
-            <!-- <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div> -->
+            </div>
 
 
             <!-- <div class="dropdown-menu border-0" aria-labelledby="books-link">
@@ -38,31 +38,31 @@
             </div> -->
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=business,investing" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=business,investing" id="business-investing"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Business & Investing
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=cookbooks" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=cookbooks" id="cookbooks"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Cookbooks
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=mystery,suspense" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=mystery,suspense" id="mystery-suspense"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mystery & Suspense
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=scifi,fantasy" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=scifi,fantasy" id="scifi-fantasy"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Scifi & Fantasy
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=children" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=children" id="children"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Children
             </a>
