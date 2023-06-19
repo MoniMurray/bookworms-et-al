@@ -19,12 +19,14 @@
                 All Books
             </a>
 
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <!-- <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>
+            </div> -->
+
+
             <!-- <div class="dropdown-menu border-0" aria-labelledby="books-link">
                 <a href="{% url 'products' %}?category=business,investing" class="dropdown-item">Business &amp Investing</a>
                 <a href="{% url 'products' %}?category=cookbooks" class="dropdown-item">Cookbooks</a>
@@ -40,60 +42,30 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Business & Investing
             </a>
-            <!-- <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div> -->
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=cookbooks" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=cookbooks" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Cookbooks
             </a>
-            <!-- <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="#?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="#?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="#?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="#" class="dropdown-item">All Products</a>
-            </div> -->
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=mystery,suspense" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mystery & Suspense
             </a>
-            <!-- <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="#?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="#?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="#?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="#" class="dropdown-item">All Products</a>
-            </div> -->
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=scifi,fantasy" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Scifi & Fantasy
             </a>
-            <!-- <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="#?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="#?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="#?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="#" class="dropdown-item">All Products</a>
-            </div> -->
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?sort=category=children" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Children
             </a>
-            <!-- <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="#?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="#?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="#?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="#" class="dropdown-item">All Products</a>
-            </div> -->
         </li>
       
 
