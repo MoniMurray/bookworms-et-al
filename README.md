@@ -326,6 +326,10 @@ Languages in this project were:
 
 - SummerNote - Used to create a Rich Text Field for the user's biography.
 
+- Boto3 - to connect Django to AWS and enable us store static files.
+ 
+- Django-Storages - Used to connect Django to AWS.
+
 
 
 
@@ -517,6 +521,28 @@ To do this, you should:
 ### Stripe Webhook
 
 - A webhook from Stripe tells your application whether your customer's payment went through or not.
+
+### Connect to Stripe
+
+- 
+- Finally, within 'Developers' click on the 'API keys' tab, copy the publishable and secret keys and add them to Heroku app via configvars keys.  Create a new webhook endpoint with the deployed app's name, enable it to 'Receive all events' and using the new webhook's signing secret key connect it to our Heroku app via a new configvar key.
+
+### Connect to AWS
+
+AWS is a cloud-based storage service which we use to store our media and static files for this project.
+
+- Login, or create an account with aws.amazon.com
+- Select S3
+- Click on 'Create Bucket' to create a new storage bucket
+- Name the new bucket following the same naming convention as used when naming the Heroku app and the ElephantSQL database.  This bucket needs to be public in order to allow public access to the static files.
+- When the bucket is created, use the 'Properties' and 'Permissions' tabs to set the bucket's settings .
+- Create an Identify and Access Management (IAM) User Group into which we create the policy used to access our S3 bucket, and create a User to access the S3 bucket.  This static files user will have access keys which will be used to connect the bucket to our deployed app on Heroku via configvar keys
+- Connect Django to S3 in AWS by installing two packages, Boto and Django Storages, and add settings, via keys, to tell our project which bucket it should be communicating with.  These keys will be added to the ConfigVars in Heroku
+- Tell Django that in production we want to use S3 to store our static files whenever someone runs collectstatic, and that we want any uploaded product images to go there also, all via a class in custom_storage.py
+- Finally, tell the browser to cache static files as they don't change very often, and this instruction will improve site speed and performance for the user.
+- Create a Media folder within the S3 bucket into which we upload all images used in our project, and grant them public-read access.
+
+
 
 ## Credits<a name="credits"></a>
 
