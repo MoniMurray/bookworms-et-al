@@ -28,8 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
+# DEBUG = 'DEVELOPMENT' in os.environ
 # if 'DATABASE_URL' in os.environ:
 #     DATABASES = {
 #         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -45,6 +45,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     'mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com', 'localhost',
+    '8000-monimurray-bookwormseta-77y7350h04a.ws-eu100.gitpod.io',
 ]
 
 
@@ -261,3 +262,4 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
