@@ -43,7 +43,7 @@ class Order(models.Model):
         """
 
         return uuid.uuid4().hex.upper()
-    
+
     def save(self, *args, **kwargs):
         """
         Override the original save method to set the order number
@@ -57,7 +57,7 @@ class Order(models.Model):
     def update_total(self):
         """
         A method to update the total by using the Sum() function
-        accross all line item total fields for all line items on 
+        accross all line item total fields for all line items on
         this order
         """
 
@@ -79,7 +79,7 @@ class OrderLineItem(models.Model):
     relating to a specific order, and referencing the Product itself """
 
     order = models.ForeignKey(
-        Order, null=False, blank=False, on_delete=models.CASCADE, 
+        Order, null=False, blank=False, on_delete=models.CASCADE,
         related_name='lineitems')
     product = models.ForeignKey(
         Product, null=False, blank=False, on_delete=models.CASCADE)
@@ -93,8 +93,6 @@ class OrderLineItem(models.Model):
 
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
-    
+
     def __str__(self):
         return f'{self.product.name} on order {self.order.order_number}'
-
-

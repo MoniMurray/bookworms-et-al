@@ -4,14 +4,14 @@ from .models import Order, OrderLineItem
 
 # Register your models here.
 class OrderLineItemAdminInline(admin.TabularInline):
-    """ 
-    Display the OrderLineItem model fields within the 
+    """
+    Display the OrderLineItem model fields within the
     same page as displaying the Order model fields
     """
 
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
-    
+
 
 class OrderAdmin(admin.ModelAdmin):
     """
@@ -30,7 +30,7 @@ class OrderAdmin(admin.ModelAdmin):
         'stripe_pid',
         'user_profile',
     )
-    
+
     list_display = (
         'order_number',
         'date',

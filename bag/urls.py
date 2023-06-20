@@ -7,4 +7,3 @@ urlpatterns = [
     path('adjust/<item_id>/', views.adjust_bag, name='adjust_bag'),
     path('delete/<item_id>/', views.delete_from_bag, name='delete_from_bag'),
 ]
-

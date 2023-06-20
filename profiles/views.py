@@ -20,7 +20,9 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed.  Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Update failed.  Please ensure the form is valid.')
     else:
         form = ProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -33,6 +35,7 @@ def profile(request):
     }
 
     return render(request, template, context)
+
 
 def order_history(request, order_number):
     """
@@ -48,7 +51,7 @@ def order_history(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
-        # this variable will be used to check in the checkout_success.html 
+        # this variable will be used to check in the checkout_success.html
         # whether the user got to that template via the order history view
         'from_profile': True,
     }

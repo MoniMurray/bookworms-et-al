@@ -14,7 +14,7 @@ class Category(models.Model):
     """
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=254)
 
     def __str__(self):
@@ -40,8 +40,9 @@ class Product(models.Model):
     rating = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
 
+
     def __str__(self):
-        """ 
+        """
         Takes in the Product name
         """
         return self.name
@@ -52,7 +53,7 @@ class Author(models.Model):
     A model to define an author
     """
     name = models.CharField(max_length=254, null=False, blank=False)
-    
+
     def __str__(self):
         """
         Takes in the Author name

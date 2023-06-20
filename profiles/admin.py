@@ -4,6 +4,7 @@ from .models import Profile
 
 # Register your models here.
 
+
 class ProfileAdmin(admin.ModelAdmin):
 
     summernote_fields = ('content',)
@@ -11,7 +12,7 @@ class ProfileAdmin(admin.ModelAdmin):
         'pk',
         'user',
         'bio',
-        'image' 
+        'image'
     )
 
 

@@ -1,12 +1,13 @@
 from django import forms
 from .models import Profile
 
+
 class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
         fields = (
-            'default_address_line1', 
+            'default_address_line1',
             'default_address_line2',
             'default_town_or_city',
             'default_post_code',
@@ -16,7 +17,7 @@ class ProfileForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
 
-        """Add placeholders and classes, remove auto-generated labels, 
+        """Add placeholders and classes, remove auto-generated labels,
         and set autofocus on first field """
 
         super().__init__(*args, **kwargs)

@@ -7,13 +7,16 @@ from checkout.webhook_handler import StripeWH_Handler
 
 import stripe
 
+
 @require_POST
 @csrf_exempt
-
 def webhook(request):
-    """ listen for webhooks from Stripe """
+    """
+    listen for webhooks from Stripe
+    """
 
-    # setup the Stripe API key and WHSecret to confirm the wh actually came from Stripe
+    # setup the Stripe API key and WHSecret to confirm the wh
+    # actually came from Stripe
     wh_secret = settings.STRIPE_WH_SECRET
     stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -37,16 +40,16 @@ def webhook(request):
     except Exception as e:
         # to catch any other exceptions other than the 2 from Stripe above
         return HttpResponse(content=e, status=400)
-    
+
     # There are over 100 different webhooks from Stripe
-    # so passing the event along to a WH Handler in a Class is best as we could 
-    #  even import it into other projects or even OpenSource it.
+    # so passing the event along to a WH Handler in a Class is best
+    # as we could even import it into other projects or even OpenSource it.
 
     # set up a webhook handler
     handler = StripeWH_Handler(request)
 
     # map webhook events to relevant handler functions
-    # in this dictionary, the keys are the wh names coming from Stripe, and 
+    # in this dictionary, the keys are the wh names coming from Stripe, and
     # the values will be the actual methods inside the handler
     event_map = {
         'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
@@ -56,13 +59,10 @@ def webhook(request):
     # get the webhook type (key) from Stripe
     event_type = event['type']
 
-    # if there's a handler for it, get it from the event_map or use 
+    # if there's a handler for it, get it from the event_map or use
     # the generic one by default
     event_handler = event_map.get(event_type, handler.handle_event)
 
     # call the event handler with the event
     response = event_handler(event)
-    return response 
-
-
-    
+    return response

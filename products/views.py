@@ -28,7 +28,7 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category_name__name'
-            
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -42,7 +42,6 @@ def all_products(request):
         #     products = products.filter(category_name__name__in=categories)
         #     categories = Category.objects.filter(name__in=categories)
 
-       
         # if 'author' in request.GET:
         #     author = request.GET['author']
         #     products = products.filter(author__name__in=author)
@@ -60,8 +59,6 @@ def all_products(request):
                 description__icontains=query)
 
             products = products.filter(queries)
-        
-        
 
     current_sorting = f'{sort}_{direction}'
 
@@ -87,6 +84,7 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
 @login_required
 def add_product(request):
     """
@@ -107,7 +105,8 @@ def add_product(request):
             messages.success(request, 'Successfully added a Product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please check the form is valid.')
+            messages.error(
+                request, 'Failed to add product. Please check the form is valid.')
     else:
         form = ProductForm()
     template = 'products/add_product.html'
@@ -116,6 +115,7 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):
@@ -132,7 +132,8 @@ def edit_product(request, product_id):
     if request.method == 'POST':
         # instantiate a new instance of the ProductForm from request.POST,
         # include request.Files to allow for images to be captured, and
-        # tell it the specific instance to update is the 'product' obtained above.
+        # tell it the specific instance to update is the 'product' 
+        # obtained above.
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
@@ -140,7 +141,8 @@ def edit_product(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
-                request, 'Failed to update product. Please check the form is valid.')
+                request,
+                'Failed to update product. Please check the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -151,6 +153,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):
