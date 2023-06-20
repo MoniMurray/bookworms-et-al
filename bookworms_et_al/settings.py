@@ -44,7 +44,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 
 ALLOWED_HOSTS = [
-    'mym-bookworms-et-al.herokuapp.com', 'localhost',
+    'mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com', 'localhost',
 ]
 
 
