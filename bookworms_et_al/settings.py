@@ -212,7 +212,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
-    
+    # cache control - confirm to browser it may cache static files
+    # for a long time to improve performance for users
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
     # S3 Bucket config which are in configvars
     AWS_STORAGE_BUCKET_NAME = 'mym-bookworms-et-al'
     AWS_S3_REGION_NAME = 'eu-west-1'
