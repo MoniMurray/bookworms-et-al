@@ -563,6 +563,8 @@ Credit to [this Stack Overflow post](https://stackoverflow.com/questions/2931387
 
 I took inspiration for the design of the Bookworms et al Bookshop from many leading Irish bookshops with strong online presence such as Easons and Dubray.
 
+To fix my footer to the bottom of every page, regardless of body content size, I used [flex](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14) as outlined on this article.
+
 All wireframes, ERD and screenshots are my own creation.  This Readme is based on the extensive Readme.md file I created for my PP4, [The Shopping List](https://github.com/MoniMurray/shopping-list)
 
 
