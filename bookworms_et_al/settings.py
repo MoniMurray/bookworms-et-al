@@ -30,17 +30,17 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = 'DEVELOPMENT' in os.environ
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+# if 'DATABASE_URL' in os.environ:
+#     DATABASES = {
+#         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
+#     }
 
 
 ALLOWED_HOSTS = [
@@ -140,7 +140,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/' #redirect to home page
+LOGIN_REDIRECT_URL = '/'  #redirect to home page
 
 WSGI_APPLICATION = 'bookworms_et_al.wsgi.application'
 
@@ -216,7 +216,7 @@ if 'USE_AWS' in os.environ:
     # cache control - confirm to browser it may cache static files
     # for a long time to improve performance for users
     AWS_S3_OBJECT_PARAMETERS = {
-        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'Expires': 'Thu, 31 Dec 2098 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
     # S3 Bucket config which are in configvars
