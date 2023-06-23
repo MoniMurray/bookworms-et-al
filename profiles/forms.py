@@ -6,16 +6,15 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = (
-            'image',
-            'bio',
-            'default_address_line1',
-            'default_address_line2',
-            'default_town_or_city',
-            'default_post_code',
-            'default_county_or_state',
-            'default_country',
-        )
+        # fields = (
+        #     'default_address_line1',
+        #     'default_address_line2',
+        #     'default_town_or_city',
+        #     'default_post_code',
+        #     'default_county_or_state',
+        #     'default_country',
+        # )
+        exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
 
@@ -26,6 +25,7 @@ class ProfileForm(forms.ModelForm):
         placeholders = {
             'image': 'Profile Image',
             'bio': 'Bio',
+            'default_phone_number': 'Phone Number',
             'default_address_line1': 'Address Line 1',
             'default_address_line2': 'Address Line 2',
             'default_town_or_city': 'Town or City',

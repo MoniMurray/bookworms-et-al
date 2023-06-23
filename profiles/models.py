@@ -19,7 +19,7 @@ class Profile(models.Model):
         quality=75,
         upload_to='profiles/',
         force_format='WEBP',
-        blank=False
+        blank=True
         )
     bio = models.SlugField(max_length=2500, null=True, blank=True)
     default_phone_number = models.CharField(
@@ -41,7 +41,7 @@ class Profile(models.Model):
         """
         A string method to return the username
         """
-        return str(self.user.username)
+        return self.user.username
 
 
 @receiver(post_save, sender=User)

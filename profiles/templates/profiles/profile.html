@@ -27,7 +27,7 @@
             <hr>
             <h2 class="logo-font mb-4">My Account</h2>
             <hr>
-            <p class="text-muted">Welcome back, {{ user.username }}!</p>
+            <p class="text-muted">Welcome back, {{ user.profile }}!</p>
         </div>
     </div>
 
@@ -38,19 +38,19 @@
         <div class="col-12 col-lg-3 order-lg-last">
             <!-- profile image-->
             <div class="profile-img text-center offset-lg-9">
-                {% if profile.image.url is not none %}
-                <img src="{{ profile.image.url }}" alt="{{ user.username }}'s profile image">
+                {% if user.profile.image %}
+                    <img src="{{ user.profile.image }}" alt="{{ user.profile }}'s profile image">
                 {% else %}
-                <img src="{% static '/media/no-image-photography-icon.svg' %}" alt="No Profile Image Available icon">
+                    <img src="{{ MEDIA_URL }}robot-line-icon.svg" alt="No Profile Image Available icon">
                 {% endif %}
             </div>
 
             <p class="text-muted">PRIMARY ADDRESS</p>
-            {{ user.username }}
+            {{ user.profile }}
             <form class="mt-3" action="{%  url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-black rounded-0 text-uppercase">Edit Details</button>
+                <button class="btn btn-black rounded-0 text-uppercase">Update Details</button>
             </form>
         </div>
 
