@@ -7,9 +7,7 @@ class CategoryAdmin(admin.ModelAdmin):
     Display the Category model fields in the Admin view
     """
 
-    list_display = (
-        'name',
-    )
+    list_display = ("name",)
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -18,17 +16,17 @@ class ProductAdmin(admin.ModelAdmin):
     """
 
     list_display = (
-        'name',
-        'rating',
-        'description',
-        'price',
-        'type',
-        'author',
-        'image_url',
-        'image',
+        "name",
+        "rating",
+        "description",
+        "price",
+        "type",
+        "author",
+        "image_url",
+        "image",
     )
 
-    ordering = ('-rating',)
+    ordering = ("-rating",)
 
 
 class AuthorAdmin(admin.ModelAdmin):
@@ -36,9 +34,7 @@ class AuthorAdmin(admin.ModelAdmin):
     Display the Author model fields in the Admin view
     """
 
-    list_display = (
-        'name',
-    )
+    list_display = ("name",)
 
 
 admin.site.register(Product, ProductAdmin)
