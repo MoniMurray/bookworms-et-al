@@ -26,3 +26,9 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.profile-img {
+    height: 50px;
+    width: 50px;
+    radius: 50%;
+}
