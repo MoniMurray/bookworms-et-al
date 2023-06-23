@@ -41,7 +41,7 @@ class Profile(models.Model):
         """
         A string method to return the username
         """
-        return self.user.username
+        return str(self.user.username)
 
 
 @receiver(post_save, sender=User)
