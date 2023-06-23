@@ -103,6 +103,13 @@ body {
     width: auto;
 }
 
+/* Home page text size and weight*/
+.display-4.logo-font.text-black {
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+
 /* To make category links colour change when hovered over */
 a.category-badge>span.badge:hover {
     background: #212529 !important;
@@ -344,6 +351,7 @@ input[name='q']::placeholder {
 
     .display-4.logo-font.text-black {
         font-size: 2rem;
+        font-weight: 600;
     }
 
     .nav-link {
@@ -363,6 +371,10 @@ input[name='q']::placeholder {
         font-size: .9rem;
     }
 
+    .btn {
+        display: inline;
+    }
+    
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
