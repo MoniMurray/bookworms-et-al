@@ -7,6 +7,8 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = (
+            'image',
+            'bio',
             'default_address_line1',
             'default_address_line2',
             'default_town_or_city',
@@ -22,6 +24,8 @@ class ProfileForm(forms.ModelForm):
 
         super().__init__(*args, **kwargs)
         placeholders = {
+            'image': 'Profile Image',
+            'bio': 'Bio',
             'default_address_line1': 'Address Line 1',
             'default_address_line2': 'Address Line 2',
             'default_town_or_city': 'Town or City',
