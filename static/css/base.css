@@ -17,6 +17,7 @@ body {
     
 }
 
+/* footer */
 .footer {
     margin-top: auto;
 }
@@ -28,6 +29,13 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+
+/* Home page text size and weight*/
+.display-4.logo-font.text-black {
+    font-size: 3.5rem;
+    font-weight: 400;
 }
 
 .logo-font {
@@ -103,10 +111,8 @@ body {
     width: auto;
 }
 
-/* Home page text size and weight*/
-.display-4.logo-font.text-black {
-    font-size: 3.5rem;
-    font-weight: 400;
+.img-responsive {
+    margin: 0 auto;
 }
 
 
