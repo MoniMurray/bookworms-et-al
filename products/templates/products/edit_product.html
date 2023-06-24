@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_meta %}
+<meta name="description" 
+content="For Authorised Shop Owner only. Edit a product on Bookworms bookshop. 
+Bookworms et al Irish bookshop, for all your bestseller reads.">
+<meta name="keywords" 
+content="view our bestseller range of books, free shipping in Ireland 
+with secure payment, book-lovers and readers, Irish-owned shop">
+<meta name="author" content="Monica Murray">
+
+{% endblock %}
+
+{% block extra_title %} Store Management - Edit {{ product.name }}{% endblock %}
+
 {% block page_header %}
 
 <div class="container header-container">

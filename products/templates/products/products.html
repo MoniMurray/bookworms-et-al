@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_meta %}
+<meta name="description" 
+content="Bookworms et al offer a range of bestselling books at affordable prices.
+Browse our books for your next read.">
+<meta name="keywords" 
+content="view our bestseller range of books, free shipping in Ireland 
+with secure payment, book-lovers and readers, Irish-owned shop">
+<meta name="author" content="Monica Murray">
+
+{% endblock %}
+
+{% block extra_title %} Bestsellers{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
