@@ -408,6 +408,8 @@ Defensive Programming was at the forefront of the site's development, with user 
 
 #### Social Media Marketing - Facebook business page
 
+As Facebook has the largest number of users and the widest demographic, I chose to set up a [Facebook Business Page](https://www.facebook.com/profile.php?id=100094116007278) as part of the social media marketing strategy for Bookworms et al.
+
 
 ### SEO
 
