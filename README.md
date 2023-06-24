@@ -410,6 +410,14 @@ Defensive Programming was at the forefront of the site's development, with user 
 
 As Facebook has the largest number of users and the widest demographic, I chose to set up a [Facebook Business Page](https://www.facebook.com/profile.php?id=100094116007278) as part of the social media marketing strategy for Bookworms et al.
 
+![Bookworms Facebook Business Page](readme_media/screenshots/seo_marketing/facebook_business_page/Bookworms_Facebook_Business_Page.png)
+![Bookworms Facebook Business Page - About Tab](readme_media/screenshots/seo_marketing/facebook_business_page/Bookworms_FB_Business_Pg_About_tab.png)
+![Bookworms Facebook Business Page - Cover Picture](readme_media/screenshots/seo_marketing/facebook_business_page/Bookworms_FB_Business_Pg_Cover_Pic.png)
+![Bookworms Facebook Business Page - Edit details tab](readme_media/screenshots/seo_marketing/facebook_business_page/Bookworms_FB_Business_Pg_Edit_details.png)
+![Bookworms Facebook Business Page - Manage page tab](readme_media/screenshots/seo_marketing/facebook_business_page/Bookworms_FB_Business_Pg_Manage_page_tab.png)
+![Bookworms Facebook Business Page - Page Health view](readme_media/screenshots/seo_marketing/facebook_business_page/Bookworms_FB_Business_Pg_Page_Health.png)
+![Bookworms Facebook Business Page - Page Posts, and Page Updates](readme_media/screenshots/seo_marketing/facebook_business_page/Bookworms_FB_Business_Pg_Posts_Updates.png)
+
 
 ### SEO
 
