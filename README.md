@@ -428,7 +428,9 @@ The ideal keyword combination is to have long-tailed keywords with High Volume (
 
 ## Privacy Policy
 
-Generate on https://policymaker.io
+A Privacy Policy, or Notice, is a document provided by the web application.  It's purpose is to be transparent and inform Bookworm's users about how their data is being collected and processed. 
+
+It is concise, transparent and easily accessible via the footer on every page of the website.  This [Privacy Policy generator](https://policymaker.io) was used to generate the text content for this Bookworm et al's Privacy Policy.
 
 ## Testing<a name="testing"></a>
 
