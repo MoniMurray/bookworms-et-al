@@ -393,6 +393,21 @@ Defensive Programming was at the forefront of the site's development, with user 
 
 ### Marketing Strategies for app
 
+- Content Marketing - consistently creating, distributing and promoting relevant online materials in a way that is strategically designed to attract and convert my target market into customers - Newsletters and Social Media Marketing
+
+#### Newsletters - VIP Club
+
+- Mailchimp selected in this marketing option as it is free for up to 2000 subscribers
+
+	Set up a Template, generate the code, copy and paste it into your footer/template, test it works.
+
+- Or set up a custom django app to satisfy the 3 custom models!!! VIP CLUB!!!
+
+
+
+
+#### Social Media Marketing - Facebook business page
+
 
 ### SEO
 
