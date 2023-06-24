@@ -412,7 +412,11 @@ Testing is documented in TESTING.md file [here](TESTING.md)
 
 ## Deployment<a name="deployment"></a>
 
-- List all Prerequisites, installs, IDE etc
+- Prerequisites:
+
+	- Heroku;
+	- ElephantSQL;
+	- Amazon AWS.
 
 - Detail Forking, Cloning and Local Deployment of the repo
 
@@ -424,7 +428,7 @@ Testing is documented in TESTING.md file [here](TESTING.md)
 
 - Add an explanation of what env variables are, where to get them ie Django Secret Key is a 16-random-character key
 
-The site is deployed using Heroku - [eCommerce Project 5]()
+The site is deployed using Heroku - [eCommerce Project 5](https://mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com/)
 
 ### To Deploy the site using Heroku:
 
@@ -439,7 +443,6 @@ In the 'Settings' tab, add the Config Variables:
 - DATABASE_URL: 'Paste ElephantSQL URL';
 - SECRET_KEY: 'Paste in your secret key';
 - PORT: 8000;
-- CLOUDINARY_URL: Cloudinary://*.
 
 In the 'Deploy' tab:
 - Select 'GitHub' from the Deployment method section;
@@ -532,14 +535,14 @@ To do this, you should:
 
 AWS is a cloud-based storage service which we use to store our media and static files for this project.
 
-- Login, or create an account with aws.amazon.com
-- Select S3
-- Click on 'Create Bucket' to create a new storage bucket
+- Login, or create an account with aws.amazon.com.
+- Select S3.
+- Click on 'Create Bucket' to create a new storage bucket.
 - Name the new bucket following the same naming convention as used when naming the Heroku app and the ElephantSQL database.  This bucket needs to be public in order to allow public access to the static files.
-- When the bucket is created, use the 'Properties' and 'Permissions' tabs to set the bucket's settings .
-- Create an Identify and Access Management (IAM) User Group into which we create the policy used to access our S3 bucket, and create a User to access the S3 bucket.  This static files user will have access keys which will be used to connect the bucket to our deployed app on Heroku via config var keys
-- Connect Django to S3 in AWS by installing two packages, Boto and Django Storages, and add settings, via keys, to tell our project which bucket it should be communicating with.  These keys will be added to the Config Vars in Heroku
-- Tell Django that in production we want to use S3 to store our static files and our media files whenever someone runs collectstatic, and that we want any uploaded product images to go there also, all via custom classes in custom_storage.py
+- When the bucket is created, use the 'Properties' and 'Permissions' tabs to set the bucket's settings.
+- Create an Identify and Access Management (IAM) User Group into which we create the policy used to access our S3 bucket, and create a User to access the S3 bucket.  This static files user will have access keys which will be used to connect the bucket to our deployed app on Heroku via config var keys.
+- Connect Django to S3 in AWS by installing two packages in the terminal, Boto and Django Storages, and add settings, via keys, to tell our project which bucket it should be communicating with.  These keys will be added to the Config Vars in Heroku.
+- Tell Django that in production we want to use S3 to store our static files and our media files whenever someone runs collectstatic, and that we want any uploaded product images to go there also, all via custom classes in custom_storage.py.
 - Finally, tell the browser to cache static files as they don't change very often, and this instruction will improve site speed and performance for the user.
 - Create a Media folder within the S3 bucket into which we upload all images used in our project, and grant them public-read access.
 
@@ -550,7 +553,7 @@ AWS is a cloud-based storage service which we use to store our media and static 
 For my Project I followed the advice given in the [CI Guide to MVP video for Project 5](https://youtu.be/i7clFOYiwS0) to use the Boutique Ado Walkthrough Project code as a boilerplate to get started and save precious time, and I then customised as much as I could.  So full credit to Boutique Ado walkthrough which I have used extensively throughout this eCommerce project. 
  I also used the knowledge I learned from the design of both the 'Hello Django' and the 'Django Blog' Walkthrough projects during the CI Module on FST Frameworks. 
 
-I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me. I found the video series on creating a [User Profile](https://www.youtube.com/watch?v=dGnRsNH81Ik&list=PLXuTq6OsqZjYSa-lrjd5wMGl23zpnhvln&index=2) particularly useful in creating my own Profile app in this project.
+I found Dee Mc's YouTube videos on creating a [Django Recipe Sharing tutorial](https://www.youtube.com/watch?v=E9eWdZTpiGA&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=4) useful to solidify what had been taught on the FSF Django module as she explained similar aspects in a different way that made sense to me. I found the video series on creating a [User Profile](https://www.youtube.com/watch?v=dGnRsNH81Ik&list=PLXuTq6OsqZjYSa-lrjd5wMGl23zpnhvln&index=2) particularly useful in creating my own Profile app in this project. The videos for creating a Favicon, Sitemap and Flex were also very helpful at different stages of this project's development.
 
 I had used [SummerNote](https://djangocentral.com/integrating-summernote-in-django/) in [my fourth project](https://github.com/MoniMurray/shopping-list) and used it again in this Bookworms project.
 
