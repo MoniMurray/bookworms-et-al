@@ -352,7 +352,7 @@ Defensive Programming was at the forefront of the site's development, with user 
 	- Search + Filter functionality
 	- High Quality images
     - Clear Product Descriptions
-    - Ratings or Reviews
+    - Ratings
     - Shopping Cart, Checkout and Payment System
 
 3. What entities would your database need, and what data might be included in these entities?
@@ -383,10 +383,9 @@ Defensive Programming was at the forefront of the site's development, with user 
 ### Document eCommerce Business model underlying the app
 
 
-### Document the purpose of the App
+### Purpose of the Application
 
-
-### B2C Focused
+-The eCommerce aspect of the Bookworms et al business is specifically designed to facilitate commercial transactions, and it involves the online transfer of information.  As mentioned above, this is a Business to Customer eCommerce application type, selling physical products online.  Payments for those products is taken online.  The transaction is finished after a single payment is made and the product is shipped.
 
 
 ### Core Business Intents
@@ -398,6 +397,8 @@ Defensive Programming was at the forefront of the site's development, with user 
 ### SEO
 
 www.xml-sitemaps.com
+
+Long-tailed keywords with High Volume (lots of people using the keywords) but Low Competition(few other sites providing pages for your keywords)
 
 
 ## Privacy Policy
