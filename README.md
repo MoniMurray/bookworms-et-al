@@ -396,9 +396,9 @@ Defensive Programming was at the forefront of the site's development, with user 
 
 ### SEO
 
-www.xml-sitemaps.com
+After adding meta tags to  my head element to optimize my website's visibility and improve search engine performance, I also added keywords to attract both search engines and users. I then added my deployed url to [XML-Sitmaps](www.xml-sitemaps.com) to generate an xml file.  Google uses this xml file to help it understand the website's structure and how the pages link to each other.
 
-Long-tailed keywords with High Volume (lots of people using the keywords) but Low Competition(few other sites providing pages for your keywords)
+The ideal keyword combination is to have long-tailed keywords with High Volume (lots of people using the keywords) but Low Competition (few other sites providing pages for your keywords).
 
 
 ## Privacy Policy
