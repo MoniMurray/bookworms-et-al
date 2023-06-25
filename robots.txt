@@ -1,3 +1,6 @@
 User-agent: *
 
-Disallow: /accounts/
+Disallow: /admin/
+Disallow: /profile/
+
+Sitemap: https://mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com/sitemap.xml
