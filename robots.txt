@@ -2,5 +2,6 @@ User-agent: *
 
 Disallow: /admin/
 Disallow: /profile/
+Disallow: /checkout/
 
 Sitemap: https://mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com/sitemap.xml

@@ -62,9 +62,9 @@ The design encourages users to browse and to make a purchase.
 
 The business owner's goal is to have a profitable eCommerce presence of its physical bookshop, which extends its customer base by providing an intuitive, robust and visually appealing website with secure and simple payment system.  The Store Owner wants to manage the product offerings of the eCommerce site securely, and add, edit or delete items via a secure interactive front-end.
 
-## Customer's Goals
+## User/Customer's Goals
 
-A customer of Bookworms et al wants to buy books.  They will understand the application's purpose when first arriving to the site, be able to navigate intuitively around the pages of the website, view all products, see any product in detail, and be able to purchase one or many books securely.  A customer of this website will also want to be able to Register to create a user profile, Login and Logout of their account on website, view and edit their personal data securely, and view their purchase history.  All customer actions are met with feedback via the interactive front end to confirm their chosen action has been performed successfully or has been unsuccessful.
+A customer of Bookworms et al wants to buy books.  They will understand the application's purpose when first arriving to the site, be able to navigate intuitively around the pages of the website, view all products, click on any product to view it in more detail, and be able to purchase one or many books securely.  A user or customer of this website will also want to be able to Register to create a user profile, Login and Logout of their account on website, view and edit their personal data securely via their account, and view their purchase history.  All customer actions are met with feedback via the interactive front end to confirm their chosen action has been performed successfully or has been unsuccessful.
 
 ## Project Goal
 
