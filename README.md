@@ -49,7 +49,7 @@ An image of the finished site generated from [Amiresponsive]() which displays th
 ![Amiresponsive](g) 
 
 
-Please visit the live site via [this link]().
+Please visit the live site via [this link](https://mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com/).
 
 
 ## Purpose
