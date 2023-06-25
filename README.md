@@ -445,7 +445,11 @@ The following table, based on Hubspot's SEO Starter Pack, helped me plan the SEO
 | About us       | Booworms + About Us                                    | Bookworms et al are expert Irish booksellers. With Free shipping<br>in Ireland, browse and purchase from our bestsellers in store or online.<br>We are book-lovers, passionate readers and love recommending the right<br>book for our customer. Shop our range now. | view our bestseller range of books, free shipping in Ireland<br>with secure payment, book-lovers and readers, Irish-owned shop | Home page                                      | Bestsellers/Home page.                                            |
 
 
+#### Robots.txt and Sitemap.xml
 
+- robots.txt is a simple text file that tells search engines where they are not allowed to go on the application.  In Bookworms, the robots.txt file is in the root directory and includes the admin, profiles and checkout directories as urls that the spiders are not permitted to access.
+
+- sitemap.xml is a file that lists a website's import page urls, making sure that search engines can crawl, or navigate through them.  It helps a search engine to understand our website's structure and crawl every essential page on the website.  sitemap.xml was generated on [xml-sitemaps.com](https://www.xml-sitemaps.com/details-mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com-49873d773.html) and is located in the root directory.
 
 
 ## Privacy Policy
