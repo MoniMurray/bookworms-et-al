@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .models import Signup
 from .forms import SignupForm
 
+from django.contrib import messages
+
+
 # Create your views here.
 def signup(request):
     """
@@ -11,6 +14,14 @@ def signup(request):
     subscriber = []
     template = 'newsletter/signup.html'
     form = SignupForm()
+
+    if request.method == 'POST':
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'You have been added to VIP Club')
+        else: 
+            messages.error(request, 'Please ensure the form is completed')
 
     context = {
         'form': form,

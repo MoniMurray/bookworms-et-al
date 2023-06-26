@@ -11,4 +11,8 @@ class SignupForm(forms.ModelForm):
         model = Signup
         fields = ('name', 'email', 'subscribe',)
 
-   
+    def __init__(self, *args, **kwargs):
+
+        """initialise form"""
+
+        super().__init__(*args, **kwargs)
