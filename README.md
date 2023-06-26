@@ -622,6 +622,8 @@ I took inspiration for the design of the Bookworms et al Bookshop from many lead
 
 To fix my footer to the bottom of every page, regardless of body content size, I used [flex](https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14) as outlined on this article.
 
+The [PyLessons](https://pylessons.com/django-subscribe) article about Newsletter subscriptions helped me to lay out the model for my own custom newsletter subscription in this project.
+
 All wireframes, ERD and screenshots are my own creation.  This Readme is based on the extensive Readme.md file I created for my PP4, [The Shopping List](https://github.com/MoniMurray/shopping-list)
 
 
