@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from .models import Signup
 from .forms import SignupForm
 
@@ -22,21 +22,11 @@ def signup(request):
             messages.success(request, 'You have been added to VIP Club')
         else: 
             messages.error(request, 'Please ensure the form is completed')
+        return redirect(reverse('home'))
 
     context = {
         'form': form,
     }
-
-    # if request.method == 'POST':
-    #     email = request.POST.get('email', None)
-    #     name = request.POST.get('name', None)
-
-    #     if not email:
-    #         messages.error(request, 'Please enter a valid email address') 
-    #         return render('Signup/')
-
-    #     subscriber.save()
-    #     messages.success(request, 'You are successfully subscribed')
 
     return render(request, template, context)
     
