@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Signup
+from .forms import SignupForm
 
 # Create your views here.
 def signup(request):
@@ -9,8 +10,11 @@ def signup(request):
     
     subscriber = []
     template = 'newsletter/signup.html'
+    form = SignupForm()
 
-    context = {}
+    context = {
+        'form': form,
+    }
 
     # if request.method == 'POST':
     #     email = request.POST.get('email', None)
