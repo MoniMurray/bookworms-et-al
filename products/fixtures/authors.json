@@ -1,0 +1,15 @@
+[
+    {"pk": 1, "model": "products.author", "fields": {"name": "Charles Duhigg"}},
+    {"pk": 2, "model": "products.author", "fields": {"name": "J. Kenji López-Alt"}},
+    {"pk": 3, "model": "products.author", "fields": {"name": "J.R.R. Tolkien"}},
+    {"pk": 4, "model": "products.author", "fields": {"name": "Napoleon Hill"}},
+    {"pk": 5, "model": "products.author", "fields": {"name": "Melissa Hartwig"}},
+    {"pk": 6, "model": "products.author", "fields": {"name": "Lee Goldberg"}},
+    {"pk": 7, "model": "products.author", "fields": {"name": "J.K.Rowling"}},
+    {"pk": 8, "model": "products.author", "fields": {"name": "Rachel Caine"}},
+    {"pk": 9, "model": "products.author", "fields": {"name": "Dale Carnegie"}},
+    {"pk": 10, "model": "products.author", "fields": {"name": "Ray Dalio"}},
+    {"pk": 11, "model": "products.author", "fields": {"name": "Stephen R. Covey"}},
+    {"pk": 12, "model": "products.author", "fields": {"name": "Mary Burton"}},
+    {"pk": 13, "model": "products.author", "fields": {"name": "George R. R. Martin"}}
+] 
