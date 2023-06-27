@@ -41,6 +41,9 @@ with secure payment, book-lovers and readers, Irish-owned shop">
 
         <!-- render Signup form -->
         <div class="col-lg-7 justify-content-center">
+            <p class="text-black mt-3">
+                Subscribe to our VIP Club below to receive news, book reviews, 
+                bestseller updates, access to exclusive deals, and more!</p>
             <form class="form mb-2" action="{% url 'signup' %}" method="POST" id="newsletter-signup-form">
                 {% csrf_token %}
                 {{ form|crispy }}
