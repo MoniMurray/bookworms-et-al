@@ -54,7 +54,7 @@ Please visit the live site via [this link](https://mym-bookworms-et-al-b7ea61e35
 
 ## Purpose
 
-The Bookworms et al application is designed and build as a fictitious online presence of a physical bookshop, with the purpose of creating an online presence for the store to extend its customer reach. 
+The 'Bookworms et al' application is designed and build as a fictitious online presence of a physical bookshop, with the purpose of creating an online presence for the store to extend its customer reach. 
 
 The design encourages users to browse and to make a purchase.
 
@@ -68,7 +68,7 @@ A customer of Bookworms et al wants to buy books.  They will understand the appl
 
 ## Project Goal
 
-Bookworms is my fifth and final Portfolio Project for Code Institute's Diploma in Full Stack Software Development (Ecommerce Applications) and is a Full Stack site based on business logic used to control a centrall-owned dataset.  
+Bookworms is my fifth and final Portfolio Project for Code Institute's Diploma in Full Stack Software Development (Ecommerce Applications) and is a Full Stack site based on business logic used to control a centrally-owned dataset.  
 
 Bookworms et al contains an authentication mechanism and provides for the online, secure payment for products which are available and stored via the site's relational database.
 
@@ -196,7 +196,11 @@ The favicon for Bookworms is also the website's landing page image.  I chose thi
 
 
 
+### Database ERD
 
+This section captures the cardinality between the entities, or tables, in the database, and how they relate to the functionality of the website itself.
+
+The data model type used for this project is the Relational Model [list models] - User (allauth), Profile, Product, Category, Author, Order, OrderLineItem and Newsletter.
 
 The Entity Relationship Model for the relational database was first created on paper and then a model designed using LucidChart.
 
@@ -236,7 +240,7 @@ Using [LucidChart](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d6440
 
 #### Footer
 
-The bespoke footer contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile. The footer also contains external links to Facebook, Instagram and Twitter.
+The bespoke footer contains links to an 'About Us' page, the application's generated 'Privacy Policy', and an invitation to subscribe to 'Join VIP Club' to receive a newsletter.  The footer also contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile, together with external links to the Facebook Business Page for Bookworms et al, and external links to Instagram and Twitter.
 
 
 ### Screenshots
@@ -360,9 +364,9 @@ Defensive Programming was at the forefront of the site's development, with user 
 | User (allauth) | Profile           | Products      | Category | Author  | Checkout: Order          | Checkout: OrderLineItem | Club          |
 | -------------- | ----------------- | ------------- | -------- | ------- | ------------------------ | ----------------------- | ------------- |
 | ID (pk)        | id (pk)           | id (pk)       | id (pk)  | id (pk) | order_number (pk)        | id                      | id            |
-| username       | username ('User') | rating        | name     | name    | user_profile ('Profile') | order ('Order')         | user ('User') |
+| username       | username ('User') | rating        | name     | name    | user_profile ('Profile') | order ('Order')         | user 		   |
 | password       | image             | name          |          |         | full_name                | product ('Product')     | subscribe     |
-| email          | bio               | category_name |          |         | email                    | quantity                | emal ('User') |
+| email          | bio               | category_name |          |         | email                    | quantity                | email 		   |
 | is_superuser   | phonenumber       | description   |          |         | phone_number             | lineitem_total          |               |
 |                | email             | price         |          |         | country                  |                         |               |
 |                | country           | author        |          |         | town                     |                         |               |
@@ -397,13 +401,7 @@ Defensive Programming was at the forefront of the site's development, with user 
 
 #### Newsletters - VIP Club
 
-- Mailchimp selected in this marketing option as it is free for up to 2000 subscribers
-
-	Set up a Template, generate the code, copy and paste it into your footer/template, test it works.
-
-- Or set up a custom django app to satisfy the 3 custom models!!! VIP CLUB!!!
-
-
+- Newsletter subscription in this application is provided via a custom django app.  Any user, not just an authenticated user, may subscribe to receive a newsletter.  The subscription page is launched via a link in the footer.  Users may provide their name, but an email address is required and a user must opt-in to subscribe to comply with GDPR Regulations.  A user will receive feedback confirming their subscription or inviting them to ensure the form is correctly filled in.
 
 
 #### Social Media Marketing - Facebook business page
@@ -481,7 +479,7 @@ Testing is documented in TESTING.md file [here](TESTING.md)
 
 - Add an explanation of what env variables are, where to get them ie Django Secret Key is a 16-random-character key
 
-The site is deployed using Heroku - [eCommerce Project 5](https://mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com/)
+The site is deployed using Heroku - [Bookworms et al](https://mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com/)
 
 ### To Deploy the site using Heroku:
 
