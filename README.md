@@ -132,8 +132,9 @@ Please follow this link to open my [AGILE.md](AGILE.md) file and read about how 
 ## Design<a name="design"></a>
 
 
-I began my design of the database structure by creating an Entity Relationship Diagram using [LucidChart.com](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#), which can be viewed [here]().  The Diagram helped me to consider what to include in each Model and the relationships between the models of the database. 
- 
+I began my design of the database structure by creating an Entity Relationship Diagram using LucidChart.com, which can be viewed [here](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#).  The Diagram planning and layout helped me to consider what to include in each Model and the relationships between the models of the database. 
+
+
 
 ### Colour Scheme
 
@@ -206,7 +207,7 @@ The Entity Relationship Model for the relational database was first created on p
 
 [LucidChart](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#)
 
-![DIAGRAM!]()
+![Entity Relationship Diagram!](readme_media/wireframes/ERD/erd.png)
 
 
 ### Data Schema Planning
