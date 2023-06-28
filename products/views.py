@@ -49,17 +49,21 @@ def all_products(request):
     #     author = Author.objects.filter(name__in=author)
     # author = get_object_or_404(Author, name=author)
 
-    # if 'q' in request.GET:
-    #     query = request.GET['q']
-    #     if not query:
-    #         messages.error(
-    #             request, 'You did not enter any search criteria')
-    #         return redirect(reverse('products'))
+    if 'q' in request.GET:
+        query = request.GET['q']
+               
+        if not query:
+            messages.error(
+                request, 'You did not enter any search criteria')
+            return redirect(reverse('products'))
 
-    #     queries = Q(name__icontains=query) | Q(
-    #         description__icontains=query)
+        queries = Q(name__icontains=query) | Q(
+            description__icontains=query) | Q(
+                author__name__icontains=query) | Q(
+                    category_name__name__icontains=query
+                )
 
-    #     products = products.filter(queries)
+        products = products.filter(queries)
 
     current_sorting = f"{sort}_{direction}"
 
