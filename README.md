@@ -623,6 +623,8 @@ To fix my footer to the bottom of every page, regardless of body content size, I
 
 The [PyLessons](https://pylessons.com/django-subscribe) article about Newsletter subscriptions helped me to lay out the model for my own custom newsletter subscription in this project.
 
+Bug fixing my search function took a little further research into how to structure a search in Django and the following [YouTube video](https://www.youtube.com/watch?v=AGtae4L5BbI&pp=ygUec2VhcmNoIHByb2R1Y3RzIGZlYXR1cmUgZGphbmdv) helped me to formulate the search and structure the view, in particular the author and category queries which needed double underscores to search in the name field of the author and category foreignkeys of Product model.
+
 All wireframes, ERD and screenshots are my own creation.  This Readme is based on the extensive Readme.md file I created for my PP4, [The Shopping List](https://github.com/MoniMurray/shopping-list)
 
 
