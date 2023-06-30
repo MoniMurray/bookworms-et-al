@@ -29,13 +29,12 @@
                 aria-haspopup="true" aria-expanded="false">
                 Business & Investing
             </a>
-        </li>
+        </li>       
 
         <!-- Cookbooks Category books -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'products' %}?category=cookbooks" id="cookbooks" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+                href="{% url 'products' %}?category=Cookbooks" id="cookbooks">
                 Cookbooks
             </a>
         </li>
@@ -43,8 +42,7 @@
         <!-- Mystery & Suspense Category books -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'products' %}?category=mystery,suspense" id="mystery-suspense" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+                href="{% url 'products' %}?category=mystery,suspense" id="mystery-suspense">
                 Mystery & Suspense
             </a>
         </li>
@@ -52,26 +50,11 @@
         <!-- Scifi & Fantasy Category books -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'products' %}?category=scifi,fantasy" id="scifi-fantasy" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+                href="{% url 'products' %}?category=scifi,fantasy" id="scifi-fantasy">
                 Scifi & Fantasy
             </a>
         </li>
 
-        <!-- List by Category -->
-        <!-- <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Categories
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="books-link">
-                <a href="{% url 'products' %}?category=business,investing" class="dropdown-item">Business &amp Investing</a>
-                <a href="{% url 'products' %}?category=cookbooks" class="dropdown-item">Cookbooks</a>
-                <a href="{% url 'products' %}?category=mystery,suspense" class="dropdown-item">Mystery &amp Suspense</a>
-                <a href="{% url 'products' %}?category=scifi,fantasy" class="dropdown-item">Scifi &amp Fantasy</a>
-                <a href="{% url 'products' %}?category=business,cookbooks,mystery,scifi,accessories" class="dropdown-item">All
-                    Books</a>
-            </div>
-        </li> -->
+
     </ul>
 </div>
