@@ -38,10 +38,10 @@ def all_products(request):
 
     # check if Category exists, split it into a list at the commas, use
     # the list to filter the queryset of all products down to matching products
-    # if 'category' in request.GET:
-    #     categories = request.GET['category'].split(',')
-    #     products = products.filter(category_name__name__in=categories)
-    #     categories = Category.objects.filter(name__in=categories)
+    if 'category' in request.GET:
+        categories = request.GET['category'].split(',')
+        products = products.filter(category_name__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
 
     # if 'author' in request.GET:
     #     author = request.GET['author']

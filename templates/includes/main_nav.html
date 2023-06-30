@@ -22,12 +22,12 @@
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>            
         </li>
+
         <!-- Business & Investing Category books -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'products' %}?category=business&investing" id="business-investing" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Business & Investing
+                href="{% url 'products' %}?category=Business" id="business-investing" >
+                Business
             </a>
         </li>       
 
@@ -42,16 +42,24 @@
         <!-- Mystery & Suspense Category books -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'products' %}?category=mystery,suspense" id="mystery-suspense">
-                Mystery & Suspense
+                href="{% url 'products' %}?category=Mystery" id="mystery-suspense">
+                Mystery
             </a>
         </li>
 
         <!-- Scifi & Fantasy Category books -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'products' %}?category=scifi,fantasy" id="scifi-fantasy">
-                Scifi & Fantasy
+                href="{% url 'products' %}?category=Scifi" id="scifi-fantasy">
+                Scifi
+            </a>
+        </li>
+
+        <!-- Accessories books -->
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5"
+                href="{% url 'products' %}?category=Accessories" id="accessories">
+                Accessories
             </a>
         </li>
 
