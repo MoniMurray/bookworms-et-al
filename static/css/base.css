@@ -235,7 +235,7 @@ input[name='q']::placeholder {
 
 .label-warning,
 .badge-warning {
-  background-color: #c67605;
+  background-color: #fff;
 }
 
 /* -------------------------------- Media Queries */
@@ -373,7 +373,7 @@ input[name='q']::placeholder {
         font-size: 1rem;
     }
 
-    #delivery-banner h4 {
+    #delivery-banner h3 {
         font-size: .9rem;
     }
 

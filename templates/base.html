@@ -64,9 +64,9 @@
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search our library">
+                            placeholder="Search our library" aria-label="Search function input box">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit" title="Submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -142,7 +142,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
+                <h3 class="logo-font my-1 delivery-banner">Free delivery on orders over €{{ free_delivery_threshold }}!</h3>
             </div>
         </div>
     </header>
