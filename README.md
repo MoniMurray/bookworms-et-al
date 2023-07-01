@@ -44,7 +44,7 @@ Developed by Monica Murray
 
 
 
-An image of the finished site generated from [Amiresponsive]() which displays the application at four screen size breakpoints.
+An image of the finished site generated from [Amiresponsive](https://amiresponsive.co.uk/) which displays the application at four screen size breakpoints.
 
 ![Amiresponsive](g) 
 
@@ -142,20 +142,38 @@ Bookworms' colour scheme is designed to be crisp, clean and sophisticated.  The 
 
 I used [Coolors](https://coolors.co) to generate a complimentary colour palette.
 
+The colour palette is generated from the landing page image.
 
-![colour palette!](). 
+![landing page image!](readme_media/screenshots/user_experience/Coolors_image_picker.png)
+![colour palette!](readme_media/screenshots/user_experience/Coolors_colour_palette.png). 
 
 
 ### Typography
 
 I chose Montserrat font from Google Fonts for my website.
 
-![Montserrat font]()
+![Montserrat font!](readme_media/screenshots/user_experience/Google_fonts_Montserrat.png)
 
 
 ### Wireframes
 
 I created my wireframes using [Figma.com](www.figma.com) to create the early UX Design Wireframe images.
+
+| Page                                             | Desktop                                       | Mobile                   |
+| ------------------------------------------------ | --------------------------------------------- | ------------------------ |
+| Home Page                                        | [homepage_desktop](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                        | [homepage_mobile](readme_media/wireframes/product_detail_desktop-store_owner_view.png)    |
+| Bestsellers/All Products Page                    | ![bestsellers_desktop!](readme_media/wireframes/bestsellers_desktop.png)                     | ![bestsellers_mobile!](readme_media/wireframes/bestsellers_mobile.png) |
+| Bestsellers/All Products Page - Store Owner View | ![bestsellers_desktop-store_owner_view!](readme_media/wireframes/bestsellers_desktop-store_owner_view.png)    |                          |
+| Product detail Page                              | ![product_detail_desktop!](readme_media/wireframes/product_detail_desktop.png)                  |                          |
+| Product detail Page - Store Owner View           | ![product_detail_desktop-store_owner_view!](readme_media/wireframes/product_detail_desktop-store_owner_view.png) |                          |
+| Profile Page                                     | ![profile_desktop!](readme_media/wireframes/profile_desktop.png)                         |                          |
+| Shopping Cart                                    | ![shopping_cart!](readme_media/wireframes/shopping_cart.png)                           |                          |
+| Checkout                                         | ![checkout_desktop!](readme_media/wireframes/checkout_desktop.png)                        | ![checkout_mobile!](readme_media/wireframes/checkout_mobile.png)    |
+| CRUD Add                                         | ![crud_add_product!](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                        |                          |
+| CRUD Edit                                        | ![crud_edit_product!](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                       |                          |
+| Newsletter signup                                | ![newsletter_signup!](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                       |                          |
+| About Us                                         | ![about_us!](readme_media/wireframes/about_us.png)                                |                          |
+| Footer                                           | ![footer!](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                                  |
 
 ### Favicon
 
@@ -421,6 +439,8 @@ As Facebook has the largest number of users and the widest demographic, I chose 
 ### SEO
 
 After adding meta tags to my head element to optimize my website's visibility and improve search engine performance, I also added keywords to attract both search engines and users. I then added my deployed url to [XML-Sitmaps](www.xml-sitemaps.com) to generate an xml file.  Google uses this xml file to help it understand the website's structure and how the pages link to each other.
+
+[Google Site Verification]()
 
 The ideal keyword combination is to have long-tailed keywords with High Volume (lots of people using the keywords) but Low Competition (few other sites providing pages for your keywords).
 
