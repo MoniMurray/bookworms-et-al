@@ -161,23 +161,23 @@ I created my wireframes using [Figma.com](www.figma.com) to create the early UX 
 
 | Page                                             | Desktop                                       | Mobile                   |
 | ------------------------------------------------ | --------------------------------------------- | ------------------------ |
-| Home Page                                        | [homepage_desktop](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                        | [homepage_mobile](readme_media/wireframes/product_detail_desktop-store_owner_view.png)    |
-| Bestsellers/All Products Page                    | ![bestsellers_desktop!](readme_media/wireframes/bestsellers_desktop.png)                     | ![bestsellers_mobile!](readme_media/wireframes/bestsellers_mobile.png) |
-| Bestsellers/All Products Page - Store Owner View | ![bestsellers_desktop-store_owner_view!](readme_media/wireframes/bestsellers_desktop-store_owner_view.png)    |                          |
-| Product detail Page                              | ![product_detail_desktop!](readme_media/wireframes/product_detail_desktop.png)                  |                          |
-| Product detail Page - Store Owner View           | ![product_detail_desktop-store_owner_view!](readme_media/wireframes/product_detail_desktop-store_owner_view.png) |                          |
-| Profile Page                                     | ![profile_desktop!](readme_media/wireframes/profile_desktop.png)                         |                          |
-| Shopping Cart                                    | ![shopping_cart!](readme_media/wireframes/shopping_cart.png)                           |                          |
-| Checkout                                         | ![checkout_desktop!](readme_media/wireframes/checkout_desktop.png)                        | ![checkout_mobile!](readme_media/wireframes/checkout_mobile.png)    |
-| CRUD Add                                         | ![crud_add_product!](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                        |                          |
-| CRUD Edit                                        | ![crud_edit_product!](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                       |                          |
-| Newsletter signup                                | ![newsletter_signup!](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                       |                          |
-| About Us                                         | ![about_us!](readme_media/wireframes/about_us.png)                                |                          |
-| Footer                                           | ![footer!](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                                  |
+| Home Page                                        | [Homepage - Desktop wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                        | [Homepage Mobile wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png)    |
+| Bestsellers/All Products Page                    | [Bestsellers - Desktop wireframe](readme_media/wireframes/bestsellers_desktop.png)                     | [Bestsellers - Mobile wireframe](readme_media/wireframes/bestsellers_mobile.png) |
+| Bestsellers/All Products Page - Store Owner View | [Bestsellers - Desktop - Store Owner wireframe](readme_media/wireframes/bestsellers_desktop-store_owner_view.png)    |                          |
+| Product detail Page                              | [Product detail - Desktop wireframe](readme_media/wireframes/product_detail_desktop.png)                  |                          |
+| Product detail Page - Store Owner View           | [Product detail - Desktop - Store Owner wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png) |                          |
+| Profile Page                                     | [Profile - Desktop](readme_media/wireframes/profile_desktop.png)                         |                          |
+| Shopping Cart                                    | [Shopping Cart wireframe](readme_media/wireframes/shopping_cart.png)                           |                          |
+| Checkout                                         | [Checkout - Desktop wireframe](readme_media/wireframes/checkout_desktop.png)                        | [Checkout - Mobile wireframe](readme_media/wireframes/checkout_mobile.png)    |
+| CRUD Add                                         | [Crud - Add_product wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                        |                          |
+| CRUD Edit                                        | [Crud - Edit_product wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                       |                          |
+| Newsletter signup                                | [Newsletter signup](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                       |                          |
+| About Us                                         | [About us](readme_media/wireframes/about_us.png)                                |                          |
+| Footer                                           | [Footer](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                                  |
 
 ### Favicon
 
-A favicon appears in the browser tab with the Website name to enable a user to easily recognise a company's website in a busy browner with many open tabs.  
+A favicon appears in the browser tab with the website name to enable a user to easily recognise a company's website in a busy browser with many open tabs.  
 
 The favicon for Bookworms is also the website's landing page image.  I chose this image from [freepik.com](www.freepik.com), saved it to my local machine, and used [favicon.io](https://favicon.io/) to download the image and generate the favicon files and the link tags to insert in the Head of my base.html.
 
@@ -230,7 +230,7 @@ The Entity Relationship Model for the relational database was first created on p
 
 ### Data Schema Planning
 
-Using [LucidChart](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#)
+Using [LucidChart](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#) I set out the entities I needed in this Project, the attributes I required within each entity and then defined the relationships between the entities.  
 
 ## Features<a name="features"></a>
 
