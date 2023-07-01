@@ -173,11 +173,14 @@
 
     <!-- Content block -->
     <div class="main-container">
-    {% block content %}
+        {% block content %}
 
-    {% endblock %}
+        {% endblock %}
     </div>
+
+    <!-- Footer include -->
     {% include 'includes/footer.html' %}
+    
     <!-- Javascript that we want to load at the end of the body -->
     {% block postloadjs %}
     <script type="text/javascript">

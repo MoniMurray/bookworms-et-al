@@ -8,7 +8,6 @@ body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     background-color: #7a7a7a;
-    /* height: calc(100vh - 164px); */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
