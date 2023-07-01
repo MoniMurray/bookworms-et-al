@@ -38,7 +38,14 @@ with secure payment, book-lovers and readers, Irish-owned shop">
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">My Account</h2>          
+            <!-- profile image -->
+            <h2 class="logo-font mb-4">My Account<span><div class="profile-img text-center offset-lg-9">
+                {% if user.profile.image %}
+                    <img src="{{ profile.image }}" alt="{{ user.profile }}'s profile image">
+                {% else %}
+                    <i class="fas fa-user fa-lg"></i>
+                {% endif %}
+            </div></span>   </h2>     
             <hr>
             <p class="text-muted">Welcome back, {{ user.profile }}!</p>
         </div>
@@ -49,15 +56,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
 
         <!-- Default Delivery Information -->
         <div class="col-12 col-lg-3 order-lg-last">
-            <!-- profile image -->
-            <!-- <div class="profile-img text-center offset-lg-9">
-                {% if user.profile.image %}
-                    <img src="{{ user.profile.image }}" alt="{{ user.profile }}'s profile image">
-                {% else %}
-                    <img src="{{ MEDIA_URL }}robot-line-icon.svg" alt="No Profile Image Available icon">
-                {% endif %}
-            </div> -->
-
+           
             <!-- profile address -->
             <p class="text-muted">PRIMARY ADDRESS</p>
             
