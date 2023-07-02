@@ -5,13 +5,14 @@
 I have used GitHub Projects in the Agile development of my project. I created a new project in the Projects tab of my repository, named '@bookworms_et_al'. Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.
 
 # CONTENTS
-1. User Stories(#us)
+1. [User Stories](#us)
 
-2. User Acceptance Criteria(#uac)
+2. [User Acceptance Criteria](#uac)
 
-3. MoSCoW Prioritisation(#moscow)
+3. [MoSCoW Prioritisation](#moscow)
 
-4. User Story Tasks(#ust)
+4. [User Story Tasks](#ust)
+
 
 ## User Stories<a name="us"></a>
 
