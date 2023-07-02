@@ -237,7 +237,68 @@ I have used MoSCoW Prioritisation to assign a priority level to the User Stories
 
 User Story	MOSCOW
 
-TABLE
+| User Story                                                                                                                                                                                                             | MOSCOW      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| As a (role) I can (capability) so that (received benefit).                                                                                                                                                             |             |
+|           |             |
+| As a first time site user I want to be able to see a colourful, robust and intuitive landing page so that I can understand what the site sells and be encouraged to make a purchase.                                   | Must Have   |
+| As a site user I want to be able to see an intuitive favicon on the site name in the browser so that I can understand the website's purpose                                                                            | Should Have |
+|                                                                                                                                                                                                                        |             |
+| As a site user I want to be able to view the navbar from every page so that I can navigate easily between pages.                                                                                                       | Must Have   |
+| As a site user I want to be able to search by category or author so that I can find products that interest me                                                                                                          | Must Have   |
+| As a site user I want to be able to navigate through pages quickly so that I can view content seamlessly without page refresh.                                                                                         | Must Have   |
+| As a site user I want to be able to view a list of products so that I can select one or some to purchase.                                                                                                              | Could Have  |
+| As a site user I want to be able to view the number of items in my shopping cart so I know how many items I have selected for purchase.                                                                                | Should Have |
+| As a site user I want to be able to see where the Register and Login options are so that I can Register/Login.                                                                                                         | Must Have   |
+|                                                                                                                                                                                                                        |             |
+| As a site user I want to be able to easily register for a personal user account so that I can have a personal account and be able to view my account content, previous orders and save my billing and shipping details | Must Have   |
+| As a site user I want to be able to login to my account so that I can access, view and edit my personal account information                                                                                            | Must Have   |
+| As a site user I want to be able to logout of my account so that I can log out and secure my personal account information when not using the store.                                                                    | Must Have   |
+| As a logged in user I want to be able to edit my personal and shipping details so that I can keep my account profile up to date                                                                                        | Should Have |
+| As a logged in user I want to be able to rate a product I have purchased so that I can contribute to the rating of products on the site                                                                                | Won't Have  |
+| As a logged in user I want to be able to comment on a product I have purchased so that I can contribute to the rating of products on the site                                                                          | Wont Have   |
+|                                                                                                                                                                                                                        |             |
+| As a site user I want to be able to sort the available products so that I can identify highly rated, low/high priced items                                                                                             | Should Have |
+| As a site user I want to be able to view products by category so that I can group products by the category or genre that interests me.                                                                                 | Must Have   |
+| As a site user I want to be able to view products by author so that I can select other works by the same author.                                                                                                       | Must Have   |
+| As a site user I want to be able to view what I have searched so that I can see whether what I want is available in the store and the number of the search results.                                                    | Should Have |
+|                                                                                                                                                                                                                        |             |
+| As a site user I want to be able to add an item to my shopping cart so that I can make a purchase.                                                                                                                     | Must Have   |
+| As a site user I want to be able to view on screen notifications when I add a product to shopping cart so that I can confirm my action was successful.                                                                 | Must Have   |
+| As a site user I want to be able to select the quantity of the product I want so that I can ensure I don't get too many or too few of the product I want.                                                              | Should Have |
+| As a site user I want to be able to view the contents of the shopping cart so that I can see the total cost of what I have selected.                                                                                   | Must Have   |
+| As a site user I want to be able to adjust the quantity of any item in the shopping cart so that I can increase or decrease the quantity of an item for puchase.                                                       | Must Have   |
+| As a site user I want to be able to delete an item from my shopping cart so that I can remove it for puchase.                                                                                                          | Could Have  |
+| As a site user I want to be able to checkout and pay so that I can complete my purchase.                                                                                                                               | Must Have   |
+| As a logged in user I want to be able to enter my shipping information so that I can checkout quickly and securely.                                                                                                    | Must Have   |
+| As a logged in user I want to be able to view an order confirmation after checkout so that I can review a summary of my successful purchases.                                                                          | Should Have |
+|                                                                                                                                                                                                                        |             |
+| As a site user I want to be able to enter my card details so that I can pay for my purchase.                                                                                                                           | Must Have   |
+| As a site user I want to be able to have my payment processed securely so that I can pay for my purchase.                                                                                                              | Must Have   |
+|                                                                                                                                                                                                                        |             |
+| As the store owner/admin I want to be able to have a secure view of the store's product data so that I can protect the security of the data of my store.                                                               | Must Have   |
+| As the store owner/admin I want to be able to add a new product to the site so that I can expand the product offering of the store                                                                                     | Must Have   |
+| As the store owner/admin I want to be able to edit/update an existing item so that I can update product price, description, etc.                                                                                       | Must Have   |
+| As the store owner/admin I want to be able to delete an item from the site so that I can remove items no longer being stocked by the store.                                                                            | Must Have   |
+| As the store owner/admin I want to be able to reply to comments from logged in users so that I can ensure customers feel valued by the owners of the store.                                                            | Won't Have  |
+|                                                                                                                                                                                                                        |             |
+| As a newly registered user I want to be able to receive a verification email upon registering on the site so that I can verify my account registration was successful.                                                 | Must Have   |
+| As a logged in user I want to be able to receive a confirmation of purchase email so that I can view and keep a record of my confirmed order                                                                           | Must Have   |
+|                                                                                                                                                                                                                        |             |
+| Create dummy FB page                                                                                                                                                                                                   | Must Have   |
+| Add a newsletter signup form to application                                                                                                                                                                            | Must Have   |
+|                                                                                                                                                                                                                        |             |
+| All user action must receive feedback                                                                                                                                                                                  | Must Have   |
+
+- Additional Setup tasks
+
+| Setup Tasks                                                                                          |           |
+| ---------------------------------------------------------------------------------------------------- | --------- |
+| Github Repo Setup, create User Story template, add User Stories to issues with labels and milestones | Must Have |
+| Django setup in Gitpod                                                                               | Must Have |
+| Allauth setup                                                                                        | Must Have |
+| Create base template                                                                                 | Must Have |
+| Create 404 error page                                                                                | Must Have |
 
 ## User Story Tasks<a name="ust"></a>
 
