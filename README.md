@@ -103,26 +103,48 @@ Bookworms is a Business to Consumer (B2C) direct seller of books.
 
 ### Strategy
 
+Our user is browsing for books, and wants an efficient, visually appealing, and secure means of book shopping. Being able to filter by genre and sort the product listing is a bonus. Website use should be intuitive. Branding should be clean, uncluttered, without distraction, but not sparse. The features are created with user ease of use in mind.
 
 ### Scope
 
+An intuitive simple, responsive online shopping experience with the following features is the Minimum Viable Product (MVP):
 
+- responsive design,
+- full-Stack website with an interactive front-end, a main navigation menu and a structured layout,
+- a product structure contained within a cloud-hosted, relational database,
+- secure authentication and role-based authorisation, 
+- current login state is reflected to the user,
+- secure ecommerce payment stystem, 
+- user feedback system to report sucessful and unsuccessful actions,
+- fully implemented CRUD - Create, Add, Update and Delete items from a secure front-end,
 
 The six-week deadline is fixed and the timeline is tight.  MVP is priority.  
 
+
 ### Structure
 
- and where that data is stored in a consistent and well-organised manner..
+As is usual with an ecommerce business, a user of Bookworms is not required to be registered to browse and make a purchase.  However, greater convenience of use of the site comes with registration, for example a user's billing details and previous purchases are saved to their Profile when registered and can be edited on their Profile when they are logged in.  To ensure the security of the ecommerce business and its product offering, only Store Owner/Admin users will have access to the Product table and to its features and functionality following authenticated superuser login. 
+
+User registration and login links are located on the Navigation bar. Successful login expands the Navigation bar to contain a 'Profile' page link for registered users, and if an authenticated user is a superuser, ie is the Store Owner, login returns 'Bookworms Store Management' link, with add, edit, and delete feature to manage the product offering of the online store.
+
+Search feature on the Navigation bar is available to all users.  
+
+Logout feature is automatic following successful login and appears on Navigation bar to all website users. Logout returns the user to Home page.
+
+The interactive footer contains internal links to the About Us, Privacy Policy pages.  It also contains a link to Bookworm's Newsletter subscription form, with external links to the website's social media.
+
+The functionality of Bookworms is a website with a cloud-based relational database to contain and manage the product offering, and which uses Stripe payment system to handle secure payments.  The database data is stored in a consistent and well-organised manner and any changes to the data is immediately available to the user at the front-end.
 
 ### Skeleton
 
-A user will be familiar with clicking on icons to perform an action, this app will conform with this convention.  Uncluttered, simple UI. 
+This ecommerce website follows all the conventions followed by other online stores.  A user will be familiar with clicking on links and on icons to perform an action, with adding products to a Shopping Cart and with completing a Checkout process and card validation process to make a secure payment for a product or service.  This app will conform with all this convention.  Uncluttered, simple UI. 
 
 ### Surface
 
+Colours will be crisp, clean, sophisticated. The colour palette generated based on the home page and favicon image.  Fonts will follow the clean, uncluttered scope with Montserrat chosen as it is easy to read on all devices.
 
+The User's interaction with this responsive application should be simple and natural.  Use of links and icons will make actions intuitive. Efficient use of feedback messages will confirm successful and unsuccessful actions to the user at the front-end.
 
-The User's interaction with this responsive application should be easy and natural.  Use of icons will make actions like edit and delete intuitive. Efficient use of response messages will confirm successful actions to the user, with unsuccessful action messages easy to understand.
 
 ## Agile Methodology<a name="agile"></a>
 

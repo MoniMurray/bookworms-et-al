@@ -228,7 +228,7 @@ User Story	Acceptance Criteria
 
 I have used MoSCoW Prioritisation to assign a priority level to the User Stories of the Project. 'MoSCoW' is an acronym for 'Must have', 'Should have', 'Could have, 'Will not have' and represent the prioritisation level applied to User Stories during this iteration of production. For the purpose of this project, 'an iteration' represents this project's lifecycle up to submission.
 
-- Must Have - these User Stories are non-negotiable and represent the core functionality of the Project. As such, they are guaranteed to be delivered. 'Must have' features of this project are the Responsive front-end design, User Registration and Authentication, and CRUD. This represents approximately 60% of the effort planned for the project overall.
+- Must Have - these User Stories are non-negotiable and represent the core functionality of the Project. As such, they are guaranteed to be delivered. Among the 'Must have' features of this project are the Responsive front-end design, User Registration and Authentication, and CRUD. This represents approximately 60% of the effort planned for the project overall.
 
 - Should Have and Could Have - Should have/Could have can be grouped together as being important aspects of the Project adding significant value, but as they are not vital they should each represent approximately 20% of the effort planned for the project.
 
