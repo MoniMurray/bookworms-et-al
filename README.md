@@ -205,72 +205,6 @@ A favicon appears in the browser tab with the website name as a visual reminder 
 
 The favicon for Bookworms is also the website's landing page image.  I chose this image from [freepik.com](www.freepik.com), saved it to my local machine, and used [favicon.io](https://favicon.io/) to download the image and generate the favicon files and the link tags to insert in the Head of my base.html.
 
-## Site Features
-
-#### Homepage
-
-Bookworms home page is the primary web page that a visitor will view when they navigate to the website via a search engine, and it also functions as a redirection point following many of site's actions. It establishes Bookworms' brand and entices a visitor to delve deeper into the website.  Our home page contains one call to action, the 'Shop Now' button.
-
-#### Registration/Authentication
-
-Wikipedia defines website user registration and login as a function which "enables a system to personalize itself".  This personalisation is what offers user's exclusivity and convenience for a returning user. Our Bookworms website personalises the experience for a registered and logged in user by displaying a welcome message containing the user's name on login, and the Navigation content is changed to reflect the access level of the authenticated used. Bookworms allows a logged-in user to view and modify personal shipping details and previous purchase information.
-
-#### Navigation 
-
-The Navigation bar of Bookworms is designed to help a site user to move smoothly around the site, allowing users to navigate the layout of the site intuitively.  It is organised in a way to link the other pages of the website.  Our user can use the following functions with ease:
-
-- Search bar function,
-- My Account, which contains Registration and Login features to an unauthenticated user, or the Logout, Profile/Bookworms Store Management features to an authenticated user, with the content depending on their level of authentication,
-- Shopping Cart and Checkout function,
-- Category filtering feature.
-
-The Navigation bar is available and offers the same functionality on each page of the website.
-
-#### My Account
-
-My Account is a tool designed for ease of use of the site user.  It also creates a sense of exclusivity for a user, with certain content only available to a logged in user. 
-
-The My Account tool contains features for all users, be that Registration for an account, Login to an account, or when logged in contains a link to the user's Profile and a Logout link to logout and preserve the user's secure content of the site.  It also provides a front-end means of managing the store's product offering for the Store Owner.
-
-#### Shopping Cart
-
-The shopping cart is for the site user to add products to for purchase.  
-
-When a product is successfully added to the shopping cart a success message is displayed to the user giving a thumnail view synopsis of the product added.  It conveniently provides a total value of the products in the shopping cart so the user can keep a running count of what they have added to the cart for purchase.
-
-Within the shopping cart page, a user has additional functionality and can increase or decrease the quantity of the product they have selected to purchase, or remove it entirely, and can see the running total of their purchase update with every change they make.
-
-The shopping cart contains a button link to the secure Checkout.
-
-#### Checkout
-
-A user can finalise their purchase of the products on this page.  They are required to add shipping details for their order, and securely add their card details.  The processing of the users card is managed using Stripe secure payments system.  
-
-On the checkout page, a user can opt-in to update their profile with their shipping details for speed of checkout on their next visit to the store.
-
-#### Products/Bestsellers
-
-The products available for purchase on Bookworms are listed on this page and the page provides easy-to-use sorting and filtering options to help users find what they want within the product listings.
-
-A product can be added directly to the shopping cart using the 'Add to My Cart' button function on each product.  Alternatively, a user can opt to open a product detail page for a product to view that offering in more details.
-
-#### Product Detail
-
-The product detail page outlines everything a user might wish to know about a product offered on Bookworms.  Product name, description, rating, price and a quantity picker are all features of this page.  A product can be added to the shopping cart, and the quantity of the product can be increased to a maximum of 5 before the 'Add to My Cart' button is clicked.
-
-#### CRUD
-
-All of the major functions of the product management of the Bookworms store can be controlled by the authenticated Store Owner via the front-end on either the Products page or the Product detail page.  New products can be added, and existing product detail can be edited, or deleted from the store entirely, with all changes being reflected to the Store Owner on the front-end and to the data on the database.
-
-#### User Feedback Messages
-
-Feedback to all user interactions is provided via messages which appear from below the shopping cart icon.  A user can see their action has been performed successfully, and feedback in the event of an unsuccessful action is provided also, with a helpful message.
-
-#### Email Confirmation
-
-Upon registering for an account on the Bookworms site, a user is sent a registration confirmation email and asked to verify their email address by clicking on the link issued to them in the confirmation email.  
-
-On making a purchase, an order confirmation email is issued to a user which confirms all the detail of their purchase and the shipping address to which it will be sent.
 
 
 ### Database ERD
@@ -290,39 +224,86 @@ The Entity Relationship Model for the relational database was first created on p
 
 Using [LucidChart](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#) I set out the entities I needed in this Project, the attributes I required within each entity and then defined the relationships between the entities.  
 
+
 ## Features<a name="features"></a>
 
+#### Homepage
 
+Bookworms home page is the primary web page that a visitor will view when they navigate to the website via a search engine, and it also functions as a redirection point following many of site's actions. It establishes Bookworms' brand and entices a visitor to delve deeper into the website.  Our home page contains one call to action, the 'Shop Now' button.
 
+#### Registration/Authentication
 
-### Landing Page
+Wikipedia defines website user registration and login as a function which "enables a system to personalize itself".  This personalisation is what offers users exclusivity, and convenience for a returning user. Our Bookworms website personalises the experience for a registered and logged in user by displaying a welcome message containing the user's name on login, and the Navigation content is changed to reflect the access level of the authenticated user. Bookworms allows a logged-in user to view and modify personal shipping details and previous purchase information.
 
+#### Navigation 
 
+The Navigation bar of Bookworms is designed to help a site user to move smoothly around the site, allowing users to navigate the layout of the site intuitively.  It is organised in a way to link the other pages of the website.  Our user can use the following functions with ease:
 
+- Search bar function,
+- My Account, which contains Registration and Login features to an unauthenticated user, or the Logout, Profile/Bookworms Store Management features to an authenticated user, with the content depending on their level of authentication,
+- Shopping Cart and Checkout function,
+- Category filtering feature.
 
-### Home Page
+The Navigation bar is available and offers the same functionality on each page of the website.
 
+#### My Account
 
+My Account is a tool designed for ease of use of the site user.  It also creates a sense of exclusivity for a user, with certain content only available to a logged in user. 
 
+The My Account tool contains features for all users, be that Registration for an account, Login to an account, or when logged in changes to contain a link to the user's Profile and a Logout link to logout and preserve the user's secure content of the site.  It also provides a front-end means of managing the store's product offering for the Store Owner.
 
-### General features on each page
+#### Shopping Cart
 
-#### The Navigation Bar 
+The shopping cart is for the site user to add products to for purchase.  
 
+When a product is successfully added to the shopping cart a success message is displayed to the user giving a thumbnail view and synopsis of the product added.  It conveniently provides a total monetary value of the products in the shopping cart so the user can keep a running count of the cost of what they have added to the cart for purchase.
 
+Within the shopping cart page, a user has additional functionality and can increase or decrease the quantity of the product they have selected to purchase, or remove it entirely, and can see the running total of their purchase update with every change they make.
+
+The shopping cart contains a button link to the secure Checkout.
+
+#### Checkout
+
+A user can finalise their purchase of the products on this page.  They are required to add shipping details for their order, and securely add their card details.  The processing of the user's card is managed using Stripe secure payments system.  
+
+On the checkout page, a user can opt-in to update their profile with their shipping details for speed of checkout on their next visit to the store.
+
+#### Products
+
+The products available for purchase on Bookworms are listed on this page and the page provides easy-to-use sorting and filtering options to help users find what they want within the product listings.
+
+A product can be added directly to the shopping cart using the 'Add to My Cart' button function on each product.  Alternatively, a user can opt to open a product detail page for a product to view that offering in more details.
+
+#### Product Detail
+
+The product detail page outlines everything a user might wish to know about a product offered on Bookworms.  Product name, description, rating, price and a quantity picker are all features of this page.  A product can be added to the shopping cart, and the quantity of the product can be increased up to a maximum of 5 before the 'Add to My Cart' button is clicked.
+
+#### CRUD
+
+All of the major functions of the product management of the Bookworms store can be controlled by the authenticated Store Owner via the front-end on either the Products page or the Product detail page.  New products can be added, and existing product detail can be edited, or deleted from the store entirely, with all changes being reflected to the Store Owner on the front-end and to the data on the database.
+
+#### User Feedback Messages
+
+Feedback to all user interactions is provided via messages which appear from below the shopping cart icon.  A user can see their action has been performed successfully, and feedback in the event of an unsuccessful action is provided also, with a helpful message. A message can be dismissed by clicking the 'x' button on the top right corner of any feedback message.
+
+#### Email Confirmation
+
+Upon registering for an account on the Bookworms site, a user is sent a registration confirmation email and asked to verify their email address by clicking on the link issued to them in the confirmation email.  
+
+On making a purchase, an order confirmation email is issued to a user which confirms all the detail of their purchase and the shipping address to which it will be sent.
 
 #### Search Feature
 
-
+Search feature, which is available to all site users, can be found in the Navigation bar and is used to search the website's content with convenience for the user in mind.  A user's search term is checked against product titles and descriptions, category names or author names and any matches found are returned to the front-end, with the number of the returned matches displayed over the list of those items.
 
 #### Footer
 
 The bespoke footer contains links to an 'About Us' page, the application's generated 'Privacy Policy', and an invitation to subscribe to 'Join VIP Club' to receive a newsletter.  The footer also contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile, together with external links to the Facebook Business Page for Bookworms et al, and external links to Instagram and Twitter.
 
-
 ### Screenshots
 
 
+TABLE 
 
 403 Page
 
@@ -412,7 +393,6 @@ Languages in this project were:
 - Django-Storages - Used to connect Django to AWS.
 
 
-
 ## Defensive Programming
 
 Defensive Programming was at the forefront of the site's development, with user authentication and authorisation implemented for all site users and limiting access to data to only the authenticated registered owner of that data.  In addition, Store Owner access is further restricted using the 'login_required' decorator with those front-end management views only rendering at the front-end to superusers.
@@ -480,7 +460,6 @@ Bookworms can provide additional benefit to Subscribers by providing regular int
 
 - Newsletter subscription in this application is provided via a custom django app.  Any user, not just an authenticated user, may subscribe to receive a newsletter.  The subscription page is launched via a link in the footer.  Users may provide their name, but an email address is required in order to subscribe, and a user must opt-in to subscribe to comply with GDPR Regulations.  A user will receive feedback confirming their subscription, or in the event of an error there will be feedback inviting them to ensure the form is correctly filled in.
 
-
 #### Social Media Marketing - Facebook business page
 
 As Facebook has the largest number of users and the widest demographic, I chose to set up a [Facebook Business Page](https://www.facebook.com/profile.php?id=100094116007278) as part of the social media marketing strategy for Bookworms et al.
@@ -534,6 +513,7 @@ The following table, based on Hubspot's SEO Starter Pack, helped me plan the SEO
 A Privacy Policy, or Notice, is a document provided by the web application.  It's purpose is to be transparent and inform Bookworm's users about how their data is being collected and processed. 
 
 It is concise, transparent and easily accessible via the footer on every page of the website.  This [Privacy Policy generator](https://www.privacypolicygenerator.info/live.php?token=6eM1Yk45QbpbJTg0NqgAfDfiFdgQoQgu) was used to generate the text content for this Bookworm et al's Privacy Policy.
+
 
 ## Testing<a name="testing"></a>
 
