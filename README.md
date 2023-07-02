@@ -125,15 +125,15 @@ The six-week deadline is fixed and the timeline is tight.  MVP is priority.
 
 As is usual with an ecommerce business, a user of Bookworms is not required to be registered to browse and make a purchase.  However, greater convenience of use of the site comes with registration, for example a user's billing details and previous purchases are saved to their Profile when registered and can be edited on their Profile when they are logged in.  To ensure the security of the ecommerce business and its product offering, only Store Owner/Admin users will have access to the Product table and to its features and functionality following authenticated superuser login. 
 
-User registration and login links are located on the Navigation bar. Successful login expands the Navigation bar to contain a 'Profile' page link for registered users, and if an authenticated user is a superuser, ie is the Store Owner, login returns 'Bookworms Store Management' link, with add, edit, and delete feature to manage the product offering of the online store.
+User registration and login links are located on the Navigation bar. Successful login expands the Navigation bar to contain a 'Profile' page link for registered users, and if an authenticated user is a superuser, ie is the Store Owner, login returns 'Bookworms Store Management' link to add further products to the store.  In addition, the Store Owner can add, edit, and delete products from the main Products page to conveniently manage the product offering of the online store.
 
 Search feature on the Navigation bar is available to all users.  
 
 Logout feature is automatic following successful login and appears on Navigation bar to all website users. Logout returns the user to Home page.
 
-The interactive footer contains internal links to the About Us, Privacy Policy pages.  It also contains a link to Bookworm's Newsletter subscription form, with external links to the website's social media.
+The interactive footer contains internal links to the About Us and Privacy Policy pages.  It also contains a link to Bookworm's Newsletter VIP Club subscription form, and external links to the website's social media.
 
-The functionality of Bookworms is a website with a cloud-based relational database to contain and manage the product offering, and which uses Stripe payment system to handle secure payments.  The database data is stored in a consistent and well-organised manner and any changes to the data is immediately available to the user at the front-end.
+The functionality of Bookworms is a website with a cloud-based relational database to contain and manage the product offering, and which uses Stripe payment system to handle secure payments.  The data is stored in a consistent and well-organised manner on the database and any changes to the data is immediately available to the user at the front-end.
 
 ### Skeleton
 
@@ -141,9 +141,9 @@ This ecommerce website follows all the conventions followed by other online stor
 
 ### Surface
 
-Colours will be crisp, clean, sophisticated. The colour palette generated based on the home page and favicon image.  Fonts will follow the clean, uncluttered scope with Montserrat chosen as it is easy to read on all devices.
+Colours will be crisp, clean, sophisticated. The colour palette generated is based on the home page and favicon image with soft greens and khaki tones.  Fonts will follow the clean, uncluttered scope with Montserrat chosen as it is easy to read on all devices.  The contrast between text and colour has been considered and colour choices made to optimise that contrast for screen reader and assistive technology.
 
-The User's interaction with this responsive application should be simple and natural.  Use of links and icons will make actions intuitive. Efficient use of feedback messages will confirm successful and unsuccessful actions to the user at the front-end.
+A User's interaction with this responsive application should be simple and natural.  Use of links and icons will make actions intuitive. Efficient use of feedback messages will confirm successful and unsuccessful actions to the user at the front-end.
 
 
 ## Agile Methodology<a name="agile"></a>
@@ -191,11 +191,11 @@ I created my wireframes using [Figma.com](www.figma.com) to create the early UX 
 | Profile Page                                     | [Profile - Desktop](readme_media/wireframes/profile_desktop.png)                         |                          |
 | Shopping Cart                                    | [Shopping Cart wireframe](readme_media/wireframes/shopping_cart.png)                           |                          |
 | Checkout                                         | [Checkout - Desktop wireframe](readme_media/wireframes/checkout_desktop.png)                        | [Checkout - Mobile wireframe](readme_media/wireframes/checkout_mobile.png)    |
-| CRUD Add                                         | [Crud - Add_product wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                        |                          |
-| CRUD Edit                                        | [Crud - Edit_product wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                       |                          |
-| Newsletter signup                                | [Newsletter signup](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                       |                          |
+| CRUD Add                                         | [Crud - Add_product wireframe](readme_media/wireframes/crud_add_product.png)                        |                          |
+| CRUD Edit                                        | [Crud - Edit_product wireframe](readme_media/wireframes/crud_edit_product.png)                       |                          |
+| Newsletter signup                                | [Newsletter signup](readme_media/wireframes/newsletter_signup.png)                       |                          |
 | About Us                                         | [About us](readme_media/wireframes/about_us.png)                                |                          |
-| Footer                                           | [Footer](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                                  |
+| Footer                                           | [Footer](readme_media/wireframes/footer.png)                                  |
 
 ### Favicon
 
