@@ -30,7 +30,7 @@
 
 #Privacy Policy
 
-# THE SHOPPING LIST Organised | Everywhere
+# Bookworms et al
 
 
 
@@ -126,7 +126,7 @@ The User's interaction with this responsive application should be easy and natur
 
 ## Agile Methodology<a name="agile"></a>
 
-Please follow this link to open my [AGILE.md](AGILE.md) file and read about how I used Agile Methodology in the planning and development of The Shopping List application.
+Please follow this link to open my [AGILE.md](AGILE.md) file and read about how I used Agile Methodology in the planning and development of Bookworms et al application.
 
 
 ## Design<a name="design"></a>
