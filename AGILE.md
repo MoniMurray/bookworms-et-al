@@ -26,7 +26,7 @@ Each user story is based on a bespoke user story Template which is created in th
 
 Each User Story extends from the Template and is created in the Issues tab of my Github repository.
 
-User Stories have been grouped and categorised into Epics using bespoke 'labels', where appropriate, and then assigned to the project named '@bookworms_et_al' where they are used to structure the development of the MVP of my project.
+User Stories have been grouped and categorised into Epics using bespoke 'labels', where appropriate, and then assigned to the project named '@bookworms_et_al' where they are used to structure the development of the MVP of my project.  MVP attainment represents the first Sprint for this project with the satisfactory meeting of each Project Feature.
 
 | User Story ID                   | As a (role)           | I want to be able to (capacity)                                    | so that I can (received benefit)                                                                                         |
 | ------------------------------- | --------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
