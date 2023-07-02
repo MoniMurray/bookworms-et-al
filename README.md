@@ -30,7 +30,7 @@
 
 #Privacy Policy
 
-# Bookworms et al
+# BOOKWORMS et al	
 
 
 
@@ -355,7 +355,6 @@ Languages in this project were:
 
 
 
-
 ## Defensive Programming
 
 Defensive Programming was at the forefront of the site's development, with user authentication and authorisation implemented for all site users and limiting access to data to only the authenticated registered owner of that data.  In addition, Store Owner access is further restricted using the 'login_required' decorator with those front-end management views only rendering at the front-end to superusers.
@@ -403,15 +402,14 @@ Defensive Programming was at the forefront of the site's development, with user 
 - Plan the cardinality of the entities, asking what is the minimum or maximum number of attributes each entity can have with another entity, and establish any relationships between the entities clearly.
 
 
-### Document eCommerce Business model underlying the app
-
-
 ### Purpose of the Application
 
 -The eCommerce aspect of the Bookworms et al business is specifically designed to facilitate commercial transactions, and it involves the online transfer of information.  As mentioned above, this is a Business to Customer eCommerce application type, selling physical products online.  Payments for those products is taken online.  The transaction is finished after a single payment is made and the product is shipped.
 
 
 ### Core Business Intents
+
+The core business intent of Bookworms et al is to sell books online as a part of it's physical bookshop business, to extend it's market reach.
 
 
 ### Marketing Strategies for app
@@ -420,7 +418,9 @@ Defensive Programming was at the forefront of the site's development, with user 
 
 #### Newsletters - VIP Club
 
-- Newsletter subscription in this application is provided via a custom django app.  Any user, not just an authenticated user, may subscribe to receive a newsletter.  The subscription page is launched via a link in the footer.  Users may provide their name, but an email address is required and a user must opt-in to subscribe to comply with GDPR Regulations.  A user will receive feedback confirming their subscription or inviting them to ensure the form is correctly filled in.
+Bookworms can provide additional benefit to Subscribers by providing regular interesting content related to bestsellers, author signings and readings and special offers.
+
+- Newsletter subscription in this application is provided via a custom django app.  Any user, not just an authenticated user, may subscribe to receive a newsletter.  The subscription page is launched via a link in the footer.  Users may provide their name, but an email address is required in order to subscribe, and a user must opt-in to subscribe to comply with GDPR Regulations.  A user will receive feedback confirming their subscription, or in the event of an error there will be feedback inviting them to ensure the form is correctly filled in.
 
 
 #### Social Media Marketing - Facebook business page
