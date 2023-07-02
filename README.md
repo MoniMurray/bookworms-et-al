@@ -103,7 +103,9 @@ Bookworms is a Business to Consumer (B2C) direct seller of books.
 
 ### Strategy
 
-Our user is browsing for books, and wants an efficient, visually appealing, and secure means of book shopping. Being able to filter by genre and sort the product listing is a bonus. Website use should be intuitive. Branding should be clean, uncluttered, without distraction, but not sparse. The features are created with user ease of use in mind.
+Our user is browsing for books, and wants an efficient, visually appealing, and secure means of book shopping. Being able to filter by genre and sort the product listing is a bonus. Website use is designed to be intuitive. Branding is clean, uncluttered, without distraction, but not sparse. The features are created with user ease of use in mind.
+
+All interaction with the site is designed to produce a positive emotional response within the user. This is down to the flow of information layout, use of colour, clear and unambiguous navigation structures and user action feedback. There are no aggressive automatic pop-ups.  A user can control all actions and is shown a progress indicator and feedback on financial transactions.
 
 ### Scope
 
@@ -137,7 +139,7 @@ The functionality of Bookworms is a website with a cloud-based relational databa
 
 ### Skeleton
 
-This ecommerce website follows all the conventions followed by other online stores.  A user will be familiar with clicking on links and on icons to perform an action, with adding products to a Shopping Cart and with completing a Checkout process and card validation process to make a secure payment for a product or service.  This app will conform with all this convention.  Uncluttered, simple UI. 
+This ecommerce website follows all the conventions followed by other online stores.  A user will be familiar with clicking on links and on icons to perform an action, with adding products to a Shopping Cart and with completing a Checkout process and card validation process to make a secure payment for a product or service.  This app will conform with all this convention.  All information displayed on the site is presented in an organised fashion with each piece of information being easy to find.  
 
 ### Surface
 
@@ -199,42 +201,76 @@ I created my wireframes using [Figma.com](www.figma.com) to create the early UX 
 
 ### Favicon
 
-A favicon appears in the browser tab with the website name to enable a user to easily recognise a company's website in a busy browser with many open tabs.  
+A favicon appears in the browser tab with the website name as a visual reminder to enable a user to easily recognise and identify a company's website in a busy browser with many open tabs.  
 
 The favicon for Bookworms is also the website's landing page image.  I chose this image from [freepik.com](www.freepik.com), saved it to my local machine, and used [favicon.io](https://favicon.io/) to download the image and generate the favicon files and the link tags to insert in the Head of my base.html.
 
+## Site Features
+
 #### Homepage
 
+Bookworms home page is the primary web page that a visitor will view when they navigate to the website via a search engine, and it also functions as a redirection point following many of site's actions. It establishes Bookworms' brand and entices a visitor to delve deeper into the website.  Our home page contains one call to action, the 'Shop Now' button.
 
 #### Registration/Authentication
 
+Wikipedia defines website user registration and login as a function which "enables a system to personalize itself".  This personalisation is what offers user's exclusivity and convenience for a returning user. Our Bookworms website personalises the experience for a registered and logged in user by displaying a welcome message containing the user's name on login, and the Navigation content is changed to reflect the access level of the authenticated used. Bookworms allows a logged-in user to view and modify personal shipping details and previous purchase information.
+
+#### Navigation 
+
+The Navigation bar of Bookworms is designed to help a site user to move smoothly around the site, allowing users to navigate the layout of the site intuitively.  It is organised in a way to link the other pages of the website.  Our user can use the following functions with ease:
+
+- Search bar function,
+- My Account, which contains Registration and Login features to an unauthenticated user, or the Logout, Profile/Bookworms Store Management features to an authenticated user, with the content depending on their level of authentication,
+- Shopping Cart and Checkout function,
+- Category filtering feature.
+
+The Navigation bar is available and offers the same functionality on each page of the website.
 
 #### My Account
 
+My Account is a tool designed for ease of use of the site user.  It also creates a sense of exclusivity for a user, with certain content only available to a logged in user. 
+
+The My Account tool contains features for all users, be that Registration for an account, Login to an account, or when logged in contains a link to the user's Profile and a Logout link to logout and preserve the user's secure content of the site.  It also provides a front-end means of managing the store's product offering for the Store Owner.
 
 #### Shopping Cart
 
+The shopping cart is for the site user to add products to for purchase.  
+
+When a product is successfully added to the shopping cart a success message is displayed to the user giving a thumnail view synopsis of the product added.  It conveniently provides a total value of the products in the shopping cart so the user can keep a running count of what they have added to the cart for purchase.
+
+Within the shopping cart page, a user has additional functionality and can increase or decrease the quantity of the product they have selected to purchase, or remove it entirely, and can see the running total of their purchase update with every change they make.
+
+The shopping cart contains a button link to the secure Checkout.
 
 #### Checkout
 
+A user can finalise their purchase of the products on this page.  They are required to add shipping details for their order, and securely add their card details.  The processing of the users card is managed using Stripe secure payments system.  
 
-#### Products
+On the checkout page, a user can opt-in to update their profile with their shipping details for speed of checkout on their next visit to the store.
 
+#### Products/Bestsellers
+
+The products available for purchase on Bookworms are listed on this page and the page provides easy-to-use sorting and filtering options to help users find what they want within the product listings.
+
+A product can be added directly to the shopping cart using the 'Add to My Cart' button function on each product.  Alternatively, a user can opt to open a product detail page for a product to view that offering in more details.
 
 #### Product Detail
 
-
+The product detail page outlines everything a user might wish to know about a product offered on Bookworms.  Product name, description, rating, price and a quantity picker are all features of this page.  A product can be added to the shopping cart, and the quantity of the product can be increased to a maximum of 5 before the 'Add to My Cart' button is clicked.
 
 #### CRUD
 
-
+All of the major functions of the product management of the Bookworms store can be controlled by the authenticated Store Owner via the front-end on either the Products page or the Product detail page.  New products can be added, and existing product detail can be edited, or deleted from the store entirely, with all changes being reflected to the Store Owner on the front-end and to the data on the database.
 
 #### User Feedback Messages
 
-
+Feedback to all user interactions is provided via messages which appear from below the shopping cart icon.  A user can see their action has been performed successfully, and feedback in the event of an unsuccessful action is provided also, with a helpful message.
 
 #### Email Confirmation
 
+Upon registering for an account on the Bookworms site, a user is sent a registration confirmation email and asked to verify their email address by clicking on the link issued to them in the confirmation email.  
+
+On making a purchase, an order confirmation email is issued to a user which confirms all the detail of their purchase and the shipping address to which it will be sent.
 
 
 ### Database ERD
@@ -666,6 +702,8 @@ To fix my footer to the bottom of every page, regardless of body content size, I
 The [PyLessons](https://pylessons.com/django-subscribe) article about Newsletter subscriptions helped me to lay out the model for my own custom newsletter subscription in this project.
 
 Bug fixing my search function took a little further research into how to structure a search in Django and the following [YouTube video](https://www.youtube.com/watch?v=AGtae4L5BbI&pp=ygUec2VhcmNoIHByb2R1Y3RzIGZlYXR1cmUgZGphbmdv) helped me to formulate the search and structure the view, in particular the author and category queries which needed double underscores to search in the name field of the author and category foreignkeys of Product model.
+
+I used [Wikipedia](https://en.wikipedia.org/wiki/Registered_user#:~:text=User%20registration%20and%20login%20enables,preferences%20indicated%20by%20the%20user.) to define features of a website, such as Registration and Login.
 
 All wireframes, ERD and screenshots are my own creation.  This Readme is based on the extensive Readme.md file I created for my PP4, [The Shopping List](https://github.com/MoniMurray/shopping-list)
 
