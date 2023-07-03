@@ -10,6 +10,7 @@
     <div class="toast-body bg-white">
         <div class="row">
             <div class="col">
+                
               {{ message }}  
               <hr class="mt-1 mb-3">
               <!-- under the success message, render the shopping bag 
@@ -46,14 +47,24 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <strong>
-                                        <p class="mt-3 mb-1 text-black">Total {% if free_delivery_delta > 0 %} (excl. delivery) {% endif%}: 
-                                            <span class="float-right">€{{total | floatformat:2}}</span>
-                                        </p>
-                                    </strong>
-                                    {% if free_delivery_delta > 0 %}
+
+                                    <!-- Free delivery in Ireland -->
+
+                                    {% if request.user.profile.default_country != 'IE' %}
+
+                                        <strong>
+                                            <p class="mt-3 mb-1 text-black">Total {% if free_delivery_delta > 0 %} (excl. delivery) {% endif%}: 
+                                                <span class="float-right">€{{total | floatformat:2}}</span>
+                                            </p>
+                                        </strong>
+                                        {% if free_delivery_delta > 0 %}
+                                            <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
+                                                Spend <strong>€{{ free_delivery_delta }}</strong> more to get free next day delivery!
+                                            </p>
+                                        {% endif %}
+                                    {% else %}
                                         <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
-                                            Spend <strong>€{{ free_delivery_delta }}</strong> more to get free next day delivery!
+                                            <strong>Free Delivery in Ireland!</strong>
                                         </p>
                                     {% endif %}
                                     <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-0">
