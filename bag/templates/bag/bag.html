@@ -46,8 +46,8 @@
                                     </td>
 
                                     <!-- product name -->
-                                    <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    <td class="py-3 d-none">
+                                        <p class="my-0 d-none"><strong>{{ item.product.name }}</strong></p>
                                         
                                     </td>
 
@@ -84,8 +84,6 @@
                                             You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
                                         </p>
                                         {% endif %}
-                                    
-                                        <!-- else -->
                                         
                                     {% else %}
                                         <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
