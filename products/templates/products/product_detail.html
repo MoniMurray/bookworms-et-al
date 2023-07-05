@@ -103,14 +103,17 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                             <!-- Column 2 contains the submit button for the form, a Keep Shopping button linking back to the products page
                                     and a hidden input field containing the current url of where the user is when they add to the shopping bag, to redirect
                                 the user back to that same page when they have completing adding to the bag -->
-                            <div class="col-12 mt-2">
+                            <div class="col-12 mt-1">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to My Cart">
+                                
+                            </div>
+                            <div class="col">    
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to My Cart"></span>
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             
