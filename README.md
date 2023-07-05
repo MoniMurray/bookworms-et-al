@@ -120,7 +120,67 @@ An intuitive simple, responsive online shopping experience with the following fe
 - user feedback system to report sucessful and unsuccessful actions,
 - fully implemented CRUD - Create, Add, Update and Delete items from a secure front-end,
 
-The six-week deadline is fixed and the timeline is tight.  MVP is priority.  
+The six-week deadline is fixed and the timeline is tight.  MVP is priority. 
+
+| Feature/Capability                                                                                 | Target                               |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| User Profile/My Account                                                                            | All Site Users                       |
+| Payment Capability/ecommerce Payment System = Stripe                                               | All Site Users                       |
+| Authentication and Authorisation                                                                   | Registered Users + Store Owner       |
+| Form with validation for CRUD                                                                      | Store Owner                          |
+| Secure access to authenticated views                                                               | Store Owner                          |
+| Shopping Cart                                                                                      | All Shoppers, logged in or not       |
+| Checkout                                                                                           | All Shoppers, logged in or not       |
+|                                                                                                    |                                      |
+| Feedback System                                                                                    |                                      |
+|                                                                                                    |                                      |
+| Implement a feedback system to report successful & unsuccessful activities - Interactive Front End | All Site Users                       |
+|                                                                                                    |                                      |
+| Main navigation menu                                                                               |                                      |
+|                                                                                                    |                                      |
+| View navbar items, navigate linked pages                                                           | All Site Users                       |
+| Role-based User Registration and Login                                                             | Registered Users + Store Owner       |
+| Restricted Content and Functionality                                                               | Registered Users + Store Owner       |
+| Data Validation                                                                                    | Registered Users + Store Owner       |
+|                                                                                                    |                                      |
+| Search                                                                                             |                                      |
+|                                                                                                    |                                      |
+| Enter search criteria, view result                                                                 | All Site Users                       |
+|                                                                                                    |                                      |
+| Footer                                                                                             |                                      |
+|                                                                                                    |                                      |
+| View footer items, navigate all linked pages                                                       | All Site Users                       |
+|                                                                                                    |                                      |
+| Products - cloud hosted SQL database                                                               |                                      |
+|                                                                                                    |                                      |
+| Browse, View detail and Select                                                                     | All Shoppers, logged in or not       |
+| Product CRUD                                                                                       | Store Owner                          |
+|                                                                                                    |                                      |
+| My Account/Profile                                                                                 |                                      |
+|                                                                                                    |                                      |
+| Register & Login                                                                                   | All Shoppers                         |
+| View My Profile                                                                                    | Registered, authenticated users only |
+| Edit/Update Profile data                                                                           | Registered, authenticated users only |
+|                                                                                                    |                                      |
+| Shopping Cart                                                                                      |                                      |
+|                                                                                                    |                                      |
+| View Shopping Cart, Add, Edit items                                                                | All Shoppers, logged in or not       |
+|                                                                                                    |                                      |
+| Checkout - Ecommerce payment system                                                                |                                      |
+|                                                                                                    |                                      |
+| View Checkout, Add shipping details,secure checkout                                                | All Shoppers, logged in or not       |
+| Make Stripe Payments                                                                               | All Shoppers, logged in or not       |
+|                                                                                                    |                                      |
+| Email                                                                                              |                                      |
+|                                                                                                    |                                      |
+| Registration Confirmation                                                                          | All site users                       |
+| Order Confirmation email                                                                           | All Shoppers, logged in or not       |
+|                                                                                                    |                                      |
+| Newsletter                                                                                         |                                      |
+|                                                                                                    |                                      |
+| View Signup page                                                                                   | All site users                       |
+| Subscribe                                                                                          | All Site users                       |
+|                                                                                                    |
 
 
 ### Structure
@@ -454,11 +514,14 @@ The core business intent of Bookworms et al is to sell books online as a part of
 
 - Content Marketing - consistently creating, distributing and promoting relevant online materials in a way that is strategically designed to attract and convert my target market into customers - Newsletters and Social Media Marketing
 
+
 #### Newsletters - VIP Club
 
 Bookworms can provide additional benefit to Subscribers by providing regular interesting content related to bestsellers, author signings and readings and special offers.
 
 - Newsletter subscription in this application is provided via a custom django app.  Any user, not just an authenticated user, may subscribe to receive a newsletter.  The subscription page is launched via a link in the footer.  Users may provide their name, but an email address is required in order to subscribe, and a user must opt-in to subscribe to comply with GDPR Regulations.  A user will receive feedback confirming their subscription, or in the event of an error there will be feedback inviting them to ensure the form is correctly filled in.
+
+![Newsletter Subscription Page!](readme_media/screenshots/seo_marketing/newsletter_signup/newsletter_subscription_page_desktop_screenshot.png)
 
 #### Social Media Marketing - Facebook business page
 
