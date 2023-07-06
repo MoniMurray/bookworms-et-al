@@ -1,35 +1,3 @@
-#Project Rationale
-
-#Business & Customer Goals
-
-#UI/UX
-
-#Database Design to ERD
-
-#Marketing
-
-#Facebook Business Page
-
-#User Stories
-
-#Testing
-
-#Technologies Used
-
-#References & Credits
-
-#Procedures
-
-#Deployment
-
-#Favicon
-
-#Code Validation
-
-#SEO
-
-#Privacy Policy
-
 # BOOKWORMS et al	
 
 
@@ -46,7 +14,7 @@ Developed by Monica Murray
 
 An image of the finished site generated from [Amiresponsive](https://amiresponsive.co.uk/) which displays the application at four screen size breakpoints.
 
-![Amiresponsive](g) 
+![Amiresponsive!](readme_media/screenshots/am_i_responsive_screenshot.png) 
 
 
 Please visit the live site via [this link](https://mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com/).
