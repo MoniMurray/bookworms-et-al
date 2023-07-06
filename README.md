@@ -428,7 +428,7 @@ Defensive Programming was at the forefront of the site's development, with user 
 
 ## Marketing
 
-- In the planning of my eCommerce application, I asked myself the following three questions:
+In the planning of my eCommerce application, I asked myself the following three questions:
 
 1. Which eCommerce application types apply to this online business.
 
@@ -468,21 +468,17 @@ Defensive Programming was at the forefront of the site's development, with user 
 
 - Plan the cardinality of the entities, asking what is the minimum or maximum number of attributes each entity can have with another entity, and establish any relationships between the entities clearly.
 
-
 ### Purpose of the Application
 
 -The eCommerce aspect of the Bookworms et al business is specifically designed to facilitate commercial transactions, and it involves the online transfer of information.  As mentioned above, this is a Business to Customer eCommerce application type, selling physical products online.  Payments for those products is taken online.  The transaction is finished after a single payment is made and the product is shipped.
-
 
 ### Core Business Intents
 
 The core business intent of Bookworms et al is to sell books online as a part of it's physical bookshop business, to extend it's market reach.
 
-
 ### Marketing Strategies for app
 
-- Content Marketing - consistently creating, distributing and promoting relevant online materials in a way that is strategically designed to attract and convert my target market into customers - Newsletters and Social Media Marketing
-
+Content Marketing - consistently creating, distributing and promoting relevant online materials in a way that is strategically designed to attract and convert my target market into customers using Newsletters and Social Media Marketing:
 
 #### Newsletters - VIP Club
 
