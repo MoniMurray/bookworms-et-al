@@ -12,10 +12,9 @@ Developed by Monica Murray
 
 
 
-An image of the finished site generated from [Amiresponsive](https://amiresponsive.co.uk/) which displays the application at four screen size breakpoints.
-
 ![Amiresponsive!](readme_media/screenshots/am_i_responsive_screenshot.png) 
 
+An image of the finished site generated from [Amiresponsive](https://amiresponsive.co.uk/) which displays the application at four screen size breakpoints.
 
 Please visit the live site via [this link](https://mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com/).
 
@@ -32,7 +31,7 @@ The business owner's goal is to have a profitable eCommerce presence of its phys
 
 ## User/Customer's Goals
 
-A customer of Bookworms et al wants to buy books.  They will understand the application's purpose when first arriving to the site, be able to navigate intuitively around the pages of the website, view all products, click on any product to view it in more detail, and be able to purchase one or many books securely.  A user or customer of this website will also want to be able to Register to create a user profile, Login and Logout of their account on website, view and edit their personal data securely via their account, and view their purchase history.  All customer actions are met with feedback via the interactive front end to confirm their chosen action has been performed successfully or has been unsuccessful.
+A customer of Bookworms et al wants to buy books.  They will understand the application's purpose when first arriving to the site, be able to navigate intuitively around the pages of the website, view all products, click on any product to view it in more detail, and be able to purchase one or many books securely.  A user or customer of this website may also want to be able to Register to create a user profile, and so can Login and Logout of their account on website, view and edit their personal data securely via their account, and view their purchase history.  All customer actions are met with feedback via the interactive front end to confirm their chosen action has been performed successfully or has been unsuccessful.
 
 ## Project Goal
 
@@ -159,7 +158,7 @@ User registration and login links are located on the Navigation bar. Successful 
 
 Search feature on the Navigation bar is available to all users.  
 
-Logout feature is automatic following successful login and appears on Navigation bar to all website users. Logout returns the user to Home page.
+Logout feature's display is automatic following successful login and appears on Navigation bar to all logged in website users. Logout returns the site user to Home page.
 
 The interactive footer contains internal links to the About Us and Privacy Policy pages.  It also contains a link to Bookworm's Newsletter VIP Club subscription form, and external links to the website's social media.
 
@@ -233,6 +232,7 @@ A favicon appears in the browser tab with the website name as a visual reminder 
 
 The favicon for Bookworms is also the website's landing page image.  I chose this image from [freepik.com](www.freepik.com), saved it to my local machine, and used [favicon.io](https://favicon.io/) to download the image and generate the favicon files and the link tags to insert in the Head of my base.html.
 
+![Favicon!](readme_media/screenshots/favicon.screenshot.png)
 
 
 ### Database ERD
@@ -333,19 +333,18 @@ The bespoke footer contains links to an 'About Us' page, the application's gener
 
 TABLE 
 
-403 Page
+404 Page
 
-![Bespoke 403 Error page!]()
+![Bespoke 404 Error page!](readme_media/screenshots/custom_404_page_screenshot_desktop.png)
 
 
 
 ### Future Implementations
 
-
+To be reviewed before submission
 
 
 ### Accessibility
-
 
 Throughout this project I have endeavoured to implement good accessibility practices.  
 
@@ -354,6 +353,8 @@ Throughout this project I have endeavoured to implement good accessibility pract
 - I have used [fontawesome](https://fontawesome.com/search?q=checkbox&o=r&m=free) icons in my application and to each icon I have added aria-labels to enable screen readers to understand them
 
 I tested each site page on Lighthouse and [Wave](https://wave.webaim.org/) and improved my score further by implementing the following upgrades ...
+
+Table
 
 
 [The A11y Collective](https://www.a11y-collective.com/) is a useful site at which I saw why I was scoring poorly in relation to links on my application.
