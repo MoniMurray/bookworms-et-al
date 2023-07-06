@@ -12,9 +12,9 @@ Developed by Monica Murray
 
 
 
-![Amiresponsive!](readme_media/screenshots/am_i_responsive_screenshot.png) 
+![techsini!](readme_media/screenshots/am_i_responsive_screenshot.png) 
 
-An image of the finished site generated from [Amiresponsive](https://amiresponsive.co.uk/) which displays the application at four screen size breakpoints.
+An image of the finished site generated from [techsini](https://techsini.com/multi-mockup/index.php) which displays the application at four screen size breakpoints.
 
 Please visit the live site via [this link](https://mym-bookworms-et-al-b7ea61e35a6e.herokuapp.com/).
 
@@ -385,7 +385,7 @@ Languages in this project were:
 
 - TinyPNG - To compress the Homepage image.
 
-- Am I Responsive? To show the website image on a range of devices.
+- Techsini To show the website image on a range of devices.
 
 - Django framework and Bootstrap CSS library were both used in this project.
 
