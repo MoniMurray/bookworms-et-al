@@ -229,7 +229,8 @@ payment is being processed -->
                             <span class="icon">
                                 <i class="fas fa-exlamation-circle"></i>
                             </span>
-                            <span>Your card will be charged <strong>€{{ grand_total | floatformat:2 }}</strong></span>
+                            <span>Your card will be charged <strong>
+                                €{% if request.user.profile.default_country != 'IE' %}{{ grand_total | floatformat:2 }}{% else %}{{ total | floatformat:2 }}{% endif %}</strong></span>
                         </p>
                     </div>
                 </form>

@@ -31,7 +31,7 @@ The business owner's goal is to have a profitable eCommerce presence of its phys
 
 ## User/Customer's Goals
 
-A customer of Bookworms et al wants to buy books.  They will understand the application's purpose when first arriving to the site, be able to navigate intuitively around the pages of the website, view all products, click on any product to view it in more detail, and be able to purchase one or many books securely.  A user or customer of this website may also want to be able to Register to create a user profile, and so can Login and Logout of their account on website, view and edit their personal data securely via their account, and view their purchase history.  All customer actions are met with feedback via the interactive front end to confirm their chosen action has been performed successfully or has been unsuccessful.
+A customer of Bookworms et al wants to buy books.  They will understand the application's purpose when first arriving to the site, be able to navigate intuitively around the pages of the website, view all products, click on any product to view it in more detail, and be able to purchase one or many books securely.  A user or customer of this website may also want to be able to Register to create a user profile, and so can Login and Logout of their account on website, view and edit their personal data securely via their account, and view their purchase history.  Registered Users with a delivery address in Ireland can avail of free delivery.  All customer actions are met with feedback via the interactive front end to confirm their chosen action has been performed successfully or has been unsuccessful.
 
 ## Project Goal
 
