@@ -3,6 +3,8 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+from profiles.models import Profile
+
 
 def bag_contents(request):
 
@@ -24,6 +26,10 @@ def bag_contents(request):
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+        if request.user.is_authenticated:
+            if request.user.profile.default_country == 'IE':
+                delivery = 0
+                free_delivery_delta = 0
     else:
         delivery = 0
         free_delivery_delta = 0

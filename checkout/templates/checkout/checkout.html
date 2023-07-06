@@ -112,17 +112,9 @@ payment is being processed -->
                             <p class="my-0">Grand Total: </p>
                         </div>
                         <div class="col-3">
-                            <p class="my-0">€{{ total | floatformat:2 }}</p>
-
-                            {% if request.user.profile.default_country != 'IE' %}                          
-                         
-                                <p class="my-0">€{{ delivery | floatformat:2 }}</p>
-                                <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
-                            {% else %}
-                                <p class="my-0">Free!</p>
-                                <p class="my-0">€{{ total | floatformat:2 }}</p>
-                            {% endif %}
-                            
+                            <p class="my-0">€{{ total | floatformat:2 }}</p>                             
+                            <p class="my-0">€{{ delivery | floatformat:2 }}</p>
+                            <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                         </div>
                     </div>
 
@@ -230,7 +222,7 @@ payment is being processed -->
                                 <i class="fas fa-exlamation-circle"></i>
                             </span>
                             <span>Your card will be charged <strong>
-                                €{% if request.user.profile.default_country != 'IE' %}{{ grand_total | floatformat:2 }}{% else %}{{ total | floatformat:2 }}{% endif %}</strong></span>
+                                €{{ grand_total | floatformat:2 }}</strong></span>
                         </p>
                     </div>
                 </form>
