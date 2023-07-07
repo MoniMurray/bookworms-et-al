@@ -63,7 +63,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
             <form class="mt-3" action="{%  url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-black rounded-0 text-uppercase">Update Details</button>
+                <button class="btn btn-black rounded-0 text-uppercase" aria-label="profile-update">Update Details</button>
             </form>
         </div>
 

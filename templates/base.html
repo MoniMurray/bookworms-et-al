@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     {% endblock %}
 
     {% block extra_meta %}
@@ -33,15 +33,14 @@
     {% block corejs %}
     <script src="https://kit.fontawesome.com/785586cce1.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-        crossorigin="anonymous"></script>
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-        crossorigin="anonymous"></script>
-        <script src="https://js.stripe.com/v3/"></script>
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+    </script>
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -63,10 +62,14 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
-                            placeholder="Search our library" aria-label="Search function input box">
+                        <input class="form-control border border-black rounded-0" 
+                            type="text" name="q"
+                            placeholder="Search our library" 
+                            aria-label="Search function input box">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit" title="Submit">
+                            <button class="form-control btn btn-black border border-black rounded-0" 
+                                type="submit"
+                                title="Submit" aria-label="submit-search">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -80,30 +83,40 @@
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <!-- Dropdown My Account menu for logged in users -->
-                        <a class="text-black nav-link" href="{% url 'profile' %}" 
-                        id="user-options" alt="My Account dropdown-menu" 
-                        data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" aria-label="user account dropdown list">
+                        <a class="text-black nav-link" 
+                            href="{% url 'profile' %}" id="user-options"
+                            alt="My Account dropdown-menu" 
+                            data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" 
+                            aria-label="user account dropdown list">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
-                               
+
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0" 
+                            aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                            <!-- if the user is the superuser we want them to be able to manage the store by 'CRUD' store products -->
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Bookworms Store Management</a>
-                                {% else %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
-                                {% endif %}
-                            
-                            <!-- the following urls are coming from Django allauth -->
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            <!-- if the user is the superuser we want them 
+                                to be able to manage the store by 'CRUD' 
+                                store products -->
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_product' %}" class="dropdown-item">
+                                Bookworms Store Management</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            <a href="{% url 'profile' %}" 
+                                class="dropdown-item">Profile</a>
+                            {% endif %}
+
+                            <!-- the following urls are coming from Django allauth -->
+                            <a href="{% url 'account_logout' %}" 
+                                class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account_signup' %}" 
+                                class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" 
+                                class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
                     </li>
@@ -115,7 +128,9 @@
                                 <div>
                                     <!-- <i class="fas fa-shopping-bag fa-lg"></i> -->
                                     <i class="fas fa-shopping-bag"></i>
-                                    <span class="badge badge-warning" id="lblCartCount"> {{ product_count}} </span>
+                                    <span class="badge badge-warning" 
+                                        id="lblCartCount"> {{ product_count}} 
+                                    </span>
                                 </div>
                                 <p class="my-0">
                                     {% if grand_total %}
@@ -134,8 +149,9 @@
         <!-- Toggle hamburger menu button -->
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#main-nav" aria-controls="main-nav" 
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- add the includes top header etc -->
@@ -145,29 +161,31 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h3 class="logo-font my-1 delivery-banner">Free delivery on orders over €{{ free_delivery_threshold }}!</h3>
+                <h3 class="logo-font my-1 delivery-banner">
+                    Free delivery on orders over €{{ free_delivery_threshold }}!
+                </h3>
             </div>
         </div>
     </header>
 
     <!-- using django default messages framework and default message codes 40-E, 30-W, 25-S so add the toasts from BA here-->
-   
+
     {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {%  with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_errors.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
+    <div class="message-container">
+        {% for message in messages %}
+        {%  with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_errors.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
     <!-- to act as an additional header in extended templates where we 
         need to put something at the top of the page but underneath 
@@ -186,12 +204,11 @@
 
     <!-- Footer include -->
     {% include 'includes/footer.html' %}
-    
+
     <!-- Javascript that we want to load at the end of the body -->
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
-
     </script>
 
     {% endblock %}

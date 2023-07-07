@@ -48,7 +48,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                 {% csrf_token %}
                 {{ form|crispy }}
 
-                <button class="btn btn-black btn-lg rounded-0 text-uppercase text-center">Subscribe</button>
+                <button class="btn btn-black btn-lg rounded-0 text-uppercase text-center" aria-label="subscribe">Subscribe</button>
                 <span><a href="{% url 'products' %}" class="btn btn-lg btn-black rounded-0 text-uppercase text-center">Shop
                             Now</a></span>
             </form>
