@@ -83,7 +83,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                         {{ products|length }} Products{% if search_term %} found for
                         <strong>"{{ search_term }}"</strong>{% endif %}
                         {% if request.user.is_superuser %}
-                        <span class="small"><a href="{% url 'add_product' %}">Add Product</a></span>
+                        <span class="small add-product"><a href="{% url 'add_product' %}">Add Product</a></span>
                         {% endif %}
                     </p>
                 </div>

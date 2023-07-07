@@ -1,4 +1,6 @@
 /* target Edit and Add Product links for contrast colour */
-h2 {
-    color: purple;
+
+.add-product,
+.edit-product {
+    color: #0055B8 !important;
 }
