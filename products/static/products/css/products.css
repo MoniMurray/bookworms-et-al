@@ -1,6 +1,5 @@
 /* target Edit and Add Product links for contrast colour */
 
-.add-product,
-.edit-product {
+a {
     color: #0055B8 !important;
 }
