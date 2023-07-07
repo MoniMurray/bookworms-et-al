@@ -10,9 +10,11 @@
                     </span>
                 </button>
             </div>
+            <label for="quantity"></label>
             <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
                 name="quantity" value="{{ item.quantity }}" min="1" max="5"
-                data-item_id="{{ item.item_id }}">
+                data-item_id="{{ item.item_id }}" id="quantity">
+                
             <div class="input-group-append">
                     <button class="increment-qty btn btn-sm rounded-0 increment-qty_{{ item.item_id }}"
                     data-item_id="{{ item.item_id }}">

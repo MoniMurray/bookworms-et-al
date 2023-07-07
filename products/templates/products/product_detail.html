@@ -32,11 +32,11 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                 <div class="image-container my-5 offset-lg-2">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="Bestseller {{ product.name }}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" max-width="100%" max-height="100%" alt="Bestseller {{ product.name }}">
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="Bestseller {{ product.name }}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" max-width="100%" max-height="100%" alt="Bestseller {{ product.name }}">
                         </a>
                     {% endif %}
                 </div>
@@ -87,6 +87,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                                                 </span>
                                             </button>
                                         </div>
+                                        <label for="id_qty_{{ product.id }}"></label>
                                         <input class="form-control qty_input" type="number" name="quantity" value="1"
                                             min="1" max="5" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                             <div class="input-group-append">

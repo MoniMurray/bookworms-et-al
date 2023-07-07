@@ -81,9 +81,9 @@ payment is being processed -->
                             <div class="col-2 mb-1">
                                 <a href="{% url 'product_detail' item.product.id %}">
                                     {% if item.product.image %}
-                                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                        <img class="w-100" src="{{ item.product.image.url }}" max-width="100%" max-height="100%" alt="{{ product.name }}">
                                     {% else %}
-                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" max-width="100%" max-height="100%" alt="{{ product.name }}">
                                     {% endif %}
                                 </a>
                             </div>
@@ -194,6 +194,7 @@ payment is being processed -->
                         </div>
 
                         <!-- pass the client secret to the view so we can get the payment intent id -->
+                        <label for="client_secret"></label>
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
 
                     </fieldset>
