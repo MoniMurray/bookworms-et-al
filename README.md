@@ -79,12 +79,12 @@ All interaction with the site is designed to produce a positive emotional respon
 An intuitive simple, responsive online shopping experience with the following features is the Minimum Viable Product (MVP):
 
 - responsive design,
-- full-Stack website with an interactive front-end, a main navigation menu and a structured layout,
+- full-stack website with an interactive front-end, a main navigation menu and a structured layout,
 - a product structure contained within a cloud-hosted, relational database,
 - secure authentication and role-based authorisation, 
 - current login state is reflected to the user,
-- secure ecommerce payment stystem, 
-- user feedback system to report sucessful and unsuccessful actions,
+- secure ecommerce payment system, 
+- user feedback system to report successful and unsuccessful actions,
 - fully implemented CRUD - Create, Add, Update and Delete items from a secure front-end,
 
 The six-week deadline is fixed and the timeline is tight.  MVP is priority. 
@@ -478,9 +478,11 @@ The core business intent of Bookworms et al is to sell books online as a part of
 
 ### Marketing Strategies for app
 
-Content Marketing - consistently creating, distributing and promoting relevant online materials in a way that is strategically designed to attract and convert my target market into customers using Newsletters and Social Media Marketing:
+#### Content Marketing 
 
-#### Newsletters - VIP Club
+- consistently creating, distributing and promoting relevant online materials in a way that is strategically designed to attract and convert my target market into customers using Newsletters and Social Media Marketing:
+
+##### Newsletters - VIP Club
 
 Bookworms can provide additional benefit to Subscribers by providing regular interesting content related to bestsellers, author signings and readings and special offers.
 
@@ -488,7 +490,7 @@ Bookworms can provide additional benefit to Subscribers by providing regular int
 
 ![Newsletter Subscription Page!](readme_media/screenshots/seo_marketing/newsletter_signup/newsletter_subscription_page_desktop_screenshot.png)
 
-#### Social Media Marketing - Facebook business page
+##### Social Media Marketing - Facebook business page
 
 As Facebook has the largest number of users and the widest demographic, I chose to set up a [Facebook Business Page](https://www.facebook.com/profile.php?id=100094116007278) as part of the social media marketing strategy for Bookworms et al.
 
@@ -501,7 +503,7 @@ As Facebook has the largest number of users and the widest demographic, I chose 
 ![Bookworms Facebook Business Page - Page Posts, and Page Updates](readme_media/screenshots/seo_marketing/facebook_business_page/Bookworms_FB_Business_Pg_Posts_Updates.png)
 
 
-### SEO
+#### SEO
 
 After adding meta tags to my head element to optimize my website's visibility and improve search engine performance, I also added keywords to attract both search engines and users. I then added my deployed url to [XML-Sitmaps](www.xml-sitemaps.com) to generate an xml file.  Google uses this xml file to help it understand the website's structure and how the pages link to each other.
 
