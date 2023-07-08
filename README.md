@@ -718,6 +718,8 @@ Bug fixing my search function took a little further research into how to structu
 
 I used [Wikipedia](https://en.wikipedia.org/wiki/Registered_user#:~:text=User%20registration%20and%20login%20enables,preferences%20indicated%20by%20the%20user.) to define features of a website, such as Registration and Login.
 
+[Freeconvert.com](https://www.freeconvert.com/jpg-to-webp) was where I converted my jpeg product images to webp format to improve site responsivity.
+
 All wireframes, ERD and screenshots are my own creation.  This Readme is based on the extensive Readme.md file I created for my PP4, [The Shopping List](https://github.com/MoniMurray/shopping-list)
 
 

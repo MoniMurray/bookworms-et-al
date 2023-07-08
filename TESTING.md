@@ -13,20 +13,65 @@ Automated Testing includes all testing that is carried out by a program - W3C HT
 
 ### HTML Validation - W3C
 
+| .html Pages                            | Result                 | Screenshot Link                                     |
+| -------------------------------------- | ---------------------- | --------------------------------------------------- |
+| templates/home/index.html              | No errors              |                                                     |
+| templates/home/about_us.html           | No errors              | [About Us page](w3c_html_about_us.png)              |
+| templates/home/privacy_policy.html     | No errors              | [Privacy Page](w3c_html_privacy_policy.png)         |
+| templates/newsletter/signup.html       | No errors              | [Newsletter Signup](w3c_html_signup.png)            |
+| templates/products/products.html       | No errors              | [Products Page](w3c_html_products.png)              |
+| templates/products/product_detail.html | No errors              | [Product Detail page](w3c_html_product_details.png) |
+| templates/products/add_product.html    | No errors              | [Add Product Page](w3c_html_add_product.png)        |
+| templates/products/edit_product.html   | No errors              | [Edit Product Page](w3c_html_edit_product.png)      |
+| templates/bag/bag.html                 | No errors              | [Shopping Cart](w3c_html_bag.png)                   |
+| templates/profile/profile.html         | No errors              | [Profile Page](w3c_html_profile.png)                |
+| templates/allauth/account/signup.html  | Allauth, so not tested |                                                     |
+| templates/allauth/account/login.html   | Allauth, so not tested |                                                     |
+| templates/allauth/account/logout.html  | Allauth, so not tested |                                                     |
+|                                        |                        |
 
 ### CSS Validation - W3C
 
+Pass W3C Css Validator without errors
+
+![W3C CSS Validator!](readme_media/screenshots/validator/w3c_css_homepage.png)
 
 ### JavaScript Validation - JShint?
 
 
-#### Python Validation - W3C
+### Python Validation - Pylint
 
 - python -m black appname
 
 - CI's Python linter
 
 ### Lighthouse
+
+I improved my application's Lighthouse test scores by doing the following:
+
+- Convert all images to webp using freeconvert.com jpeg to webp
+- Set width and height and alt attributes on all img elements
+- Aria ids updated
+- CRUD links text darkened via custom css to provide enough colour contrast between b/g and text.
+- Navigation <li> elements enclosed within <ul>element.
+- Reduce unused css by running coverage tab of devtools
+- Add aria-label attributes to all button elements
+- Add label element with for attribute to any input elements, and match the value of the for attribute to an id attribute within the input element
+- Bag.html meta tags
+
+| Page                                   | Performance | Accessibility | Best Practice | SEO |
+| -------------------------------------- | ----------- | ------------- | ------------- | --- |
+| templates/home/index.html              | 74          | 100           | 100           | 96  |
+| templates/home/about_us.html           | 90          | 98            | 100           | 96  |
+| templates/home/privacy_policy.html     | 81          | 97            | 100           | 96  |
+| templates/newsletter/signup.html       | 82          | 100           | 100           | 97  |
+| templates/products/products.html       | 78          | 100           | 100           | 90  |
+| templates/products/product_detail.html | 81          | 89            | 100           | 98  |
+| templates/products/add_product.html    | 81          | 86            | 100           | 98  |
+| templates/products/edit_product.html   | 81          | 76            | 92            | 90  |
+| templates/bag/bag.html                 | 82          | 79            | 100           | 87  |
+| templates/checkout/checkout.html       | 74          | 96            | 100           | 98  |
+| templates/profile/profile.html         | 78          | 86            | 100           | 98  |
 
 
 ### WAVE
