@@ -4,6 +4,8 @@
 
 I have used GitHub Projects in the Agile development of my project. I created a new project in the Projects tab of my repository, named '@bookworms_et_al'. Within this Project I used a Kanban Board to track each User Story as I incrementally developed the MVP of the project.
 
+![Github Projects View!](readme_media/screenshots/agile/github_project_view.png)
+
 # CONTENTS
 1. [User Stories](#us)
 
@@ -363,7 +365,8 @@ The following screenshot shows all User Stories in the 'Done' column at the end 
 
 ![Final Kanban view!](readme_media/screenshots/agile/Agile_Github_Project_User_Stories_Done.png)
 
-Screenshots of the retrospective view of a user story upon completion and marking as 'done' where the history of the user story is laid out.  It displays the user story label, milestone, status, along with the acceptance criteria and tasks.  The evolution of the development process in working on this user story is captured in the comments:
+
+Screenshots of the retrospective view of a user story upon completion and marking as 'done', where the history of the user story is laid out.  It displays the user story label, milestone, status, along with the acceptance criteria and tasks.  The evolution of the development process of this user story is captured in the comments:
 
 ![User Story Retrospective view 1!](readme_media/screenshots/agile/user_story_detail_when_done1.png)
 ![User Story Retrospective view 2!](readme_media/screenshots/agile/user_story_detail_when_done2.png)
