@@ -163,7 +163,16 @@ This is a screenshot of the Kanban board in Projects at different stages of the 
 
 ![Kanban board in Projects - First Screenshot!](readme_media/screenshots/agile/Agile_GitHub_Project_First_Screenshot.png)
 
-![Kanban board in Projects - Second Screenshot!](readme_media/screenshots/agile/Agile_Github_Project_User_Stories_Done.png)
+
+The following screenshot shows all User Stories in the 'Done' column at the end of the iteration.
+
+![Final Kanban view!](readme_media/screenshots/agile/Agile_Github_Project_User_Stories_Done.png)
+
+
+What follows is a retrospective view of a user story upon completion and being marked as 'done', where the development history of the user story is laid out.  It displays the user story label, milestone, status, along with the acceptance criteria and tasks.  The evolution of the development process of this user story is captured in the comments:
+
+![User Story Retrospective view 1!](readme_media/screenshots/agile/user_story_detail_when_done1.png)
+![User Story Retrospective view 2!](readme_media/screenshots/agile/user_story_detail_when_done2.png)
 
 ## User Acceptance Criteria<a name="uac"></a>
 
@@ -361,15 +370,6 @@ Acceptance Criteria	User Story Task
 |                                                                                                                                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                   |
 | All user action must receive feedback                                                                                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                 | Task 1: Use Django messages to generate response messages with each relevant view                                                                                                                                                                                                                                                                                                                 |
 
-The following screenshot shows all User Stories in the 'Done' column at the end of the iteration.
-
-![Final Kanban view!](readme_media/screenshots/agile/Agile_Github_Project_User_Stories_Done.png)
-
-
-Screenshots of the retrospective view of a user story upon completion and marking as 'done', where the history of the user story is laid out.  It displays the user story label, milestone, status, along with the acceptance criteria and tasks.  The evolution of the development process of this user story is captured in the comments:
-
-![User Story Retrospective view 1!](readme_media/screenshots/agile/user_story_detail_when_done1.png)
-![User Story Retrospective view 2!](readme_media/screenshots/agile/user_story_detail_when_done2.png)
 
 
 The User Story Tasks lists will be used as a basis for Manual Testing steps to ensure full application testing. Follow this [link to Testing](TESTING.md) to read more about the Testing undertaken for this application.
