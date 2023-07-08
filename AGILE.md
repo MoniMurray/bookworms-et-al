@@ -6,7 +6,7 @@ I have used GitHub Projects in the Agile development of my project. I created a 
 
 ![Github Projects View!](readme_media/screenshots/agile/github_project_view.png)
 
-# CONTENTS
+## CONTENTS
 1. [User Stories](#us)
 
 2. [User Acceptance Criteria](#uac)

@@ -31,7 +31,7 @@ Automated Testing includes all testing that is carried out by a program - W3C HT
 
 ### WAVE
 
-## Manual Testing<a name="manual_testing"></a> - insert manual testing table!!!
+## Manual Testing<a name="manual_testing"></a> 
 
 Manual Testing tests as follows:
 
@@ -60,8 +60,8 @@ Manual Testing tests as follows:
 | As a site user I want to be able to login to my account so that I can access, view and edit my personal account information                                                                                            | Pass               |          |
 | As a site user I want to be able to logout of my account so that I can log out and secure my personal account information when not using the store.                                                                    | Pass               |          |
 | As a logged in user I want to be able to edit my personal and shipping details so that I can keep my account profile up to date                                                                                        | Pass               |          |
-| As a logged in user I want to be able to rate a product I have purchased so that I can contribute to the rating of products on the site                                                                                | Not in this Sprint |          |
-| As a logged in user I want to be able to comment on a product I have purchased so that I can contribute to the rating of products on the site                                                                          | Not in this Sprint |          |
+| As a logged in user I want to be able to rate a product I have purchased so that I can contribute to the rating of products on the site                                                                                | Not in this Sprint |  Future Feature        |
+| As a logged in user I want to be able to comment on a product I have purchased so that I can contribute to the rating of products on the site                                                                          | Not in this Sprint |     Future Feature      |
 |                                                                                                                                                                                                                        |                    |          |
 | As a site user I want to be able to sort the available products so that I can identify highly rated, low/high priced items                                                                                             | Pass               |          |
 | As a site user I want to be able to view products by category so that I can group products by the category or genre that interests me.                                                                                 | Pass               |          |
@@ -85,7 +85,7 @@ Manual Testing tests as follows:
 | As the store owner/admin I want to be able to add a new product to the site so that I can expand the product offering of the store                                                                                     | Pass               |          |
 | As the store owner/admin I want to be able to edit/update an existing item so that I can update product price, description, etc.                                                                                       | Pass               |          |
 | As the store owner/admin I want to be able to delete an item from the site so that I can remove items no longer being stocked by the store.                                                                            | Pass               |          |
-| As the store owner/admin I want to be able to reply to comments from logged in users so that I can ensure customers feel valued by the owners of the store.                                                            | Not in this Sprint |          |
+| As the store owner/admin I want to be able to reply to comments from logged in users so that I can ensure customers feel valued by the owners of the store.                                                            | Not in this Sprint |     Future Feature      |
 |                                                                                                                                                                                                                        |                    |          |
 | As a newly registered user I want to be able to receive a verification email upon registering on the site so that I can verify my account registration was successful.                                                 | Pass               |          |
 | As a logged in user I want to be able to receive a confirmation of purchase email so that I can view and keep a record of my confirmed order                                                                           | Pass               |          |

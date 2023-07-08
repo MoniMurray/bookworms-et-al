@@ -341,7 +341,10 @@ TABLE
 
 ### Future Implementations
 
-To be reviewed before submission
+Future features to develop will be:
+
+- enable registered users to review their purchased books and rate the book;
+- enable the Store Owner to reply to customer comments and reviews.
 
 
 ### Accessibility
