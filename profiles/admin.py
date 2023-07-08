@@ -6,6 +6,9 @@ from .models import Profile
 
 
 class ProfileAdmin(admin.ModelAdmin):
+    """
+    Layout the Admin view of the model fields
+    """
 
     summernote_fields = ('content',)
     list_display = (

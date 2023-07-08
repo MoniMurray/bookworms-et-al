@@ -8,6 +8,7 @@ class SignupForm(forms.ModelForm):
     """
 
     class Meta:
+        """Manage the behaviour of the model fields"""
         model = Signup
         fields = ('name', 'email', 'subscribe',)
 

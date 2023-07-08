@@ -1,18 +1,20 @@
+import json
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-from .forms import OrderForm
+import stripe
 from bag.contexts import bag_contents
 from products.models import Product
-from .models import Order, OrderLineItem
 from profiles.forms import ProfileForm
 from profiles.models import Profile
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
-import stripe
 
-import json
+
+
 
 
 @require_POST
@@ -92,8 +94,9 @@ def checkout(request):
                         order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database"
-                        "Please call us for more information"
+                        "One of the products in your bag wasn't found \
+                            in our database. Please call us for more \
+                                information"
                     ))
                     order.delete()
                     return redirect(reverse('view_bag'))
@@ -101,8 +104,11 @@ def checkout(request):
             return redirect(
                 reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, (
-                'There was an error with your form.\Please check your information'))
+            messages.error(
+                request, (
+                    'There was an error with your form. \
+                        Please check your information'
+                    ))
     else:
         bag = request.session.get('bag', {})
         # if nothing in the bag
@@ -146,8 +152,9 @@ def checkout(request):
 
     if not stripe_public_key:
         messages.warning(
-                request, 
-                f'Stripe public key is missing./Did you forget to set it in your environment?')
+                request,
+                ('Stripe public key is missing.\
+                    Did you forget to set it in your environment?'))
 
     template = 'checkout/checkout.html'
     context = {

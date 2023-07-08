@@ -1,8 +1,8 @@
-# Monica's testing
+# Bookworms et al - Testing
 
 ## Testing Overview
 
-![Amiresponsiveimage]()
+![techsini!](readme_media/screenshots/am_i_responsive_screenshot.png)
 
 ## CONTENTS
 1. [Automated Testing](#automated_testing)

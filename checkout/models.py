@@ -1,7 +1,7 @@
-from django.db import models
 import uuid
-from django_countries.fields import CountryField
+from django.db import models
 from django.db.models import Sum
+from django_countries.fields import CountryField
 from django.conf import settings
 from products.models import Product
 from profiles.models import Profile
@@ -64,7 +64,8 @@ class Order(models.Model):
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.country != 'IE':
-            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE/100
+            self.delivery_cost = (
+                self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE/100)
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost

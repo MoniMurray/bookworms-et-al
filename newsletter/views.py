@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 from .models import Signup
 from .forms import SignupForm
-
-from django.contrib import messages
 
 
 # Create your views here.
@@ -18,9 +17,11 @@ def signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'You have been added to VIP Club')
+            messages.success(
+                request, 'You have been added to VIP Club')
         else:
-            messages.error(request, 'Please ensure the form is completed')
+            messages.error(
+                request, 'Please ensure the form is completed')
         return redirect(reverse('home'))
 
     context = {

@@ -9,14 +9,18 @@ class Signup(models.Model):
     """
     name = models.CharField(max_length=180, null=True, blank=True)
     subscribe = models.BooleanField(default=False)
-    email = models.EmailField(unique=True, max_length=180, null=False, blank=False)
+    email = models.EmailField(
+        unique=True, max_length=180, null=False, blank=False)
 
-    class Meta: 
+    class Meta:
+        """
+        Direct how the admin calls the plural of the Signup model"
+        """
         verbose_name_plural = 'Signup'
-    
+
     def __str__(self):
         """
         Takes in the subscriber's email
         """
         return self.email
-    
+

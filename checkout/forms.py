@@ -8,6 +8,9 @@ class OrderForm(forms.ModelForm):
     """
 
     class Meta:
+        """
+        Manage the behaviour of the model fields
+        """
         model = Order
         fields = (
             'full_name',

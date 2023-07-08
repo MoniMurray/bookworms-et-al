@@ -1,12 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 from .models import Product, Category, Author
 from .forms import ProductForm
-from django.contrib.auth.decorators import login_required
-
-
-# Create your views here.
 
 
 def all_products(request):
@@ -37,21 +34,16 @@ def all_products(request):
             products = products.order_by(sortkey)
 
     # check if Category exists, split it into a list at the commas, use
-    # the list to filter the queryset of all products down to matching products
+    # the list to filter the queryset of all products down to 
+    # matching products
     if 'category' in request.GET:
         categories = request.GET['category'].split(',')
         products = products.filter(category_name__name__in=categories)
         categories = Category.objects.filter(name__in=categories)
 
-    # if 'author' in request.GET:
-    #     author = request.GET['author']
-    #     products = products.filter(author__name__in=author)
-    #     author = Author.objects.filter(name__in=author)
-    # author = get_object_or_404(Author, name=author)
-
     if 'q' in request.GET:
         query = request.GET['q']
-               
+
         if not query:
             messages.error(
                 request, 'You did not enter any search criteria')
@@ -128,7 +120,8 @@ def add_product(request):
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(
-                request, "Failed to add product. Please check the form is valid."
+                request, "Failed to add product. \
+                    Please check the form is valid."
             )
     else:
         form = ProductForm()
@@ -164,7 +157,8 @@ def edit_product(request, product_id):
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(
-                request, "Failed to update product. Please check the form is valid."
+                request, "Failed to update product. \
+                    Please check the form is valid."
             )
     else:
         form = ProductForm(instance=product)

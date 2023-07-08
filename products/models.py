@@ -10,6 +10,9 @@ class Category(models.Model):
     """
 
     class Meta:
+        """
+        Direct the admin how to display the plural of the Category model
+        """
         verbose_name_plural = "Categories"
 
     name = models.CharField(max_length=254)
@@ -33,10 +36,12 @@ class Product(models.Model):
     author = models.ForeignKey(
         "Author", null=False, blank=False, on_delete=models.CASCADE
     )
-    type = models.CharField(max_length=20, choices=TYPE_CHOICES, default="Hardback")
+    type = models.CharField(
+        max_length=20, choices=TYPE_CHOICES, default="Hardback")
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
         """
