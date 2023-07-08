@@ -363,4 +363,10 @@ The following screenshot shows all User Stories in the 'Done' column at the end 
 
 ![Final Kanban view!](readme_media/screenshots/agile/Agile_Github_Project_User_Stories_Done.png)
 
+Screenshots of the retrospective view of a user story upon completion and marking as 'done' where the history of the user story is laid out.  It displays the user story label, milestone, status, along with the acceptance criteria and tasks.  The evolution of the development process in working on this user story is captured in the comments:
+
+![User Story Retrospective view 1!](readme_media/screenshots/agile/user_story_detail_when_done1.png)
+![User Story Retrospective view 2!](readme_media/screenshots/agile/user_story_detail_when_done2.png)
+
+
 The User Story Tasks lists will be used as a basis for Manual Testing steps to ensure full application testing. Follow this [link to Testing](TESTING.md) to read more about the Testing undertaken for this application.
