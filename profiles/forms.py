@@ -2,13 +2,22 @@ from django import forms
 from .models import Profile
 
 
+
 class ProfileForm(forms.ModelForm):
+    """
+    A form to render the Profile fields
+    """
 
     class Meta:
+        """
+        This inner metaclass will define the Model and the fields
+        to include
+        """
         model = Profile
 
         exclude = ('user',)
 
+   
     def __init__(self, *args, **kwargs):
 
         """Add placeholders and classes, remove auto-generated labels,
