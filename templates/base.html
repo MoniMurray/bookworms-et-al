@@ -125,7 +125,6 @@
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div>
-                                    <!-- <i class="fas fa-shopping-bag fa-lg"></i> -->
                                     <i class="fas fa-shopping-bag"></i>
                                     <span class="badge badge-warning" 
                                         id="lblCartCount"> {{ product_count}} 
@@ -167,7 +166,8 @@
         </div>
     </header>
 
-    <!-- using django default messages framework and default message codes 40-E, 30-W, 25-S so add the toasts from BA here-->
+    <!-- using django default messages framework and default message 
+        codes 40-E, 30-W, 25-S so add the toasts from BA here-->
 
     {% if messages %}
     <div class="message-container">

@@ -10,8 +10,8 @@
 
         <!-- List Books all at once or ordered by category-->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" 
-            href="#" id="all-products-link" aria-label="dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+                aria-label="dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Bestsellers
             </a>
 
@@ -20,16 +20,16 @@
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>            
+            </div>
         </li>
 
         <!-- Business & Investing Category books -->
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'products' %}?category=Business" id="business-investing" >
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=Business"
+                id="business-investing">
                 Business
             </a>
-        </li>       
+        </li>
 
         <!-- Cookbooks Category books -->
         <li class="nav-item">
@@ -41,16 +41,16 @@
 
         <!-- Mystery & Suspense Category books -->
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'products' %}?category=Mystery" id="mystery-suspense">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=Mystery"
+                id="mystery-suspense">
                 Mystery
             </a>
         </li>
 
         <!-- Scifi & Fantasy Category books -->
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'products' %}?category=Scifi" id="scifi-fantasy">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=Scifi"
+                id="scifi-fantasy">
                 Scifi
             </a>
         </li>
