@@ -43,10 +43,10 @@ with secure payment, book-lovers and readers, Irish-owned shop">
             <h2 class="logo-font mb-4">{{ user.profile }}'s Account</h2>
             
         </div>
-        <div class="col-6 mt-5 px-3">
+        <div class="col-6 mt-5 px-5">
             <!-- profile image -->
                 {% if user.profile.image %}
-                    <img src="{{ MEDIA_URL}}{{user.profile.image}}" alt="{{ user.profile }}'s profile image" max-height="100%" max-width="100%">
+                    <img src="{{ MEDIA_URL}}{{user.profile.image}}" alt="{{ user.profile }}'s profile image" max-height="50%" max-width="50%">
                 {% else %}
                     <i class="fas fa-user fa-lg"></i>
                 {% endif %}
