@@ -36,19 +36,26 @@ with secure payment, book-lovers and readers, Irish-owned shop">
 <div class="overlay"></div>
 <div class="container ">
     <div class="row">
-        <div class="col">
-            <hr>
+        <hr>
+        <!-- profile header -->
+        <div class="col-6 mt-5">
+                        
+            <h2 class="logo-font mb-4">{{ user.profile }}'s Account</h2>
+        </div>
+        <div class="col-6 mt-5">
             <!-- profile image -->
-             
-            <h2 class="logo-font mb-4">{{ user.profile }}'s Account<span><div class="profile-img text-center offset-lg-9">
                 {% if user.profile.image %}
                     <img src="{{ user.profile.image }}" alt="{{ user.profile }}'s profile image" max-height="100%" max-width="100%">
                 {% else %}
                     <i class="fas fa-user fa-lg"></i>
                 {% endif %}
-            </div></span>   </h2>     
+
+                {% if user.profile.bio %}
+                    <p>{{ user.profile.bio }}</p>
+                {% endif %}
+        </div>        
             <hr>
-        </div>
+        
     </div>
 
     <div class="row">
