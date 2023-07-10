@@ -23,7 +23,11 @@ def add_to_bag(request, item_id):
     quantity = 1
 
     if request.method == "POST":
-        quantity = int(request.POST.get("quantity"))
+
+        if quantity > 0:
+            messages.error(request, "Quantity must be greater than 0")
+        else:
+            quantity = int(request.POST.get("quantity"))
         redirect_url = request.POST.get("redirect_url")
 
     if item_id in list(bag.keys()):
