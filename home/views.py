@@ -16,6 +16,7 @@ def about_us(request):
 
     return render(request, 'home/about_us.html')
 
+
 def privacy_policy(request):
     """
     A view to return the about_us page
