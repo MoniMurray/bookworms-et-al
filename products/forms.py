@@ -26,4 +26,3 @@ class ProductForm(forms.ModelForm):
         Override the init() method to make changes to some fields
         """
         super().__init__(*args, **kwargs)
-       

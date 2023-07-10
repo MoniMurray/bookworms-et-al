@@ -2,7 +2,6 @@ from django import forms
 from .models import Profile
 
 
-
 class ProfileForm(forms.ModelForm):
     """
     A form to render the Profile fields
@@ -17,7 +16,6 @@ class ProfileForm(forms.ModelForm):
 
         exclude = ('user',)
 
-   
     def __init__(self, *args, **kwargs):
 
         """Add placeholders and classes, remove auto-generated labels,

@@ -34,7 +34,7 @@ def all_products(request):
             products = products.order_by(sortkey)
 
     # check if Category exists, split it into a list at the commas, use
-    # the list to filter the queryset of all products down to 
+    # the list to filter the queryset of all products down to
     # matching products
     if 'category' in request.GET:
         categories = request.GET['category'].split(',')

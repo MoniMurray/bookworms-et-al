@@ -41,6 +41,58 @@ Pass W3C Css Validator without errors
 
 ### Python Validation - Pylint
 
+| Page                                             | Result                                        |
+| ------------------------------------------------ | --------------------------------------------- |
+| bag/                                             |                                               |
+| [context.py](http://context.py/)                 | No Errors                                     |
+| [urls.py](http://urls.py/)                       | No Errors                                     |
+| [views.py](http://views.py/)                     | No Errors                                     |
+|                                                  |                                               |
+| bookworms_et_al/                                 |                                               |
+| [settings.py](http://settings.py/)               | Lines too long, still less than 90 characters* |
+| [urls.py](http://urls.py/)                       | No Errors                                     |
+| [views.py](http://views.py/)                     | No Errors                                     |
+| [wsgi.py](http://wsgi.py)                        | No Errors                                     |
+|                                                  |                                               |
+| checkout/                                        |                                               |
+| [admin.py](http://admin.py/)                     | No Errors                                     |
+| [apps.py](http://apps.py/)                       | No Errors                                     |
+| [forms.py](http://forms.py/)                     | No Errors                                     |
+| [models.py](http://models.py/)                   | No Errors                                     |
+| [signals.py](http://signals.py/)                 | No Errors                                     |
+| [urls.py](http://urls.py/)                       | No Errors                                     |
+| [views.py](http://views.py)                      | No Errors                                     |
+| [webhooks.py](http://webhooks.py/)               | No Errors                                     |
+| [webhook_handler.py](http://webhook_browser.py/) | No Errors                                     |
+|                                                  |                                               |
+| home/                                            |                                               |
+| [urls.py](http://urls.py/)                       | No Errors                                     |
+| [views.py](http://views.py)                      | No Errors                                     |
+|                                                  |                                               |
+| newsletter/                                      |                                               |
+| [admin.py](http://admin.py/)                     | No Errors                                     |
+| [forms.py](http://forms.py/)                     | No Errors                                     |
+| [models.py](http://models.py/)                   | No Errors                                     |
+| [urls.py](http://urls.py/)                       | No Errors                                     |
+| [views.py](http://views.py)                      | No Errors                                     |
+|                                                  |                                               |
+| products/                                        |                                               |
+| [admin.py](http://admin.py/)                     | No Errors                                     |
+| [models.py](http://models.py/)                   | No Errors                                     |
+| [urls.py](http://urls.py/)                       | No Errors                                     |
+| [views.py](http://views.py)                      | No Errors                                     |
+| [forms.py](http://forms.py/)                     | No Errors                                     |
+| [widgets.py](http://widgets.py/)                 | No Errors                                     |
+|                                                  |                                               |
+| profile/                                         |                                               |
+| [admin.py](http://admin.py/)                     | No Errors                                     |
+| [models.py](http://models.py/)                   | No Errors                                     |
+| [urls.py](http://urls.py/)                       | No Errors                                     |
+| [views.py](http://views.py)                      | No Errors                                     |
+| [forms.py](http://forms.py/)                     | No Errors                                     |
+|                                                  |
+
+*
 - python -m black appname
 
 - CI's Python linter
