@@ -11,7 +11,7 @@
 
 Automated Testing includes all testing that is carried out by a program - W3C HTML and CSS validation testing, Javascript linter, PEP8 Python testing, Lighthouse and WAVE testing.
 
-### HTML Validation - W3C
+### HTML Validation - W3C html Validator
 
 | .html Pages                            | Result                 | Screenshot Link                                     |
 | -------------------------------------- | ---------------------- | --------------------------------------------------- |
@@ -30,16 +30,23 @@ Automated Testing includes all testing that is carried out by a program - W3C HT
 |  templates/allauth/account/login.html | Allauth, so not tested |                                                     |
 |  templates/allauth/account/logout.html                                      |   Allauth, so not tested                     |
 
-### CSS Validation - W3C
+### CSS Validation - W3C CSS Validator
 
 Pass W3C Css Validator without errors
 
 ![W3C CSS Validator!](readme_media/screenshots/validator/w3c_css_homepage.png)
 
-### JavaScript Validation - JShint?
+### JavaScript Validation - JShint
 
+No errors in JShint, only references to the jQuery identifier.
 
-### Python Validation - Pylint
+### Python Validation 
+
+I used the following validation tools to test the python code in this Project:
+
+- the command pylint appname in the terminal to check for errors within each app; then
+
+- CI's Python linter to test the individual files per the table below.
 
 | Page                                             | Result                                        |
 | ------------------------------------------------ | --------------------------------------------- |
@@ -92,10 +99,10 @@ Pass W3C Css Validator without errors
 | [forms.py](http://forms.py/)                     | No Errors                                     |
 |                                                  |
 
-*
+* ![Settings.py Linter result!](readme_media/screenshots/validator/settings.py_screenshot.png)
+
 - python -m black appname
 
-- CI's Python linter
 
 ### Lighthouse
 
@@ -127,6 +134,8 @@ I improved my application's Lighthouse test scores by doing the following:
 
 
 ### WAVE
+
+table?
 
 ## Manual Testing<a name="manual_testing"></a> 
 
