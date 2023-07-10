@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .models import Product, Category, Author
-from .forms import ProductForm
+from .forms import ProductForm, AuthorForm
 
 
 def all_products(request):
@@ -126,6 +126,40 @@ def add_product(request):
     else:
         form = ProductForm()
     template = "products/add_product.html"
+    context = {
+        "form": form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def add_author(request):
+    """
+    Add an Author to the store listing
+    """
+
+    # restrict this view function to superusers/store owner
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, only store owners can do that.")
+        return redirect(reverse("home"))
+
+    if request.method == "POST":
+        # instantiate a new instance of the ProductForm from request.POST,
+        # include request.Files to allow for images to be captured
+        form = AuthorForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, "Successfully added a new Author!")
+            return redirect(reverse("add_product"))
+        else:
+            messages.error(
+                request, "Failed to add a new Author. \
+                    Please check the form is valid."
+            )
+    else:
+        form = AuthorForm()
+    template = "products/add_author.html"
     context = {
         "form": form,
     }

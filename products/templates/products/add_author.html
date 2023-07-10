@@ -3,7 +3,7 @@
 
 {% block extra_meta %}
 <meta name="description" 
-content="For Authorised Shop Owner only. Add a new book to Bookworms bookshop. Bookworms et al Irish bookshop, for all your bestseller reads.">
+content="For Authorised Shop Owner only. Add a new bestselling author to Bookworms bookshop. Bookworms et al Irish bookshop, for all your bestseller reads.">
 <meta name="keywords" 
 content="view our bestseller range of books, free shipping in Ireland 
 with secure payment, book-lovers and readers, Irish-owned shop">
@@ -11,7 +11,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
 
 {% endblock %}
 
-{% block extra_title %} Store Management - Add Product{% endblock %}
+{% block extra_title %} Store Management - Add Author{% endblock %}
 
 {% block page_header %}
 
@@ -29,12 +29,12 @@ with secure payment, book-lovers and readers, Irish-owned shop">
 
 <div class="overlay"></div>
 <div class="container ">
-    <!-- Row 1 of two in this container - Row 1 Contains Add Product Heading -->
+    <!-- Row 1 of two in this container - Row 1 Contains Add Author Heading -->
     <div class="row">
         <div class="col-12 col-lg-6 mt-5">
             <hr>
             <h2 class="logo-font mb-4">Bookworms Shop Management</h2>
-            <h5 class="text-muted">Add a new Bestseller</h5>
+            <h5 class="text-muted">Add a new Author</h5>
             <hr>
         </div>
     </div>
@@ -42,24 +42,19 @@ with secure payment, book-lovers and readers, Irish-owned shop">
     <!-- Row 2 of two in this container - Row 2 contains the form -->
     <div class="row">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'add_product' %}" 
-                class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'add_author' %}" 
+                class="form mb-2">
                 {% csrf_token %}
                 {% for field in form %}
-                    
                     {% if field.name != 'image' %}
                         {{ field | as_crispy_field }}
                     {% else %}
                         {{ field }}
                     {% endif %}
-
-                    {% if field.name == 'author' %}
-                        <a href="{% url 'add_author' %}">Add new Author</a>
-                    {% endif %}
                 {% endfor %}
                 <div class="text-right">
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit" aria-label="add-product">Add Product</button>
+                    <button class="btn btn-black rounded-0" type="submit" aria-label="add-product">Add Author</button>
                 </div>
             </form>
         </div>
@@ -73,10 +68,5 @@ with secure payment, book-lovers and readers, Irish-owned shop">
 
 {% block postloadjs %}
     {{ block.super }}
-    <script>
-        $('#new-image').change(function() {
-            var file = $('#new-image')[0].files[0];
-            $('#filename').text(`Image will be set to: ${file.name}`);
-        });
-    </script>
+
 {% endblock %}
