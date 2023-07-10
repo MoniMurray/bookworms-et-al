@@ -3,125 +3,130 @@
 {% load bag_tools %}
 
 {% block extra_meta %}
-<meta name="description" 
-content="Bookworms et al offers secure and encrypted checkout powered by Stripe.
+<meta name="description" content="Bookworms et al offers secure and encrypted checkout powered by Stripe.
 Purchase from our range of bestseller books.">
-<meta name="keywords" 
-content="shop our bestseller range of books, free shipping in Ireland 
+<meta name="keywords" content="shop our bestseller range of books, free shipping in Ireland 
 with secure payment, book-lovers and readers, Irish-owned shop">
 <meta name="author" content="Monica Murray">
 
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block extra_title %} Shopping Cart{% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font my-5">Shopping Cart</h2>
-                <hr>
-            </div>
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font my-5">Shopping Cart</h2>
+            <hr>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col">
-                {% if bag_items %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col" ></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col" >Qty</th>
-                                    <th scope="col">Subtotal</th>
-                                </tr>
-                            </thead>
+    <!-- Order summary here -->
+    <div class="row">
+        <div class="col-12 mb-5">
+        {% if bag_items %}
+            <p class="text-muted">Shopping Cart Summary ({{ product_count }})</p>
+            <!-- 3 main row components, Header, Brief items description, Cost Summary -->
+            <div class="row">
 
-                            {% for item in bag_items %}
-                                <tr>
-                                    <!-- product image -->
-                                    <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" max-width="100%" max-height="100%" alt="{{ item.product.name }}">
-                                    </td>
+                <!-- Order summary header -->
+                <div class="col-8 offset-2">
 
-                                    <!-- product name -->
-                                    <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        
-                                    </td>
-                                    
+                    <p class="mb-1 mt-0 small text-muted">Item</p>
+                </div>
+                <div class="col-2 text-right">
+                    <p class="mx-1 mt-0 small text-muted">Subtotal</p>
+                </div>
+            </div>
 
-                                    <!-- product item price -->
-                                    <td class="py-3">
-                                        <p class="my-0">€{{ item.product.price }}</p>
-                                    </td>
+            <!-- Loop through items in bag to give brief description -->
+            {% for item in bag_items %}
+            <div class="row">
+                <!-- product image -->
+                <div class="col-2 mb-1">
+                    <a href="{% url 'product_detail' item.product.id %}">
+                        {% if item.product.image %}
+                        <img class="w-100" src="{{ item.product.image.url }}" max-width="100%" max-height="100%"
+                            alt="{{ product.name }}">
+                        {% else %}
+                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" max-width="100%" max-height="100%"
+                            alt="{{ product.name }}">
+                        {% endif %}
+                    </a>
+                </div>
 
-                                    <!-- quantity -->
-                                    <td class="py-3 w-25">
-                                        {% include "bag/quantity_form.html" %}
-                                    </td>
+                <!-- product name and quantity -->
+                <div class="col-6">
+                    <p class="my-0"><strong>{{ item.product.name}}</strong></p>
+                    <p class="my-0 small text-muted">Qty: {% include "bag/quantity_form.html" %} </p>
+                </div>
 
-                                    <!-- Shopping bag sub-total -->
-                                    <td class="py-3 w-25">
-                                        <p class="my-0">
-                                            €{{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                            <tr>
+                <!-- product item price -->
+                <div class="col-2 mb-1">
+                    <p class="my-0 small text-muted">€{{ item.product.price }}</p>
+                </div>
 
-                                <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                <!-- product item subtotal -->
 
-                                     <!-- Free delivery in Ireland -->
+                <div class="col-2 text-right">
+                    <p class="my-0 small text-muted">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                </div>
+            </div>
+            {% endfor %}
 
-                                    {% if request.user.profile.default_country != 'IE' %}
+            <hr class="my-0">
 
-                                        <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
-                                        <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
-                                        {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
-                                        </p>
-                                        {% endif %}
-                                        
-                                    {% else %}
-                                        <h6>Delivery: Free Delivery in Ireland!</h6>
-                                        <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                {% else %}
+            <div class="row text-black text-right">
+                <div class="col-10 offset-2">
+                    <p class="my-0">Shopping Cart Total: €{{ total | floatformat:2 }}</p>
+                    <!-- Free delivery in Ireland -->
+
+                    {% if request.user.profile.default_country != 'IE' %}
+
+                    <p class="my-0">Delivery: €{{ delivery|floatformat:2 }}</p>
+                    <p class="my-0"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></p>
+                    {% if free_delivery_delta > 0 %}
+                    <p class="mb-1 text-danger">
+                        You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
+                    </p>
+                    {% endif %}
+
+        {% else %}
+                    <p class="my-0">Delivery: Free Delivery in Ireland!</p>
+                    <p class="my-0"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></p>
+        {% endif %}
+                </div>
+
+            </div>
+
+            <!-- old -->
+            <div class="row">
+                <div class="col text-right">
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                        <span class="text-uppercase">Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                    
+                    {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
@@ -129,37 +134,38 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
-                {% endif %}
+                    {% endif %}
+                </div>
             </div>
         </div>
-    </div>
-{% endblock %}
+        {% endblock %}
 
-{% block postloadjs %}
-{{ block.super }}
+        {% block postloadjs %}
+        {{ block.super }}
 
-{% include 'includes/quantity_input_script.html' %}
+        {% include 'includes/quantity_input_script.html' %}
 
-<script>
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
+        <script>
+            // Update quantity on click
+            $('.update-link').click(function (e) {
+                var form = $(this).prev('.update-form');
+                form.submit();
+            })
 
-    // Delete item and reload on click
-    $('.delete-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('delete_')[1];
-        var url = `/bag/delete/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, };
+            // Delete item and reload on click
+            $('.delete-item').click(function (e) {
+                var csrfToken = "{{ csrf_token }}";
+                var itemId = $(this).attr('id').split('delete_')[1];
+                var url = `/bag/delete/${itemId}/`;
+                var data = {
+                    'csrfmiddlewaretoken': csrfToken,
+                };
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+                $.post(url, data)
+                    .done(function () {
+                        location.reload();
+                    });
+            })
+        </script>
 
-</script>
-
-{% endblock %}
+        {% endblock %}
