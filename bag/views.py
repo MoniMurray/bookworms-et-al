@@ -24,19 +24,20 @@ def add_to_bag(request, item_id):
 
     if request.method == "POST":
 
-        if quantity > 0:
-            messages.error(request, "Quantity must be greater than 0")
-        else:
-            quantity = int(request.POST.get("quantity"))
+        quantity = int(request.POST.get("quantity"))
         redirect_url = request.POST.get("redirect_url")
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
+        print()
         messages.success(
             request, f"Updated {product.name} quantity to {bag[item_id]}")
+        print()
     else:
         bag[item_id] = quantity
+        print()
         messages.success(request, f"Added {product.name} to your bag")
+        print()
 
     request.session["bag"] = bag
     return redirect(redirect_url)

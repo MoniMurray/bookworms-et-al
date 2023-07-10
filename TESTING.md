@@ -7,7 +7,7 @@
 2. [Manual Testing](#manual_testing)
 
 
-## Automated Testing<a name="automated_testing"></a> - insert testing tables!!
+## Automated Testing<a name="automated_testing"></a>
 
 Automated Testing includes all testing that is carried out by a program - W3C HTML and CSS validation testing, Javascript linter, PEP8 Python testing, Lighthouse and WAVE testing.
 
