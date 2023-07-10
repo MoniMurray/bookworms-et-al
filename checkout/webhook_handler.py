@@ -107,11 +107,13 @@ class StripeWH_Handler:
             if save_info:
                 profile.default_phone_number = shipping_details.phone
                 profile.default_country = shipping_details.address.country
-                profile.default_post_code = shipping_details.address.postal_code
+                profile.default_post_code = shipping_details.address.\
+                    postal_code
                 profile.default_town_or_city = shipping_details.address.city
                 profile.default_address_line1 = shipping_details.address.line1
                 profile.default_address_line2 = shipping_details.address.line2
-                profile.default_county_or_state = shipping_details.address.state
+                profile.default_county_or_state = shipping_details.\
+                    address.state
                 profile.save()
 
         order_exists = False
