@@ -41,7 +41,7 @@ Bookworms et al contains an authentication mechanism and provides for the online
 
 ## Business Model
 
-Bookworms is a Business to Consumer (B2C) direct seller of books.
+Bookworms is a Business to Consumer (B2C) direct seller of books which takes single payments - the transaction ends once the payment is made.
 
 
 
@@ -162,7 +162,7 @@ Logout feature's display is automatic following successful login and appears on 
 
 The interactive footer contains internal links to the About Us and Privacy Policy pages.  It also contains a link to Bookworm's Newsletter VIP Club subscription form, and external links to the website's social media.
 
-The functionality of Bookworms is a website with a cloud-based relational database to contain and manage the product offering, and which uses Stripe payment system to handle secure payments.  The data is stored in a consistent and well-organised manner on the database and any changes to the data is immediately available to the user at the front-end.
+The functionality of Bookworms is a website with a cloud-based relational database to contain and manage the product offering, and which uses Stripe payment system to handle secure payments with a transaction ending after a single payment is made.  The data is stored in a consistent and well-organised manner on the database and any changes to the data is immediately available to the user at the front-end.
 
 ### Skeleton
 
@@ -261,7 +261,7 @@ Bookworms home page is the primary web page that a visitor will view when they n
 
 #### Registration/Authentication
 
-Wikipedia defines website user registration and login as a function which "enables a system to personalize itself".  This personalisation is what offers users exclusivity, and convenience for a returning user. Our Bookworms website personalises the experience for a registered and logged in user by displaying a welcome message containing the user's name on login, and the Navigation content is changed to reflect the access level of the authenticated user. Bookworms allows a logged-in user to view and modify personal shipping details and previous purchase information.
+Wikipedia defines website user registration and login as a function which "enables a system to personalize itself".  This personalisation is what offers users exclusivity, and convenience for a returning user. Our Bookworms website personalises the experience for a registered and logged in user by displaying a welcome message containing the user's name on login, and the Navigation content is changed to reflect the access level of the authenticated user. Bookworms allows a logged-in user to view and modify personal shipping details and previous purchase information, and even receive free shipping if they have an address in Ireland.
 
 #### Navigation 
 
@@ -278,7 +278,7 @@ The Navigation bar is available and offers the same functionality on each page o
 
 My Account is a tool designed for ease of use of the site user.  It also creates a sense of exclusivity for a user, with certain content only available to a logged in user. 
 
-The My Account tool contains features for all users, be that Registration for an account, Login to an account, or when logged in changes to contain a link to the user's Profile and a Logout link to logout and preserve the user's secure content of the site.  It also provides a front-end means of managing the store's product offering for the Store Owner.
+The My Account tool contains features for all users, be that Registration for an account, Login to an account, or when logged in changes to contain a link to the user's Profile and a Logout link to logout and preserve the user's secure content of the site.  It also provides a front-end means of managing the store's product offering for the Store Owner and requires authentication of their credentials to display this functionality.
 
 #### Shopping Cart
 
@@ -286,7 +286,7 @@ The shopping cart is for the site user to add products to for purchase.
 
 When a product is successfully added to the shopping cart a success message is displayed to the user giving a thumbnail view and synopsis of the product added.  It conveniently provides a total monetary value of the products in the shopping cart so the user can keep a running count of the cost of what they have added to the cart for purchase.
 
-Within the shopping cart page, a user has additional functionality and can increase or decrease the quantity of the product they have selected to purchase, or remove it entirely, and can see the running total of their purchase update with every change they make.
+Within the shopping cart page, a user has additional functionality and can increase or decrease the quantity of a product they have selected to purchase up to a maximum of 5, or remove it entirely, and can see the running total of their purchase update with every change they make.
 
 The shopping cart contains a button link to the secure Checkout.
 
@@ -294,7 +294,7 @@ The shopping cart contains a button link to the secure Checkout.
 
 A user can finalise their purchase of the products on this page.  They are required to add shipping details for their order, and securely add their card details.  The processing of the user's card is managed using Stripe secure payments system.  
 
-On the checkout page, a user can opt-in to update their profile with their shipping details for speed of checkout on their next visit to the store.
+On the checkout page, a user can opt-in to update their profile with their shipping details for speed of checkout on their next visit to the store and so a returning logged-in user will have most of their details pre-populated into this form, save for the Name field, and the credit card field, both of which they are required to complete for each checkout process.
 
 #### Products
 
@@ -326,24 +326,20 @@ Search feature, which is available to all site users, can be found in the Naviga
 
 #### Footer
 
-The bespoke footer contains links to an 'About Us' page, the application's generated 'Privacy Policy', and an invitation to subscribe to 'Join VIP Club' to receive a newsletter.  The footer also contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile, together with external links to the Facebook Business Page for Bookworms et al, and external links to Instagram and Twitter.
+The bespoke footer contains internal links to an 'About Us' page, the application's generated 'Privacy Policy', and an invitation to subscribe to 'Join VIP Club' to receive a newsletter.  The footer also contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile, together with external links to the Facebook Business Page for Bookworms et al, and external links to Instagram and Twitter.
 
-### Screenshots
+#### Bespoke Error Page
 
-
-TABLE 
-
-404 Page
+A bespoke 404 Page has been created for Bookworms et al, a screenshot of which is below.
 
 ![Bespoke 404 Error page!](readme_media/screenshots/custom_404_page_screenshot_desktop.png)
-
 
 
 ### Future Implementations
 
 Future features to develop will be:
 
-- enable registered users to review their purchased books and rate the book;
+- enable registered users to review their purchased books and to rate the book(s) purchased;
 - enable the Store Owner to reply to customer comments and reviews.
 
 
@@ -355,14 +351,11 @@ Throughout this project I have endeavoured to implement good accessibility pract
 - descriptive alt text attributes are used on all site images
 - I have used [fontawesome](https://fontawesome.com/search?q=checkbox&o=r&m=free) icons in my application and to each icon I have added aria-labels to enable screen readers to understand them
 
-I tested each site page on Lighthouse and [Wave](https://wave.webaim.org/) and improved my score further by implementing the following upgrades ...
-
-Table
-
+I tested each site page on Lighthouse and detail these tests and scores in [Testing.md](TESTING.md)
 
 [The A11y Collective](https://www.a11y-collective.com/) is a useful site at which I saw why I was scoring poorly in relation to links on my application.
 
-The CI a11y accessibility Slack channel is a useful and detailed resource which I will use earlier in my next project and post-Diploma.
+The CI a11y accessibility Slack channel is a useful and detailed resource which I will resolve to use early in future development projects post-Diploma.
 
 
 ## Technologies Used**<a name="technologies"></a>
@@ -388,7 +381,7 @@ Languages in this project were:
 
 - TinyPNG - To compress the Homepage image.
 
-- Techsini To show the website image on a range of devices.
+- Techsini - To show the website image on a range of devices.
 
 - Django framework and Bootstrap CSS library were both used in this project.
 
@@ -427,11 +420,11 @@ Languages in this project were:
 
 ## Defensive Programming
 
-Defensive Programming was at the forefront of the site's development, with user authentication and authorisation implemented for all site users and limiting access to data to only the authenticated registered owner of that data.  In addition, Store Owner access is further restricted using the 'login_required' decorator with those front-end management views only rendering at the front-end to superusers.
+Defensive Programming was at the forefront of the site's development, with user authentication and authorisation implemented for all site users and limiting access to data to only the authenticated registered owner of that data.  In addition, Store Owner access is further restricted using the 'login_required' decorator with those front-end management views only rendering at the front-end to the authenticated superuser.
 
 ## Marketing
 
-In the planning of my eCommerce application, I asked myself the following three questions:
+In the planning of my eCommerce application, I asked myself the following questions to develop the marketing plan for Bookworms et al:
 
 1. Which eCommerce application types apply to this online business.
 
@@ -449,7 +442,7 @@ In the planning of my eCommerce application, I asked myself the following three 
 
 3. What entities would your database need, and what data might be included in these entities?
 
-| User (allauth) | Profile           | Products      | Category | Author  | Checkout: Order          | Checkout: OrderLineItem | Club          |
+| User (allauth) | Profile           | Products      | Category | Author  | Checkout: Order          | Checkout: OrderLineItem | VIP Club      |
 | -------------- | ----------------- | ------------- | -------- | ------- | ------------------------ | ----------------------- | ------------- |
 | ID (pk)        | id (pk)           | id (pk)       | id (pk)  | id (pk) | order_number (pk)        | id                      | id            |
 | username       | username ('User') | rating        | name     | name    | user_profile ('Profile') | order ('Order')         | user 		   |
@@ -469,7 +462,7 @@ In the planning of my eCommerce application, I asked myself the following three 
 |                |                   |               |          |         | stripe_pid               |                         |               |
 |                |                   |               |          |         |                          |                         |
 
-- Plan the cardinality of the entities, asking what is the minimum or maximum number of attributes each entity can have with another entity, and establish any relationships between the entities clearly.
+- I planned the cardinality of the entities, asking what the minimum or maximum number of attributes each entity can have with another entity, and establishing any relationships between the entities clearly.
 
 ### Purpose of the Application
 
