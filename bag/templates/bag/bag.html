@@ -52,7 +52,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
 
             <!-- Loop through items in bag to give brief description -->
             {% for item in bag_items %}
-            <div class="row">
+            <div class="row mb-3">
                 <!-- product image -->
                 <div class="col-2 mb-1">
                     <a href="{% url 'product_detail' item.product.id %}">
@@ -83,6 +83,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                     <p class="my-0 small text-muted">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
             </div>
+
             {% endfor %}
 
             <hr class="my-0">
