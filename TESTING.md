@@ -16,17 +16,17 @@ Automated Testing includes all testing that is carried out by a program - W3C HT
 | .html Pages                            | Result                 | Screenshot Link                                     |
 | -------------------------------------- | ---------------------- | --------------------------------------------------- |
 | templates/home/index.html              | No errors              |                                                     |
-| templates/home/about_us.html           | No errors              | [About Us page](w3c_html_about_us.png)              |
-| templates/home/privacy_policy.html     | No errors              | [Privacy Page](w3c_html_privacy_policy.png)         |
-| templates/newsletter/signup.html       | No errors              | [Newsletter Signup](w3c_html_signup.png)            |
-| templates/products/products.html       | No errors              | [Products Page](w3c_html_products.png)              |
-| templates/products/product_detail.html | No errors              | [Product Detail page](w3c_html_product_details.png) |
+| templates/home/about_us.html           | No errors              | [About Us page](readme_media/screenshots/validator/w3c_html_about_us.png)              |
+| templates/home/privacy_policy.html     | No errors              | [Privacy Page](readme_media/screenshots/validator/w3c_html_privacy_policy.png)         |
+| templates/newsletter/signup.html       | No errors              | [Newsletter Signup](readme_media/screenshots/validator/w3c_html_signup.png)            |
+| templates/products/products.html       | No errors              | [Products Page](readme_media/screenshots/validator/w3c_html_products.png)              |
+| templates/products/product_detail.html | No errors              | [Product Detail page](readme_media/screenshots/validator/w3c_html_product_details.png) |
 | templates/products/add_author.html     | No errors              | [Add Author Page](readme_media/screenshots/validator/w3c_html_add_author.png)                                 |
-| templates/products/add_product.html    | No errors              | [Add Product Page](w3c_html_add_product.png)        |
-| templates/products/edit_product.html   | No errors              | [Edit Product Page](w3c_html_edit_product.png)      |
-| templates/bag/bag.html                 | No errors              | [Shopping Cart](w3c_html_bag.png)                   |
-| templates/profile/profile.html         | No errors              | [Profile Page](w3c_html_profile.png)                |
-| templates/checkout/checkout.html       | No errors              | [Checkout Page]()                                   |
+| templates/products/add_product.html    | No errors              | [Add Product Page](readme_media/screenshots/validator/w3c_html_add_product.png)        |
+| templates/products/edit_product.html   | No errors              | [Edit Product Page](readme_media/screenshots/validator/w3c_html_edit_product.png)      |
+| templates/bag/bag.html                 | No errors              | [Shopping Cart](readme_media/screenshots/validator/w3c_html_bag.png)                   |
+| templates/profile/profile.html         | No errors              | [Profile Page](readme_media/screenshots/validator/w3c_html_profile.png)                |
+| templates/checkout/checkout.html       | No errors              | [Checkout Page](readme_media/screenshots/validator/w3c_html_checkout.png)                                   |
 | templates/allauth/account/signup.html  | Allauth, so not tested |                                                     |
 | templates/allauth/account/login.html   | Allauth, so not tested |                                                     |
 | templates/allauth/account/logout.html  | Allauth, so not tested |                                                     |
