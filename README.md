@@ -212,7 +212,7 @@ I created my wireframes using [Figma.com](www.figma.com) to create the early UX 
 
 | Page                                             | Desktop                                       | Mobile                   |
 | ------------------------------------------------ | --------------------------------------------- | ------------------------ |
-| Home Page                                        | [Homepage - Desktop wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                        | [Homepage Mobile wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png)    |
+| Home Page                                        | [Homepage - Desktop wireframe](readme_media/wireframes/product_detail_desktop-store_owner_view.png)                        | [Homepage Mobile wireframe](readme_media/wireframes/homepage_mobile.png)    |
 | Bestsellers/All Products Page                    | [Bestsellers - Desktop wireframe](readme_media/wireframes/bestsellers_desktop.png)                     | [Bestsellers - Mobile wireframe](readme_media/wireframes/bestsellers_mobile.png) |
 | Bestsellers/All Products Page - Store Owner View | [Bestsellers - Desktop - Store Owner wireframe](readme_media/wireframes/bestsellers_desktop-store_owner_view.png)    |                          |
 | Product detail Page                              | [Product detail - Desktop wireframe](readme_media/wireframes/product_detail_desktop.png)                  |                          |
