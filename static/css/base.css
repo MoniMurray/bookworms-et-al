@@ -222,6 +222,8 @@ input[name='q']::placeholder {
     vertical-align: top;
     margin-left: -10px;
 }
+
+
 .badge {
   padding-left: 9px;
   padding-right: 9px;
@@ -232,7 +234,7 @@ input[name='q']::placeholder {
 
 .label-warning,
 .badge-warning {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 /* -------------------------------- Media Queries */
@@ -295,7 +297,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: black; /* text-info */
 }
 
 /* Product Form */
