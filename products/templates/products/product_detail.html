@@ -109,13 +109,23 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
+                                    {% if request.user.is_superuser %}
+                                    <span class="text-uppercase">All Products</span>
+
+                                    {% else %}
                                     <span class="text-uppercase">Keep Shopping</span>
+                                    {% endif %}
                                 </a>
                                 
                             </div>
+
+                            {% if request.user.is_superuser %}
+                                <div class="d-none"></div>
+                            {% else %}
                             <div class="col">    
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to My Cart">
                             </div>
+                            {% endif %}
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             
                         </div>

@@ -44,7 +44,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
     <div class="row">
         <div class="col-12 col-md-6">
             <form method="POST" action="{% url 'edit_product' product.id %}" 
-                class="form mb-2" enctype="multipart/form-data" aria-label="edit-{{ item.product.name }}">
+                class="form mb-2" enctype="multipart/form-data" aria-label="edit-{{ product.name }}">
                 {% csrf_token %}
                 {% for field in form %}
                     {% if field.name != 'image' %}
@@ -54,7 +54,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                     {% endif %}
                 {% endfor %}
                 <div class="text-right">
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">Cancel</a>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0" aria-label="cancel">Cancel</a>
                     <button class="btn btn-black rounded-0" type="submit" aria-label="edit-product">Update Product</button>
                 </div>
             </form>
