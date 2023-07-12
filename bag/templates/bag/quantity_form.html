@@ -1,4 +1,4 @@
-<form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+<form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}" aria-label="quantity-form">
     {% csrf_token %}
     <div class="form-group">
         <div class="input-group input-group-{{ item.item_id }}">
@@ -10,9 +10,9 @@
                     </span>
                 </button>
             </div>
-            <label for="quantity-{{ item.product.name }}"></label>
+            <label for="quantity"></label>
             <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
-                name="quantity-{{ item.product.name }}" value="{{ item.quantity }}" min="1" max="5"
+                name="quantity" value="{{ item.quantity }}" min="1" max="5"
                 data-item_id="{{ item.item_id }}" id="quantity" aria-label="quantity-input" readonly>
                 
             <div class="input-group-append">
