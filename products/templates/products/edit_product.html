@@ -44,7 +44,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
     <div class="row">
         <div class="col-12 col-md-6">
             <form method="POST" action="{% url 'edit_product' product.id %}" 
-                class="form mb-2" enctype="multipart/form-data">
+                class="form mb-2" enctype="multipart/form-data" aria-label="edit-{{ item.product.name }}">
                 {% csrf_token %}
                 {% for field in form %}
                     {% if field.name != 'image' %}

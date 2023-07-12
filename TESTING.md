@@ -122,7 +122,7 @@ I improved my application's Lighthouse test scores by doing the following:
 
 | Page                                   | Performance | Accessibility | Best Practice | SEO |
 | -------------------------------------- | ----------- | ------------- | ------------- | --- |
-| templates/home/index.html              | 74          | 100           | 100           | 96  |
+| templates/home/index.html              | 82          | 100           | 100           | 96  |
 | templates/home/about_us.html           | 90          | 98            | 100           | 96  |
 | templates/home/privacy_policy.html     | 81          | 97            | 100           | 96  |
 | templates/newsletter/signup.html       | 82          | 100           | 100           | 97  |
@@ -130,9 +130,9 @@ I improved my application's Lighthouse test scores by doing the following:
 | templates/products/product_detail.html | 81          | 89            | 100           | 98  |
 | templates/products/add_product.html    | 81          | 86            | 100           | 98  |
 | templates/products/edit_product.html   | 81          | 76            | 92            | 90  |
-| templates/bag/bag.html                 | 82          | 79            | 100           | 87  |
-| templates/checkout/checkout.html       | 74          | 96            | 100           | 98  |
-| templates/profile/profile.html         | 78          | 86            | 100           | 98  |
+| templates/bag/bag.html                 | 82          | 92            | 100           | 88  |
+| templates/checkout/checkout.html       | 78          | 96            | 100           | 98  |
+| templates/profile/profile.html         | 81          | 97            | 100           | 98  |
 
 
 ### WAVE
