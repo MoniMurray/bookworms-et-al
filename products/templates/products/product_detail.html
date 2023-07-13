@@ -69,7 +69,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                     <p class="lead mb-0 text-left mt-5">Delivery in 2-3 days</p>
                     <p class="lead mb-0 text-left mt-3">FREE Delivery in ROI</p>
 
-                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST" aria-label="product-detail-quantity-form">
                         <!-- csrf token is vital -->
                         {% csrf_token %}
                         <!-- layout is a single row with two columns -->
