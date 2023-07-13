@@ -134,7 +134,11 @@ I improved my application's Lighthouse test scores by doing the following:
 | templates/checkout/checkout.html       | 78          | 96            | 100           | 98  |
 | templates/profile/profile.html         | 81          | 97            | 100           | 98  |
 
+### WAVE
 
+The following screenshot shows no errors or warnings in WAVE
+
+![WAVE!](readme_media/screenshots/validator/wave_screenshot_afterfix.png)
 
 ## Manual Testing<a name="manual_testing"></a> 
 
