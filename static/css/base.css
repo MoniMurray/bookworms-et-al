@@ -216,7 +216,7 @@ input[name='q']::placeholder {
 /* Shopping bag counter */
 #lblCartCount {
     font-size: 12px;
-    background: #ff0000;
+    background: #0000FF;
     color: #fff;
     padding: 0 5px;
     vertical-align: top;
