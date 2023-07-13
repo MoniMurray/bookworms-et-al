@@ -713,6 +713,8 @@ I used [Wikipedia](https://en.wikipedia.org/wiki/Registered_user#:~:text=User%20
 
 [Freeconvert.com](https://www.freeconvert.com/jpg-to-webp) was where I converted my jpeg product images to webp format to improve site responsivity.
 
+[WebAIM](https://webaim.org/resources/contrastchecker/) Colour Contrast Checker helped me select a better contrast combination to address WAVE warning.
+
 All wireframes, ERD and screenshots are my own creation.  This Readme is based on the extensive Readme.md file I created for my PP4, [The Shopping List](https://github.com/MoniMurray/shopping-list)
 
 
