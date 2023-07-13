@@ -108,7 +108,7 @@ I used the following validation tools to test the python code in this Project:
 
 ### Lighthouse
 
-I improved my application's Lighthouse test scores by doing the following:
+I improved my application's overall Lighthouse test scores by doing the following:
 
 - Convert all images to webp using freeconvert.com jpeg to webp
 - Set width and height and alt attributes on all img elements
@@ -135,7 +135,7 @@ I improved my application's Lighthouse test scores by doing the following:
 | templates/profile/profile.html         | 81          | 97            | 100           | 98  |
 
 
-I made many different efforts, as evidenced in my commit messages, to improve the Performance score of the application in Lighthouse.  Some of these efforts improved the score by a point or two, but none brought the score above a low 80 while maintaining the functionality of the application.  The Coverage test in Lighthouse showed that Stripe's script was causing a severe delay in rendering the content of the DOM so I tried to address this by adding the 'defer' attribute to the Stripe script in the head element of base template.  This improved the Lighthouse score to 92, but in doing so blocked Stripe from rendering correctly in the Checkout and as this is a fundamental function of my application I removed the defer attribute.  I also tried using async attribute as an alternative fix, but similar to the defer attribute, it stopped Stripe from rendering and functioning correctly.
+I made many different efforts, as evidenced in my commit messages, to improve the Performance scores of the application in Lighthouse.  Some of these efforts improved the score by a point or two, but none brought the score above a low 80 while maintaining the functionality of the application.  The Coverage test in Lighthouse showed that Stripe's script was causing a severe delay in rendering the content of the DOM so I tried to address this by adding the 'defer' attribute to the Stripe script in the head element of base template.  This improved the Lighthouse score to 92, but in doing so blocked Stripe from rendering correctly in the Checkout and as this is a fundamental function of my application I removed the 'defer' attribute.  I also trialled using 'async' attribute as an alternative fix, but similar to the 'defer' attribute, it stopped Stripe from rendering and functioning correctly so I removed it.
 
 
 ### WAVE
