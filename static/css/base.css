@@ -16,6 +16,11 @@ body {
     
 }
 
+a {
+    color: #0000FF;
+    text-decoration: none;
+    background-color: transparent;
+}
 
 /* footer */
 footer {

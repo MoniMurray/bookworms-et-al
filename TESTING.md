@@ -129,8 +129,7 @@ I improved my application's overall Lighthouse test scores by doing the followin
 | templates/products/products.html       | 78          | 100           | 100           | 90  |
 | templates/products/product_detail.html | 82          | 100           | 100           | 98  |
 | templates/products/add_product.html    | 81          | 86            | 100           | 98  |
-| templates/products/edit_product.html   | 81          | 76            | 92            | 90  |
-| templates/bag/bag.html                 | 82          | 92            | 100           | 88  |
+| templates/bag/bag.html                 | 84          | 95            | 100           | 88  |
 | templates/checkout/checkout.html       | 78          | 96            | 100           | 98  |
 | templates/profile/profile.html         | 81          | 97            | 100           | 98  |
 

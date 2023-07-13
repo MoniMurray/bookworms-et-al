@@ -34,7 +34,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
         <div class="col-12 col-lg-6 mt-5">
             <hr>
             <h2 class="logo-font mb-4">Bookworms Shop Management</h2>
-            <h5 class="text-muted">Add a new Bestseller</h5>
+            <h3 class="text-muted">Add a new Bestseller</h3>
             <hr>
         </div>
     </div>
@@ -54,7 +54,7 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                     {% endif %}
 
                     {% if field.name == 'author' %}
-                        <a href="{% url 'add_author' %}">Add new Author</a>
+                        <a href="{% url 'add_author' %}"><strong>Add new Author</strong></a>
                     {% endif %}
                 {% endfor %}
                 <div class="text-right">
