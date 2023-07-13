@@ -120,6 +120,8 @@ I improved my application's overall Lighthouse test scores by doing the followin
 - Add label element with for attribute to any input elements, and match the value of the for attribute to an id attribute within the input element
 - Bag.html meta tags
 
+Accessibility, Best Practice and SEO percentage scores all consistently return above 90.
+
 | Page                                   | Performance | Accessibility | Best Practice | SEO |
 | -------------------------------------- | ----------- | ------------- | ------------- | --- |
 | templates/home/index.html              | 82          | 100           | 100           | 96  |
@@ -128,13 +130,13 @@ I improved my application's overall Lighthouse test scores by doing the followin
 | templates/newsletter/signup.html       | 82          | 100           | 100           | 97  |
 | templates/products/products.html       | 78          | 100           | 100           | 90  |
 | templates/products/product_detail.html | 82          | 100           | 100           | 98  |
-| templates/products/add_product.html    | 81          | 86            | 100           | 98  |
+| templates/products/add_product.html    | 81          | 91            | 100           | 98  |
 | templates/bag/bag.html                 | 84          | 95            | 100           | 88  |
 | templates/checkout/checkout.html       | 78          | 96            | 100           | 98  |
 | templates/profile/profile.html         | 81          | 97            | 100           | 98  |
 
 
-I made many different efforts, as evidenced in my commit messages, to improve the Performance scores of the application in Lighthouse.  Some of these efforts improved the score by a point or two, but none brought the score above a low 80 while maintaining the functionality of the application.  The Coverage test in Lighthouse showed that Stripe's script was causing a severe delay in rendering the content of the DOM so I tried to address this by adding the 'defer' attribute to the Stripe script in the head element of base template.  This improved the Lighthouse score to 92, but in doing so blocked Stripe from rendering correctly in the Checkout and as this is a fundamental function of my application I removed the 'defer' attribute.  I also trialled using 'async' attribute as an alternative fix, but similar to the 'defer' attribute, it stopped Stripe from rendering and functioning correctly so I removed it.
+I made many different efforts, as evidenced in my commit messages, to improve the Performance scores of the application in Lighthouse.  Some of these efforts improved the score by a point or two, but none brought the score above a low 80 while maintaining the functionality of the application.  The Coverage test in Lighthouse showed that the external links and scripts, particularly Stripe's script was causing a severe delay in rendering the content of the DOM so I tried to address this by adding the 'defer' attribute to the Stripe script in the head element of base template.  This improved the Lighthouse score to 92, but in doing so blocked Stripe from rendering correctly in the Checkout and as this is a fundamental function of my application I removed the 'defer' attribute.  I also trialled using 'async' attribute as an alternative fix, but similar to the 'defer' attribute, it stopped Stripe from rendering and functioning correctly so I removed it.
 
 
 ### WAVE
