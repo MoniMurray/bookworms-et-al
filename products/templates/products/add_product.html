@@ -54,12 +54,12 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                     {% endif %}
 
                     {% if field.name == 'author' %}
-                        <a href="{% url 'add_author' %}"><strong>Add new Author</strong></a>
+                        <a href="{% url 'add_author' %}" aria-label="add-author-link"><strong>Add new Author</strong></a>
                     {% endif %}
                 {% endfor %}
                 <div class="text-right">
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit" aria-label="add-product">Add Product</button>
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0" aria-label="cancel-button">Cancel</a>
+                    <button class="btn btn-black rounded-0" type="submit" aria-label="submit-add-product">Add Product</button>
                 </div>
             </form>
         </div>

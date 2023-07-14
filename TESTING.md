@@ -129,7 +129,7 @@ Accessibility, Best Practice and SEO percentage scores all consistently return a
 | Page                                   | Performance | Accessibility | Best Practice | SEO |
 | -------------------------------------- | ----------- | ------------- | ------------- | --- |
 | templates/home/index.html              | 82          | 100           | 100           | 96  |
-| templates/home/about_us.html           | 90          | 98            | 100           | 96  |
+| templates/home/about_us.html           | 90          | 100           | 100           | 96  |
 | templates/home/privacy_policy.html     | 81          | 97            | 100           | 96  |
 | templates/newsletter/signup.html       | 82          | 100           | 100           | 97  |
 | templates/products/products.html       | 78          | 100           | 100           | 90  |
