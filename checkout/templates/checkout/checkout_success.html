@@ -234,7 +234,7 @@
 
                     {% else %}
                         <a href="{% url 'products' %}"
-                            class="btn btn-black rounded-0 my-2">
+                            class="btn btn-black text-white rounded-0 my-2">
                             <span class="icon mr-2">
                                 <i class="fas fa-gifts"></i>
                             </span>
@@ -244,7 +244,7 @@
                     
                     {% if user.is_authenticated %}
                         <a href="{% url 'account_logout' %}"
-                            class="btn btn-black rounded-0 my-2">
+                            class="btn btn-black text-white rounded-0 my-2">
                             
                             <span class="text-uppercase">Logout</span>
                         </a>
