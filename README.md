@@ -693,7 +693,7 @@ Use the following steps:
 - Log in to GitHub and locate the repository Bookworms et al
 - At the top of the Repository (not the top of the page) just above the "Settings" Button on the menu, locate and click the "Fork" Button.
 
-You should now have a copy of the original repository in your GitHub account.
+You should now have a copy of the original repository in your GitHub account.  To deploy your forked project following customisation, follow the steps above.
 
 ### How to Clone this Project
 
