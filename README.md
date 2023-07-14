@@ -329,7 +329,7 @@ Search feature, which is available to all site users, can be found in the Naviga
 
 #### Footer
 
-The bespoke footer contains internal links to an 'About Us' page, the application's generated 'Privacy Policy', and an invitation to subscribe to 'Join VIP Club' to receive a newsletter.  The footer also contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile, together with external links to the Facebook Business Page for Bookworms et al, and external links to Instagram and Twitter.
+The bespoke footer contains internal links to an 'About Us' page, the application's generated 'Privacy Policy', and an invitation to subscribe to 'Join VIP Club' to receive a newsletter.  The footer also contains a line of text "Made by Monica Murray for CI P4" with an external link to my GitHub profile, together with external links to the [Facebook Business Page](https://www.facebook.com/profile.php?id=100094116007278) for Bookworms et al, and external links to Instagram and Twitter.
 
 #### Bespoke Error Page
 
