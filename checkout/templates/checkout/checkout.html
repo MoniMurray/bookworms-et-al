@@ -79,7 +79,7 @@ payment is being processed -->
                         <div class="row">
                             <!-- product image -->
                             <div class="col-2 mb-1">
-                                <a href="{% url 'product_detail' item.product.id %}">
+                                <a href="{% url 'product_detail' item.product.id %}" aria-label="{{product.name}}">
                                     {% if item.product.image %}
                                         <img class="w-100" src="{{ item.product.image.url }}" max-width="100%" max-height="100%" alt="{{ product.name }}">
                                     {% else %}
@@ -165,10 +165,10 @@ payment is being processed -->
                                     id="id-save-info" name="save-info" checked>
                                 {% else %}
                                     <label class="form-check-label" for="id-save-info">
-                                        <a class="text-info" href="{% url 'account_signup' %}">
+                                        <a href="{% url 'account_signup' %}" aria-label="Create-account-link">
                                             Create an account
                                         </a> or 
-                                        <a class="text-info" href="{% url 'account_login' %}">login</a>
+                                        <a href="{% url 'account_login' %}" aria-label="Login-link">login</a>
                                         to save this information
                                     </label>
                                     
