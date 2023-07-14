@@ -152,7 +152,7 @@ The six-week deadline is fixed and the timeline is tight.  MVP is priority.
 
 ### Structure
 
-As is usual with an ecommerce business, a user of Bookworms is not required to be registered to browse and make a purchase.  However, greater convenience of use of the site comes with registration, for example a user's billing details and previous purchases are saved to their Profile when registered and can be edited on their Profile when they are logged in.  To ensure the security of the ecommerce business and its product offering, only Store Owner/Admin users will have access to the Product table and to its features and functionality following authenticated superuser login. 
+As is usual with an ecommerce business, a user of Bookworms is not required to be registered to browse and make a purchase.  However, greater convenience of use of the site comes with registration, for example a user's shipping details and previous purchases are saved to their Profile when registered and can be edited on their Profile when they are logged in.  To ensure the security of the ecommerce business and its product offering, only Store Owner/Admin users will have access to the Product table and to its features and functionality following authenticated superuser login. 
 
 User registration and login links are located on the Navigation bar. Successful login expands the Navigation bar to contain a 'Profile' page link for registered users, and if an authenticated user is a superuser, ie is the Store Owner, login returns 'Bookworms Store Management' link to add further products to the store.  In addition, the Store Owner can add, edit, and delete products from the main Products page to conveniently manage the product offering of the online store.
 
@@ -170,7 +170,7 @@ This ecommerce website follows all the conventions followed by other online stor
 
 ### Surface
 
-Colours will be crisp, clean, sophisticated. The colour palette generated is based on the home page and favicon image with soft greens and khaki tones.  Fonts will follow the clean, uncluttered scope with Montserrat chosen as it is easy to read on all devices.  The contrast between text and colour has been considered and colour choices made to optimise that contrast for screen reader and assistive technology.
+Colours are crisp, clean, sophisticated. The colour palette generated is based on the home page and favicon image with soft greens and khaki tones.  Fonts follow the clean, uncluttered scope with Montserrat chosen as it is easy to read on all devices.  The contrast between text and colour has been considered and colour choices made to optimise that contrast for screen reader and assistive technology.
 
 A User's interaction with this responsive application should be simple and natural.  Use of links and icons will make actions intuitive. Efficient use of feedback messages will confirm successful and unsuccessful actions to the user at the front-end.
 
@@ -184,7 +184,6 @@ Please follow this link to open my [AGILE.md](AGILE.md) file and read about how 
 
 
 I began my design of the database structure by creating an Entity Relationship Diagram using LucidChart.com, which can be viewed [here](https://lucid.app/lucidchart/870086e4-1983-4c96-9b3f-d46d64402517/edit?page=0_0&invitationId=inv_c8206c6c-8a90-4b84-9056-0eba3ce0cab4#).  The Diagram planning and layout helped me to consider what to include in each Model and the relationships between the models of the database. 
-
 
 
 ### Colour Scheme
@@ -261,7 +260,7 @@ Bookworms home page is the primary web page that a visitor will view when they n
 
 #### Registration/Authentication
 
-Wikipedia defines website user registration and login as a function which "enables a system to personalize itself".  This personalisation is what offers users exclusivity, and convenience for a returning user. Our Bookworms website personalises the experience for a registered and logged in user by displaying a welcome message containing the user's name on login, and the Navigation content is changed to reflect the access level of the authenticated user. Bookworms allows a logged-in user to view and modify personal shipping details and previous purchase information, and even receive free shipping if they have an address in Ireland.
+Wikipedia defines website user registration and login as a function which "enables a system to personalize itself".  This personalisation is what offers users exclusivity, and convenience for a returning user. The Bookworms website personalises the experience for a registered and logged in user by displaying a welcome message containing the user's name on login, and the Navigation content is changed to reflect the access level of the authenticated user. Bookworms allows a logged-in user to view and modify personal shipping details and previous purchase information, and even receive free shipping if they have an address in Ireland.
 
 #### Navigation 
 
@@ -284,7 +283,7 @@ The My Account tool contains features for all users, be that Registration for an
 
 The shopping cart is for the site user to add products to for purchase.  
 
-When a product is successfully added to the shopping cart a success message is displayed to the user giving a thumbnail view and synopsis of the product added.  It conveniently provides a total monetary value of the products in the shopping cart so the user can keep a running count of the cost of what they have added to the cart for purchase.
+When a product is successfully added to the shopping cart a success message is displayed to the user giving a thumbnail view and synopsis of the product added.  It conveniently provides a total monetary value of the products in the shopping cart so the user can keep a running count of the cost of the contents of the cart.
 
 Within the shopping cart page, a user has additional functionality and can increase or decrease the quantity of a product they have selected to purchase up to a maximum of 5, or remove it entirely, and can see the running total of their purchase update with every change they make.
 
@@ -302,13 +301,17 @@ The products available for purchase on Bookworms are listed on this page and the
 
 A product can be added directly to the shopping cart using the 'Add to My Cart' button function on each product.  Alternatively, a user can opt to open a product detail page for a product to view that offering in more details.
 
+The 'Add to My Cart' button is not displayed to the Store Owner on this page as they do not need the function to add products to the shopping cart.
+
 #### Product Detail
 
 The product detail page outlines everything a user might wish to know about a product offered on Bookworms.  Product name, description, rating, price and a quantity picker are all features of this page.  A product can be added to the shopping cart, and the quantity of the product can be increased up to a maximum of 5 before the 'Add to My Cart' button is clicked.
 
+The 'Add to My Cart' button is not displayed to the Store Owner as they do not need the function to add products to the shopping cart.
+
 #### CRUD
 
-All of the major functions of the product management of the Bookworms store can be controlled by the authenticated Store Owner via the front-end on either the Products page or the Product detail page.  New products can be added, and existing product detail can be edited, or deleted from the store entirely, with all changes being reflected to the Store Owner on the front-end and to the data on the database.
+All of the major functions of the product management of the Bookworms store can be controlled by the authenticated Store Owner via the front-end on either the Products page or the Product detail page.  New products can be added, and existing product detail can be edited, or deleted from the store entirely, with all changes being reflected immediately to the Store Owner on the front-end and to the data on the database.
 
 #### User Feedback Messages
 
@@ -356,6 +359,8 @@ I tested each site page on Lighthouse and detail these tests and scores in [Test
 [The A11y Collective](https://www.a11y-collective.com/) is a useful site at which I saw why I was scoring poorly in relation to links on my application.
 
 The CI a11y accessibility Slack channel is a useful and detailed resource which I will resolve to use early in future development projects post-Diploma.
+
+[WebAIM](https://webaim.org/resources/contrastchecker/) Colour Contrast checker helped me choose colours based on their accessibility rather than appearance.
 
 
 ## Technologies Used**<a name="technologies"></a>
@@ -466,7 +471,7 @@ In the planning of my eCommerce application, I asked myself the following questi
 
 ### Purpose of the Application
 
--The eCommerce aspect of the Bookworms et al business is specifically designed to facilitate commercial transactions, and it involves the online transfer of information.  As mentioned above, this is a Business to Customer eCommerce application type, selling physical products online.  Payments for those products is taken online.  The transaction is finished after a single payment is made and the product is shipped.
+The eCommerce aspect of the Bookworms et al business is specifically designed to facilitate commercial transactions, and it involves the online transfer of information.  As mentioned above, this is a Business to Customer eCommerce application type, selling physical products online.  Payments for those products is taken online.  The transaction is finished after a single payment is made and the product is shipped.
 
 ### Core Business Intents
 
@@ -524,7 +529,7 @@ The following table, based on Hubspot's SEO Starter Pack, helped me plan the SEO
 | Profile        | Bookworms + {{user.username}}'s Account Profile        | Only for logged in users. Review your past orders, edit your details. Browse our range of bestsellers.                                                                                                                                                               | view our bestseller range of books, free shipping in Ireland<br>with secure payment, book-lovers and readers, Irish-owned shop | Login, Home page, Profile, Order Number        | Edit details, Logout, Bestsellers/Keep Shopping                   |
 | VIP Club       | Bookworms + Newsletter                                 | VIP Club for book, reviews, updates access to exclusive deals, and more. Shop Bookworms for recommended books.                                                                                                                                                       | view our bestseller range of books, free shipping in Ireland<br>with secure payment, book-lovers and readers, Irish-owned shop | Home page, Register, Login, Profile            | Subscribe                                                         |
 | Policy         | Bookworms + Privacy Policy                             | Here's everything you need to know about how we collect, store and manage our customers data. Shop Bookworms for all your holiday bestselling books                                                                                                                  | view our bestseller range of books, free shipping in Ireland<br>with secure payment, book-lovers and readers, Irish-owned shop | Home page                                      | Bestsellers/Home page.                                            |
-| About us       | Booworms + About Us                                    | Bookworms et al are expert Irish booksellers. With Free shipping<br>in Ireland, browse and purchase from our bestsellers in store or online.<br>We are book-lovers, passionate readers and love recommending the right<br>book for our customer. Shop our range now. | view our bestseller range of books, free shipping in Ireland<br>with secure payment, book-lovers and readers, Irish-owned shop | Home page                                      | Bestsellers/Home page.                                            |
+| About us       | Bookworms + About Us                                    | Bookworms et al are expert Irish booksellers. With Free shipping<br>in Ireland, browse and purchase from our bestsellers in store or online.<br>We are book-lovers, passionate readers and love recommending the right<br>book for our customer. Shop our range now. | view our bestseller range of books, free shipping in Ireland<br>with secure payment, book-lovers and readers, Irish-owned shop | Home page                                      | Bestsellers/Home page.                                            |
 
 
 #### Robots.txt and Sitemap.xml
@@ -565,9 +570,9 @@ Testing is documented in TESTING.md file [here](TESTING.md)
 	- I created this project using the [Code Institute student custom template](https://github.com/Code-Institute-Org/gitpod-full-template); 
 	- click the 'Use this template' button in the template and then 'create a new respository' from the dropdown;
 	- Name the repository, then click 'Create Repository' button; 
-	- On your newly opened 'repo', click the button for the IDE of your choice, I use Gitpod, to launch the repo in the IDE;
+	- On your newly opened 'repo', click the button for the code editor of your choice, I use Gitpod, to launch the repo in the IDE;
 	- Paste in your new repository name where prompted to create a new Gitpod workspace, click Continue;
-	- optional, When the workspace opens, Pin your project to the top left of your browser window for ease of launching every time you code.
+	- optional: When the workspace opens, Pin your project to the top left of your browser window for ease of launching every time you code.
 
 
 - The following are the short set up steps to start a Django project
@@ -715,7 +720,7 @@ To do this, you should:
 
 - When Stripe creates this payment intent, it will also have a secret that identifies it and when it is returned to the website, we send it to the template as the "client_secret" variable.
 
-- Then, in the javascript, on the client side (our website) we call the confirmCartPayment method from Stripe javascript using hte client_secret which will verify our user's credit card number.
+- Then, in the javascript, on the client side (our website) we call the confirmCartPayment method from Stripe javascript using the client_secret which will verify our user's credit card number.
 
 #### Stripe Webhook
 
@@ -723,10 +728,10 @@ To do this, you should:
 
 #### Connect to Stripe
 
-- In the logged in Stripe dashboard, click on Developers, and then API Keys - these are the key values which will be saved to Heroku Config Vars to connect the deployed project to Stripe;
+- In the logged in Stripe dashboard, click on Developers, and then API Keys - here you will find the key values which will be saved to Heroku Config Vars to connect the deployed project to Stripe;
 - Create a new webhook endpoint in Developers, Webhooks, select the 'add endpoint' link;
 - Paste in the Heroku app URL, followed by /checkout/WH and select to 'receive all events', the click 'add endpoint' button;
-- Reveal the webhook signing secret, copy and paste as the value to the STRIPE_WH_SECRET config var in the Heroku app's Deploy tab.
+- Reveal the webhook signing secret, copy and paste it as the value to the STRIPE_WH_SECRET config var in the Heroku app's Deploy tab.
 
 ### Connect to AWS
 
