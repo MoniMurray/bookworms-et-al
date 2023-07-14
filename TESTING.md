@@ -142,6 +142,8 @@ Accessibility, Best Practice and SEO percentage scores all consistently return a
 
 I made many different efforts, as evidenced in my commit messages, to improve the Performance scores of the application in Lighthouse.  Some of these efforts improved the score by a point or two, but none brought the score above a low 80 while maintaining the functionality of the application.  The Coverage test in Lighthouse showed that the external links and scripts in the base template, particularly Stripe's script, was the cause of a severe delay in rendering the content of the DOM so I tried to address this by adding the 'defer' attribute to the Stripe script in the head element of base template.  This improved the Lighthouse score to 92, but in doing so blocked Stripe from rendering correctly in the Checkout and as this is a fundamental function of my application I removed the 'defer' attribute.  I also trialled using 'async' attribute as an alternative fix, but similar to the 'defer' attribute, it stopped Stripe from rendering and functioning correctly so I removed it.  I also tried applying these fixes to the other script elements, but each which each test improved the performance score it was at the cost of core functionality of the application.
 
+The colour contrast on the checkout template's 'Country' field is coming from Stripe.  I do not yet have sufficient in-depth knowledge of Stripe to be able to fix this bug at present but will add it to the next iteration's User Stories.
+
 
 ### WAVE
 
