@@ -98,12 +98,12 @@ with secure payment, book-lovers and readers, Irish-owned shop">
                         {% if product.image %}
                             <a href="{% url 'product_detail' product.id %}">
                                 <img class="card-img-top img-fluid img-responsive" src="{{ product.image.url }}"
-                                    alt="Bestseller: {{ product.name }}">
+                                    alt="Bestseller: {{ product.name }}" height="100%" width="100%">
                             </a>
                         {% else %}
                             <a href="{% url 'product_detail' product.id %}">
                                 <img class="card-img-top img-fluid img-responsive" src="{{ MEDIA_URL }}noimage.png"
-                                    alt="Bestseller: {{ product.name }}">
+                                    alt="Bestseller: {{ product.name }}" height="100%" width="100%">
                             </a>
                         {% endif %}
 
