@@ -66,3 +66,6 @@ select option[value=""] {
   color: #aab7c4 !important;
 }
 
+a {
+  color: #0000FF !important;
+}

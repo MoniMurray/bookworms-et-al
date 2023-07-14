@@ -135,7 +135,7 @@ Accessibility, Best Practice and SEO percentage scores all consistently return a
 | templates/products/products.html       | 78          | 100           | 100           | 90  |
 | templates/products/product_detail.html | 82          | 100           | 100           | 98  |
 | templates/products/add_product.html    | 81          | 91            | 100           | 98  |
-| templates/bag/bag.html                 | 84          | 95            | 100           | 88  |
+| templates/bag/bag.html                 | 84          | 100           | 100           | 88  |
 | templates/checkout/checkout.html       | 78          | 96            | 100           | 98  |
 | templates/profile/profile.html         | 81          | 97            | 100           | 98  |
 
