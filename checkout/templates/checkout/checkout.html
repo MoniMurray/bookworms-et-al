@@ -79,7 +79,7 @@ payment is being processed -->
                         <div class="row">
                             <!-- product image -->
                             <div class="col-2 mb-1">
-                                <a href="{% url 'product_detail' item.product.id %}" aria-label="{{product.name}}">
+                                <a href="{% url 'product_detail' item.product.id %}" aria-label="{{ item.product.name}}">
                                     {% if item.product.image %}
                                         <img class="w-100" src="{{ item.product.image.url }}" max-width="100%" max-height="100%" alt="{{ product.name }}">
                                     {% else %}
