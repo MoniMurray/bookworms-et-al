@@ -148,7 +148,21 @@ The Checkout app template page was a particularly difficult page to improve the 
 
 - Desktop
 
+Scores are at or above 90% in all areas.
 
+| Page                                   | Performance | Accessibility | Best Practice | SEO |
+| -------------------------------------- | ----------- | ------------- | ------------- | --- |
+| templates/home/index.html              | 98          | 100           | 100           | 100 |
+| templates/home/about_us.html           | 97          | 100           | 100           | 100 |
+| templates/home/privacy_policy.html     | 98          | 100           | 100           | 100 |
+| templates/newsletter/signup.html       | 99          | 100           | 100           | 100 |
+| templates/products/products.html       | 94          | 100           | 92            | 90  |
+| templates/products/product_detail.html | 98          | 100           | 100           | 100 |
+| templates/products/add_author.html     | 98          | 98            | 100           | 100 |
+| templates/products/add_product.html    | 98          | 91            | 100           | 100 |
+| templates/bag/bag.html                 | 99          | 100           | 100           | 90  |
+| templates/checkout/checkout.html       | 93          | 100           | 100           | 100 |
+| templates/profile/profile.html         | 98          | 100           | 100           | 100 |
 
 
 ### WAVE
