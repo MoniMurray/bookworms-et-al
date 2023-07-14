@@ -44,7 +44,11 @@ No errors in JShint, only references to the jQuery identifier.
 
 ### Python Validation 
 
-I used the following validation tools to test the python code in this Project:
+I installed the Black formatter and used the following command in the code editor terminal to edit the code layout in each app of the project:
+
+- python -m black appname
+
+I then used the following validation tools to test the python code in this Project:
 
 - the command pylint appname in the terminal to check for errors within each app; then
 
@@ -103,7 +107,7 @@ I used the following validation tools to test the python code in this Project:
 
 ![Settings.py Linter result!](readme_media/screenshots/validator/settings.py_screenshot.png)
 
-- python -m black appname
+- I endeavoured to address the settings.py linter result of lines being too long within the AUTH_PASSWORD_VALIDATORS list of key value pairs, however breaking the lines to comply with the 80 character limit effected the readability of the code and, even more crucially, the functionality of the password validation function, and so I have chosen to ignore this PEP8 warning.
 
 
 ### Lighthouse
