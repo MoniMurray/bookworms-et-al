@@ -27,9 +27,9 @@ Automated Testing includes all testing that is carried out by a program - W3C HT
 | templates/bag/bag.html                 | No errors              | [Shopping Cart](readme_media/screenshots/validator/w3c_html_bag.png)                   |
 | templates/profile/profile.html         | No errors              | [Profile Page](readme_media/screenshots/validator/w3c_html_profile.png)                |
 | templates/checkout/checkout.html       | No errors              | [Checkout Page](readme_media/screenshots/validator/w3c_html_checkout.png)                                   |
-| templates/allauth/account/signup.html  | Allauth, so not tested |                                                     |
-| templates/allauth/account/login.html   | Allauth, so not tested |                                                     |
-| templates/allauth/account/logout.html  | Allauth, so not tested |                                                     |
+| templates/allauth/account/signup.html  | Django Allauth, so not tested |                                                     |
+| templates/allauth/account/login.html   | Django Allauth, so not tested |                                                     |
+| templates/allauth/account/logout.html  | Django Allauth, so not tested |                                                     |
 |                                        |                        |
 
 ### CSS Validation - W3C CSS Validator
